@@ -1,5 +1,7 @@
-import 'package:e_commerce_app/core/utils/constants/app_views.dart';
-import 'package:e_commerce_app/core/utils/constants/assets.dart';
+import 'package:e_commerce_app/constants.dart';
+import 'package:e_commerce_app/core/services/shared_prefrences.dart';
+import 'package:e_commerce_app/core/utils/app_routes.dart';
+import 'package:e_commerce_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -21,10 +23,15 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        Navigator.pushReplacementNamed(
-          context,
-          AppViews.onBoardingView,
-        );
+        Prefs.setBool(kIsOnBoardingViewSeen, false);
+
+        Prefs.getBool(kIsOnBoardingViewSeen)
+            ? Navigator.of(context).pushReplacementNamed(
+                AppRoutes.loginView,
+              )
+            : Navigator.of(context).pushReplacementNamed(
+                AppRoutes.onBoardingView,
+              );
       },
     );
   }
