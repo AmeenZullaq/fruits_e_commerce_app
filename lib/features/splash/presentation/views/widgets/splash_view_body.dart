@@ -23,8 +23,6 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        Prefs.setBool(kIsOnBoardingViewSeen, false);
-
         Prefs.getBool(kIsOnBoardingViewSeen)
             ? Navigator.of(context).pushReplacementNamed(
                 AppRoutes.loginView,

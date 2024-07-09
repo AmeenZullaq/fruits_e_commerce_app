@@ -5,13 +5,29 @@ class Assets {
   /// assets/images/app_logo.jpg
   static const String imagesAppLogo = "assets/images/app_logo.jpg";
 
+  /// Assets for imagesAppleIcon
+  /// assets/images/Apple_icon.svg
+  static const String imagesAppleIcon = "assets/images/Apple_icon.svg";
+
   /// Assets for imagesBottomSplah
   /// assets/images/bottom_splah.svg
   static const String imagesBottomSplah = "assets/images/bottom_splah.svg";
 
+  /// Assets for imagesEye
+  /// assets/images/Eye.svg
+  static const String imagesEye = "assets/images/Eye.svg";
+
+  /// Assets for imagesFacebookIcon
+  /// assets/images/Facebook_icon.svg
+  static const String imagesFacebookIcon = "assets/images/Facebook_icon.svg";
+
   /// Assets for imagesFruitBasket
   /// assets/images/FruitBasket.svg
   static const String imagesFruitBasket = "assets/images/FruitBasket.svg";
+
+  /// Assets for imagesGoogleIcon
+  /// assets/images/google_icon.svg
+  static const String imagesGoogleIcon = "assets/images/google_icon.svg";
 
   /// Assets for imagesLogo
   /// assets/images/logo.svg

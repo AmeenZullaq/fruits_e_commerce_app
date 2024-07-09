@@ -1,7 +1,8 @@
 import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/app_styles.dart';
+import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/widgets/page_view_item.dart';
+import 'package:e_commerce_app/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -26,20 +27,20 @@ class OnBoardingPageView extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "welcom".tr(),
-                  style: AppStyles.bold23.copyWith(
+                  text: LocaleKeys.welcom.tr(),
+                  style: AppTextStyles.bold23.copyWith(
                     color: AppColors.gray950,
                   ),
                 ),
                 TextSpan(
-                  text: 'Fruit'.tr(),
-                  style: AppStyles.bold23.copyWith(
+                  text: LocaleKeys.Fruit.tr(),
+                  style: AppTextStyles.bold23.copyWith(
                     color: AppColors.green1_500,
                   ),
                 ),
                 TextSpan(
-                  text: 'HUB'.tr(),
-                  style: AppStyles.bold23.copyWith(
+                  text: LocaleKeys.HUB.tr(),
+                  style: AppTextStyles.bold23.copyWith(
                     color: AppColors.orange500,
                   ),
                 ),
@@ -49,20 +50,20 @@ class OnBoardingPageView extends StatelessWidget {
           subTitle: Column(
             children: [
               Text(
-                'discover'.tr(),
-                style: AppStyles.semiBold13.copyWith(
+                LocaleKeys.discover.tr(),
+                style: AppTextStyles.semiBold13.copyWith(
                   color: AppColors.gray500,
                 ),
               ),
               Text(
-                'our extensive'.tr(),
-                style: AppStyles.semiBold13.copyWith(
+                LocaleKeys.our_extensive.tr(),
+                style: AppTextStyles.semiBold13.copyWith(
                   color: AppColors.gray500,
                 ),
               ),
               Text(
-                'the best.'.tr(),
-                style: AppStyles.semiBold13.copyWith(
+                LocaleKeys.the_best.tr(),
+                style: AppTextStyles.semiBold13.copyWith(
                   color: AppColors.gray500,
                 ),
               ),
@@ -73,28 +74,28 @@ class OnBoardingPageView extends StatelessWidget {
           backGroundImage: Assets.imagesOnBoardingBackGroundGreen,
           image: Assets.imagesPineapple,
           title: Text(
-            "serch and shoping".tr(),
-            style: AppStyles.bold23.copyWith(
+            LocaleKeys.serch_and_shoping.tr(),
+            style: AppTextStyles.bold23.copyWith(
               color: AppColors.gray950,
             ),
           ),
           subTitle: Column(
             children: [
               Text(
-                'We offer'.tr(),
-                style: AppStyles.semiBold13.copyWith(
+                LocaleKeys.We_offer.tr(),
+                style: AppTextStyles.semiBold13.copyWith(
                   color: AppColors.gray500,
                 ),
               ),
               Text(
-                'the details'.tr(),
-                style: AppStyles.semiBold13.copyWith(
+                LocaleKeys.the_details.tr(),
+                style: AppTextStyles.semiBold13.copyWith(
                   color: AppColors.gray500,
                 ),
               ),
               Text(
-                'prefect'.tr(),
-                style: AppStyles.semiBold13.copyWith(
+                LocaleKeys.prefect.tr(),
+                style: AppTextStyles.semiBold13.copyWith(
                   color: AppColors.gray500,
                 ),
               ),

@@ -6,6 +6,7 @@ import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
+import 'package:e_commerce_app/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,7 +45,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     return Column(
       children: [
         SizedBox(
-          height: MediaQuery.sizeOf(context).height * .77,
+          height: MediaQuery.sizeOf(context).height * .8,
           child: OnBoardingPageView(
             pageController: pageController,
           ),
@@ -76,7 +77,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   AppRoutes.loginView,
                 );
               },
-              text: "start now".tr(),
+              text: LocaleKeys.start_now.tr(),
             ),
           ),
         ),

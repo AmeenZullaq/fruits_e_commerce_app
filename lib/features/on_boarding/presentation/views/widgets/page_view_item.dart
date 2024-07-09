@@ -2,7 +2,7 @@ import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/core/utils/app_styles.dart';
+import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +39,7 @@ class PageViewItem extends StatelessWidget {
         Column(
           children: [
             SizedBox(
-              height: 85.h,
+              height: 100.h,
             ),
             SvgPicture.asset(
               image,
@@ -69,12 +69,12 @@ class PageViewItem extends StatelessWidget {
             child: DynamicPadding(
               left: 16,
               right: 16,
-              top: 16,
+              top: 50,
               child: Align(
                 alignment: Alignment.topRight,
                 child: Text(
                   'skip'.tr(),
-                  style: AppStyles.regular13.copyWith(
+                  style: AppTextStyles.regular13.copyWith(
                     color: AppColors.gray400,
                   ),
                 ),

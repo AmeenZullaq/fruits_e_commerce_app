@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/app_styles.dart';
+import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,7 +26,7 @@ class AppButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: AppStyles.bold16.copyWith(
+          style: AppTextStyles.bold16.copyWith(
             color: const Color(0xffFFFFFF),
           ),
         ),
