@@ -4,6 +4,5 @@ abstract class AppRoutes {
   static const loginView = 'loginView';
   static const singupView = 'singupView';
   static const passwordView = 'passwordView';
-
-
+  static const verificationView = 'verificationView';
 }
