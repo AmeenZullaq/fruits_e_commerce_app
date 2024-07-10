@@ -1,9 +1,9 @@
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/widgets/login_view_body.dart';
+import 'package:e_commerce_app/features/auth/presentation/views/widgets/singup_view_body.dart';
 import 'package:flutter/material.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SingupView extends StatelessWidget {
+  const SingupView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class LoginView extends StatelessWidget {
             end: 16,
             start: 16,
             top: 28,
-            child: LoginViewBody(),
+            child: SingupViewBody(),
           ),
         ),
       ),

@@ -67,8 +67,8 @@ class PageViewItem extends StatelessWidget {
               );
             },
             child: DynamicPadding(
-              left: 16,
-              right: 16,
+              end: 16,
+              start: 16,
               top: 50,
               child: Align(
                 alignment: Alignment.topRight,

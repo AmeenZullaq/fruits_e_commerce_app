@@ -13,6 +13,10 @@ class Assets {
   /// assets/images/bottom_splah.svg
   static const String imagesBottomSplah = "assets/images/bottom_splah.svg";
 
+  /// Assets for imagesCheckIcon
+  /// assets/images/check_icon.svg
+  static const String imagesCheckIcon = "assets/images/check_icon.svg";
+
   /// Assets for imagesEye
   /// assets/images/Eye.svg
   static const String imagesEye = "assets/images/Eye.svg";

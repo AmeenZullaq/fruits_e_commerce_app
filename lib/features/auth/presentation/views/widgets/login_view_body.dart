@@ -4,7 +4,7 @@ import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/dont_have_account.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/forget_password.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/social_login_fields.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/widgets/login_fields_with_email_password.dart';
+import 'package:e_commerce_app/features/auth/presentation/views/widgets/login_fields.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:e_commerce_app/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -38,6 +38,7 @@ class LoginViewBody extends StatelessWidget {
         ),
         AppButton(
           text: LocaleKeys.login.tr(),
+          onTap: () {},
         ),
         SizedBox(
           height: 33.h,

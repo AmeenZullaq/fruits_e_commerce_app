@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SymetricPadding extends StatelessWidget {
   const SymetricPadding({
@@ -35,7 +36,9 @@ class AllPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.all(all),
+      padding: EdgeInsetsDirectional.all(
+        all,
+      ),
       child: child,
     );
   }
@@ -46,24 +49,24 @@ class DynamicPadding extends StatelessWidget {
     super.key,
     this.top = 0.0,
     this.bottom = 0.0,
-    this.left = 0.0,
-    this.right = 0.0,
+    this.end = 0.0,
+    this.start = 0.0,
     this.child,
   });
   final double top;
   final double bottom;
-  final double left;
-  final double right;
+  final double end;
+  final double start;
   final Widget? child;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
+      padding: EdgeInsetsDirectional.only(
         top: top,
         bottom: bottom,
-        left: left,
-        right: right,
+        end: end,
+        start: start,
       ),
       child: child,
     );
@@ -83,7 +86,9 @@ class StartPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.only(start: start),
+      padding: EdgeInsetsDirectional.only(
+        start: start.w,
+      ),
       child: child,
     );
   }
@@ -101,7 +106,9 @@ class EndPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.only(end: end),
+      padding: EdgeInsetsDirectional.only(
+        end: end,
+      ),
       child: child,
     );
   }
@@ -119,7 +126,9 @@ class TopPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.only(top: top),
+      padding: EdgeInsetsDirectional.only(
+        top: top,
+      ),
       child: child,
     );
   }
@@ -137,7 +146,9 @@ class BottomPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.only(bottom: bottom),
+      padding: EdgeInsetsDirectional.only(
+        bottom: bottom,
+      ),
       child: child,
     );
   }

@@ -7,11 +7,11 @@ class AppButton extends StatelessWidget {
   const AppButton({
     super.key,
     required this.text,
-    this.onTap,
+    required this.onTap,
   });
 
   final String text;
-  final void Function()? onTap;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
