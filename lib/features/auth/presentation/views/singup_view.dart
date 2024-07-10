@@ -14,7 +14,6 @@ class SingupView extends StatelessWidget {
             bottom: 45,
             end: 16,
             start: 16,
-            top: 28,
             child: SingupViewBody(),
           ),
         ),

@@ -3,5 +3,7 @@ abstract class AppRoutes {
   static const onBoardingView = 'onBoardingView';
   static const loginView = 'loginView';
   static const singupView = 'singupView';
+  static const passwordView = 'passwordView';
+
 
 }

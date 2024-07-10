@@ -25,8 +25,8 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 24.h,
-        width: 26.w,
+        height: 20.h,
+        width: 22.w,
         decoration: BoxDecoration(
           color: isCheked ? AppColors.green1_500 : const Color(0xFFFFFFFF),
           borderRadius: BorderRadius.circular(8),

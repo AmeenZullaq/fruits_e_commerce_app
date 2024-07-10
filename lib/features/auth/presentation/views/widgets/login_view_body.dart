@@ -1,5 +1,4 @@
-import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
+import 'package:e_commerce_app/core/helper_functions/build_app_bar.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/dont_have_account.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/forget_password.dart';
@@ -19,14 +18,12 @@ class LoginViewBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          LocaleKeys.login.tr(),
-          style: AppTextStyles.bold19.copyWith(
-            color: AppColors.gray950,
-          ),
+        buildAppBar(
+          context,
+          title: LocaleKeys.login.tr(),
         ),
         SizedBox(
-          height: 20.h,
+          height: 24.h,
         ),
         const LoginFields(),
         SizedBox(

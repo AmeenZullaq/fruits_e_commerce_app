@@ -39,7 +39,9 @@ abstract class LocaleKeys {
   static const Forgetting_Password = 'Forgetting_Password';
   static const Dont_worry_just_write_your_phone_number_and_we_will_send =
       'Dont_worry_just_write_your_phone_number_and_we_will_send';
-  static const code_cerification = 'code_cerification';
+  static const code_verification = 'code_verification';
+  static const verification_code = 'verification_code';
+  static const mobile_number = 'mobile_number';
   static const Enter_the_code_we_sent_to_the_following_email_address =
       'Enter_the_code_we_sent_to_the_following_email_address';
   static const check_the_code = 'check_the_code';

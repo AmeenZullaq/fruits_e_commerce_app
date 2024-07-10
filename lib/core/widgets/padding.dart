@@ -16,8 +16,8 @@ class SymetricPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: horizontal,
-        vertical: vertical,
+        horizontal: horizontal.w,
+        vertical: vertical.h,
       ),
       child: child,
     );
