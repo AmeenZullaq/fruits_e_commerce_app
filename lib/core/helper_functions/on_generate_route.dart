@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/login_view.dart';
+import 'package:e_commerce_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/verification_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';
@@ -37,6 +38,11 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case AppRoutes.verificationView:
       return MaterialPageRoute(
         builder: (context) => const VerificationView(),
+      );
+
+    case AppRoutes.resetPasswordView:
+      return MaterialPageRoute(
+        builder: (context) => const ResetPasswordView(),
       );
 
     default:

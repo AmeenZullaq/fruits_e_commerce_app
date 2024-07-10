@@ -1,6 +1,7 @@
 import 'package:e_commerce_app/core/helper_functions/build_app_bar.dart';
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -46,17 +47,24 @@ class VerificationViewBody extends StatelessWidget {
         ),
         AppButton(
           text: LocaleKeys.check_the_code.tr(),
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).pushNamed(
+              AppRoutes.resetPasswordView,
+            );
+          },
         ),
         SizedBox(
           height: 30.h,
         ),
         Align(
           alignment: AlignmentDirectional.center,
-          child: Text(
-            LocaleKeys.resend_the_code.tr(),
-            style: AppTextStyles.semiBold16.copyWith(
-              color: AppColors.green1_600,
+          child: GestureDetector(
+            onTap: () {},
+            child: Text(
+              LocaleKeys.resend_the_code.tr(),
+              style: AppTextStyles.semiBold16.copyWith(
+                color: AppColors.green1_600,
+              ),
             ),
           ),
         ),

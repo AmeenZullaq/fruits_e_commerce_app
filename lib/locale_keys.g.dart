@@ -22,6 +22,7 @@ abstract class LocaleKeys {
   static const login = 'login';
   static const email_address = 'email_address';
   static const password = 'password';
+  static const confirm_password = 'confirm_password';
   static const forget_password = 'forget_password';
   static const do_not_have_an_account = 'do_not_have_an_account';
   static const create_a_new_account = 'create_a_new_account';

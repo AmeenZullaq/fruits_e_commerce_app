@@ -14,6 +14,7 @@
     "login": "تسجيل دخول",
     "email_address": "البريد الإلكتروني",
     "password": "كلمة المرور",
+    "confirm_password": "تأكيد كلمة المرور",
     "forget_password": "نسيت كلمة المرور",
     "do_not_have_an_account": "لا تمتلك حساب؟ ",
     "create_a_new_account": "إنشاء حساب جديد",
