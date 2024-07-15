@@ -39,5 +39,21 @@
     "new_password": "كلمة مرور جديدة",
     "create_a_new_password_to_login": "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
     "create_a_new_password": "إنشاء كلمة مرور جديدة",
-    "the_password_has_been_changed_successfully": "تم تغيير الباسورد بنجاح"
+    "the_password_has_been_changed_successfully": "تم تغيير الباسورد بنجاح",
+    "The_password_has_been_changed_successfully": "تم تغيير الباسورد بنجاح",
+    "The_password_provided_is_too_weak": "كلمة المرورضعيفة جدًا.",
+    "The_account_already_exists_for_that_email": "الحساب موجود بالفعل لهذا البريد الإلكتروني.",
+    "An_error_occurred_Please_try_again_later": "لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى",
+    "email_is_required": "البريد الالكتروني مطلوب",
+    "enter_a_valid_email": "أدخل بريد إلكتروني متاح",
+    "password_is_required": "كلمة المرور مطلوبة",
+    "password_must_be_at_least_6_characturs": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    "user_name_is_required": "اسم المستخدم مطلوب",
+    "user_name_must_be_at_least_6_characturs": "يجب أن يكون المستخدم 3 أحرف على الأقل",
+    "phone_number_is_required": "رقم الهاتف مطلوب",
+    "enter_a_valid_phone_number": "أدخل رقم هاتف متاح",
+    "confirm_password_is_required": "تأكيد كلمة المرور مطلوب",
+    "passwords_do_not_match": "كلمة المرور غير مطابقة",
+    "otp_is_required": "هذا الحقل مطلوب",
+    "otp_must_be_6_digits": "يجب أن يتكون هذا الحقل من 4 أرقام"
 }

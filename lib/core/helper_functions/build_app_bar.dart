@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 AppBar buildAppBar(
   context, {
   required String title,
-  IconData leading = Icons.arrow_back_ios_new,
+  IconData? leading,
   IconData? action,
 }) {
   return AppBar(

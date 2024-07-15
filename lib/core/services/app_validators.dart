@@ -1,4 +1,5 @@
 abstract class AppValidators {
+  
   static String? validateEmail(String? email) {
     var regExp = RegExp(
         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
