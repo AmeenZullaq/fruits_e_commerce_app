@@ -55,5 +55,9 @@
     "confirm_password_is_required": "Confirm password is required",
     "passwords_do_not_match": "Passwords do not match",
     "otp_is_required": "Otp is required",
-    "otp_must_be_6_digits": "Otp must be 6 digits"
+    "otp_must_be_6_digits": "Otp must be 6 digits",
+    "you_must_agree_to_the_terms_and_conditions": "You must agree to the terms and conditions",
+    "no_use_found_for_that_email": "No user found for that email.",
+    "wrong_password_provided_for_that_user": "Wrong password provided for that user.",
+    "make_sure_you_are_connected_to_the_Internet" : "Make sure you are connected to the Internet"
 }

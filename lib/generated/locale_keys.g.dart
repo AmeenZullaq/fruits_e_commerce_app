@@ -1,5 +1,4 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
-// ignore_for_file: constant_identifier_names
 
 abstract class  LocaleKeys {
   static const you_welcom_in = 'you_welcom_in';
@@ -59,5 +58,9 @@ abstract class  LocaleKeys {
   static const passwords_do_not_match = 'passwords_do_not_match';
   static const otp_is_required = 'otp_is_required';
   static const otp_must_be_6_digits = 'otp_must_be_6_digits';
+  static const you_must_agree_to_the_terms_and_conditions = 'you_must_agree_to_the_terms_and_conditions';
+  static const no_use_found_for_that_email = 'no_use_found_for_that_email';
+  static const wrong_password_provided_for_that_user = 'wrong_password_provided_for_that_user';
+  static const make_sure_you_are_connected_to_the_Internet = 'make_sure_you_are_connected_to_the_Internet';
 
 }

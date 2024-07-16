@@ -55,5 +55,9 @@
     "confirm_password_is_required": "تأكيد كلمة المرور مطلوب",
     "passwords_do_not_match": "كلمة المرور غير مطابقة",
     "otp_is_required": "هذا الحقل مطلوب",
-    "otp_must_be_6_digits": "يجب أن يتكون هذا الحقل من 4 أرقام"
+    "otp_must_be_6_digits": "يجب أن يتكون هذا الحقل من 4 أرقام",
+    "you_must_agree_to_the_terms_and_conditions": "يجب عليك الموافقة على الشروط والأحكام",
+    "no_use_found_for_that_email": "لم يتم العثور على مستخدم لهذا البريد الالكتروني",
+    "wrong_password_provided_for_that_user": "تم استخدام كلمة مرور خاطئة لهذا المستخدم ",
+    "make_sure_you_are_connected_to_the_Internet": "تاكد من اتصالك بالانترنت"
 }

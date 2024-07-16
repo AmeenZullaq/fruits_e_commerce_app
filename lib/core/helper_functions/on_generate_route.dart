@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/login_view.dart';
+import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/verification_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/password_view.dart';

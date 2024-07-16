@@ -2,36 +2,33 @@ import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
 import 'package:e_commerce_app/features/auth/domain/repos/auth_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-part 'sing_up_state.dart';
+part 'sing_in_state.dart';
 
-class SingUpCubit extends Cubit<SingUpState> {
-  SingUpCubit(this.authRepo) : super(SingUpInitial());
+class SingInCubit extends Cubit<SingInState> {
+  SingInCubit(this.authRepo) : super(SingInInitial());
 
   final AuthRepo authRepo;
-  final TextEditingController userNameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  bool isTermsAccepted = false;
 
-  Future<void> singUp() async {
+  Future<void> singInwithEmailAndPassword() async {
     emit(
-      SingUpLoading(),
+      SingInLoading(),
     );
-    var result = await authRepo.createUserWithEmailAndPassword(
+    var result = await authRepo.singInwithEmailAndPassword(
       email: emailController.text,
       password: passwordController.text,
-      name: userNameController.text,
     );
     result.fold(
       (failure) {
         emit(
-          SingUpFailure(errMessage: failure.errMessage),
+          SingInFailure(errMessage: failure.errMessage),
         );
       },
       (user) {
         emit(
-          SingUpSuccess(user: user),
+          SingInSuccess(user: user),
         );
       },
     );

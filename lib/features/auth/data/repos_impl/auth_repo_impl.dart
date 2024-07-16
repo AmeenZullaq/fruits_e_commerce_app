@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/firebase_failure.dart';
-import 'package:e_commerce_app/core/error/server_failure.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/features/auth/data/models/user_model.dart';
 import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
@@ -31,7 +30,7 @@ class AuthRepoImpl extends AuthRepo {
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
-          FirebaseFailure.fromAuthFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(
@@ -39,6 +38,31 @@ class AuthRepoImpl extends AuthRepo {
           errMessage: LocaleKeys.An_error_occurred_Please_try_again_later.tr(),
         ),
       );
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> singInwithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      User user = await firebaseAuthService.singInwithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return right(
+        UserModel.fromAuthFirebase(user),
+      );
+    } catch (e) {
+      if (e is FirebaseAuthException) {
+        return left(
+          ServerFailure.fromAuthFirebase(e),
+        );
+      }
+      return left(ServerFailure(
+        errMessage: LocaleKeys.An_error_occurred_Please_try_again_later.tr(),
+      ));
     }
   }
 }

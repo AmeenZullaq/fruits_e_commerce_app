@@ -8,7 +8,7 @@ void getItService() {
   getIt.registerSingleton<FirebaseAuthService>(
     FirebaseAuthService(),
   );
-  getIt.registerSingleton(
+  getIt.registerSingleton<AuthRepoImpl>(
     AuthRepoImpl(
       getIt.get<FirebaseAuthService>(),
     ),

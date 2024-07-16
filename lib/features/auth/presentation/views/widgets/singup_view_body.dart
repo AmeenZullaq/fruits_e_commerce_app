@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubites/singup_cubit/sing_up_cubit.dart';
@@ -18,13 +19,13 @@ class SingupViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SingUpCubit singUpCubit = context.read<SingUpCubit>();
-    return Form(
-      key: singUpCubit.formKey,
-      child: SingleChildScrollView(
-        child: DynamicPadding(
-          bottom: 45,
-          end: 16,
-          start: 16,
+    return SingleChildScrollView(
+      child: DynamicPadding(
+        bottom: 45,
+        end: 16,
+        start: 16,
+        child: Form(
+          key: singUpCubit.formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -34,8 +35,14 @@ class SingupViewBody extends StatelessWidget {
               UserNameField(
                 userNameController: singUpCubit.userNameController,
               ),
+              SizedBox(
+                height: 16.h,
+              ),
               EmailField(
                 emailController: singUpCubit.emailController,
+              ),
+              SizedBox(
+                height: 16.h,
               ),
               PasswordField(
                 passwordController: singUpCubit.passwordController,
@@ -50,7 +57,16 @@ class SingupViewBody extends StatelessWidget {
               AppButton(
                 onTap: () {
                   if (singUpCubit.formKey.currentState!.validate()) {
-                    singUpCubit.singUp();
+                    if (singUpCubit.isTermsAccepted) {
+                      singUpCubit.singUp();
+                    } else {
+                      showingSnackBar(
+                        context,
+                        text: LocaleKeys
+                            .you_must_agree_to_the_terms_and_conditions
+                            .tr(),
+                      );
+                    }
                   }
                 },
                 text: LocaleKeys.create_a_new_account.tr(),
