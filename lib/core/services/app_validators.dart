@@ -1,5 +1,4 @@
 abstract class AppValidators {
-  
   static String? validateEmail(String? email) {
     var regExp = RegExp(
         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
@@ -33,7 +32,7 @@ abstract class AppValidators {
   }
 
   static String? validatePhoneNumber(String? phoneNumber) {
-    var regExp = RegExp(r'^09[0-9]{8}$');
+    var regExp = RegExp(r'^\+963\s?9\d{8}$');
 
     if (phoneNumber == null || phoneNumber.isEmpty) {
       return 'Phone number is required';

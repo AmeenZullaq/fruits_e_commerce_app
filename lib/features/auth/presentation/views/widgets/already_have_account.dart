@@ -25,7 +25,7 @@ class AlreadyHaveAccount extends StatelessWidget {
             child: GestureDetector(
               onTap: () {
                 Navigator.of(context).pushReplacementNamed(
-                  AppRoutes.loginView,
+                  AppRoutes.singIn,
                 );
               },
               child: Text(

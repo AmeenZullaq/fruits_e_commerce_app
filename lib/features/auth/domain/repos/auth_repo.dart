@@ -13,4 +13,14 @@ abstract class AuthRepo {
     required String email,
     required String password,
   });
+
+  Future<Either<Failure, Null>> createNewPassword({
+    required String userEmail,
+  });
+
+  Future<Either<Failure, UserEntity>> singInWithGoogle();
+
+  Future<Either<Failure, UserEntity>> singInWithFacebook();
+
+  Future<Either<Failure, UserEntity>> singInWithApple();
 }

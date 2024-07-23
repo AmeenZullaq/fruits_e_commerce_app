@@ -25,7 +25,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       () {
         Prefs.getBool(kIsOnBoardingViewSeen)
             ? Navigator.of(context).pushReplacementNamed(
-                AppRoutes.loginView,
+                AppRoutes.singIn,
               )
             : Navigator.of(context).pushReplacementNamed(
                 AppRoutes.onBoardingView,

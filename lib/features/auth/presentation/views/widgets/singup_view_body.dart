@@ -1,7 +1,7 @@
 import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/auth/presentation/cubites/singup_cubit/sing_up_cubit.dart';
+import 'package:e_commerce_app/features/auth/presentation/cubits/singup_cubit/sing_up_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/already_have_account.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/email_field.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/our_terms.dart';

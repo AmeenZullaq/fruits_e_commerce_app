@@ -1,9 +1,8 @@
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/reset_password_view.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/verification_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';
+import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:e_commerce_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -20,9 +19,9 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
         builder: (context) => const OnBoardingView(),
       );
 
-    case AppRoutes.loginView:
+    case AppRoutes.singIn:
       return MaterialPageRoute(
-        builder: (context) => const LoginView(),
+        builder: (context) => const SingInView(),
       );
 
     case AppRoutes.singupView:
@@ -35,14 +34,9 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
         builder: (context) => const PasswordView(),
       );
 
-    case AppRoutes.verificationView:
+    case AppRoutes.homeView:
       return MaterialPageRoute(
-        builder: (context) => const VerificationView(),
-      );
-
-    case AppRoutes.resetPasswordView:
-      return MaterialPageRoute(
-        builder: (context) => const ResetPasswordView(),
+        builder: (context) => const HomeView(),
       );
 
     default:

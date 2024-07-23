@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/auth/presentation/cubites/singin_cubit/sing_in_cubit.dart';
+import 'package:e_commerce_app/features/auth/presentation/cubits/singin_cubit/sing_in_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/dont_have_account.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/email_field.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/forget_password.dart';
@@ -67,7 +67,7 @@ class SinginViewBody extends StatelessWidget {
               SizedBox(
                 height: 16.h,
               ),
-              const SocialLoginFields(),
+              const SocialSingInFields(),
               SizedBox(
                 height: 50.h,
               ),

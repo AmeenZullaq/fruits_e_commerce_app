@@ -31,6 +31,7 @@ void main() async {
       supportedLocales: const [Locale('ar'), Locale('en')],
       path: 'assets/translations',
       fallbackLocale: const Locale('ar'),
+      startLocale: const Locale('ar'),
       child: const FruitsApp(),
     ),
   );

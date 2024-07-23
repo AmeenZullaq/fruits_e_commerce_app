@@ -31,11 +31,12 @@ abstract class  LocaleKeys {
   static const and_terms = 'and_terms';
   static const you_already_have_an_account = 'you_already_have_an_account';
   static const Forgetting_Password = 'Forgetting_Password';
-  static const Dont_worry_just_write_your_phone_number_and_we_will_send = 'Dont_worry_just_write_your_phone_number_and_we_will_send';
+  static const Dont_worry_just_write_your_phone_number_and_we_will_send_the_verification_code = 'Dont_worry_just_write_your_phone_number_and_we_will_send_the_verification_code';
+  static const Dont_worry_just_enter_your_email_address = 'Dont_worry_just_enter_your_email_address';
   static const code_verification = 'code_verification';
   static const verification_code = 'verification_code';
   static const mobile_number = 'mobile_number';
-  static const Enter_the_code_we_sent_to_the_following_email_address = 'Enter_the_code_we_sent_to_the_following_email_address';
+  static const Enter_the_code_we_sent_to_your_phone_number = 'Enter_the_code_we_sent_to_your_phone_number';
   static const check_the_code = 'check_the_code';
   static const resend_the_code = 'resend_the_code';
   static const new_password = 'new_password';
@@ -62,5 +63,12 @@ abstract class  LocaleKeys {
   static const no_use_found_for_that_email = 'no_use_found_for_that_email';
   static const wrong_password_provided_for_that_user = 'wrong_password_provided_for_that_user';
   static const make_sure_you_are_connected_to_the_Internet = 'make_sure_you_are_connected_to_the_Internet';
+  static const an_account_already_exists_with_a_different_credential = 'an_account_already_exists_with_a_different_credential';
+  static const the_password_or_mail_is_incorrect = 'the_password_or_mail_is_incorrect';
+  static const too_man_yrequests_Try_again_later = 'too_man_yrequests_Try_again_later';
+  static const invalid_phone_number = 'invalid_phone_number';
+  static const we_have_already_sent_a_message_to_your_email_address = 'we_have_already_sent_a_message_to_your_email_address';
+  static const please_re_authenticate_by_logging_in_again_to_perform_this_action = 'please_re_authenticate_by_logging_in_again_to_perform_this_action';
+  static const Sorry_we_couldnt_find_an_account_with_that_email_address = 'Sorry_we_couldnt_find_an_account_with_that_email_address';
 
 }

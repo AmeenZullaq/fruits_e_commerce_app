@@ -29,11 +29,12 @@
     "and_terms": "والأحكام الخاصة بنأ",
     "you_already_have_an_account": "تمتلك حساب بالفعل؟ ",
     "Forgetting_Password": "نسيان كلمة المرور",
-    "Dont_worry_just_write_your_phone_number_and_we_will_send": "لا تقلق ، ما عليك سوى كتابة رقم هاتفك وسنرسل",
+    "Dont_worry_just_write_your_phone_number_and_we_will_send_the_verification_code": "لا تقلق ، ما عليك سوى كتابة رقم هاتفك وسنرسل لك رمز التحقق",
+    "Dont_worry_just_enter_your_email_address": "لا تقلق فقط أدخل عنوان بريدك الإلكتروني",
     "code_verification": "التحقق من الرمز",
     "verification_code": "رمز التحقق.",
     "mobile_number": "رقم الهاتف",
-    "Enter_the_code_we_sent_to_the_following_email_address": "أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي",
+    "Enter_the_code_we_sent_to_your_phone_number": "أدخل الرمز الذي أرسلناه إلى رقم هاتفك",
     "check_the_code": "تحقق من الرمز",
     "resend_the_code": "إعادة إرسال الرمز",
     "new_password": "كلمة مرور جديدة",
@@ -59,5 +60,12 @@
     "you_must_agree_to_the_terms_and_conditions": "يجب عليك الموافقة على الشروط والأحكام",
     "no_use_found_for_that_email": "لم يتم العثور على مستخدم لهذا البريد الالكتروني",
     "wrong_password_provided_for_that_user": "تم استخدام كلمة مرور خاطئة لهذا المستخدم ",
-    "make_sure_you_are_connected_to_the_Internet": "تاكد من اتصالك بالانترنت"
+    "make_sure_you_are_connected_to_the_Internet": "تاكد من اتصالك بالانترنت",
+    "an_account_already_exists_with_a_different_credential": "يوجد حساب بالفعل باستخدام بيانات اعتماد مختلفة",
+    "the_password_or_mail_is_incorrect": "كلمة المرور أو البريد غير صحيح",
+    "too_man_yrequests_Try_again_later": "طلبات كثيرة جدا. حاول مرة أخرى في وقت لاحق.",
+    "invalid_phone_number": "رقم الهاتف غير صحيح",
+    "we_have_already_sent_a_message_to_your_email_address": "لقد أرسلنا بالفعل رسالة إلى عنوان بريدك الإلكتروني",
+    "please_re_authenticate_by_logging_in_again_to_perform_this_action": "يرجى إعادة المصادقة عن طريق تسجيل الدخول مرة أخرى لتنفيذ هذا الإجراء",
+    "Sorry_we_couldnt_find_an_account_with_that_email_address": "عذرًا، لم نتمكن من العثور على حساب باستخدام عنوان البريد الإلكتروني هذا"
 }

@@ -63,7 +63,7 @@ class PageViewItem extends StatelessWidget {
             onTap: () {
               Prefs.setBool(kIsOnBoardingViewSeen, true);
               Navigator.of(context).pushReplacementNamed(
-                AppRoutes.loginView,
+                AppRoutes.singIn,
               );
             },
             child: DynamicPadding(

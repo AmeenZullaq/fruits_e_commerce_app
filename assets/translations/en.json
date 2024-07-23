@@ -29,11 +29,12 @@
     "and_terms": "and terms",
     "you_already_have_an_account": "You already have an account? ",
     "Forgetting_Password": "Forgetting Password",
-    "Dont_worry_just_write_your_phone_number_and_we_will_send": "Don't worry, just write your phone number and we will send",
+    "Dont_worry_just_write_your_phone_number_and_we_will_send_the_verification_code": "Don't worry, just write your phone number and we will send the verification code",
+    "Dont_worry_just_enter_your_email_address": "Dont worry just enter your email address",
     "code_verification": "Code verification",
     "verification_code": "verification code",
     "mobile_number": "Mobile number",
-    "Enter_the_code_we_sent_to_the_following_email_address": "Enter the code we sent to the following email address",
+    "Enter_the_code_we_sent_to_your_phone_number": "Enter the code we sent to your phone number",
     "check_the_code": "Check the code",
     "resend_the_code": "Resend the code",
     "new_password": "New Password",
@@ -59,5 +60,12 @@
     "you_must_agree_to_the_terms_and_conditions": "You must agree to the terms and conditions",
     "no_use_found_for_that_email": "No user found for that email.",
     "wrong_password_provided_for_that_user": "Wrong password provided for that user.",
-    "make_sure_you_are_connected_to_the_Internet" : "Make sure you are connected to the Internet"
+    "make_sure_you_are_connected_to_the_Internet": "Make sure you are connected to the Internet",
+    "an_account_already_exists_with_a_different_credential": "An account already exists with a different credential",
+    "the_password_or_mail_is_incorrect": "The password or email is incorrect",
+    "too_man_yrequests_Try_again_later": "Too many requests, Try again later",
+    "invalid_phone_number": "Invalid phone number",
+    "we_have_already_sent_a_message_to_your_email_address": "We have already sent a message to your email address",
+    "please_re_authenticate_by_logging_in_again_to_perform_this_action": "please re-authenticate by logging in again to perform this action",
+    "Sorry_we_couldnt_find_an_account_with_that_email_address": "Sorry, we couldn't find an account with that email address"
 }
