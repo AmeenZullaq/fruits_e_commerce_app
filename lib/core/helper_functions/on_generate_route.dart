@@ -1,7 +1,8 @@
 import 'package:e_commerce_app/core/utils/app_routes.dart';
+import 'package:e_commerce_app/core/widgets/app_main_views.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';
+import 'package:e_commerce_app/features/home/presentation/views/best_seller_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:e_commerce_app/features/splash/presentation/views/splash_view.dart';
@@ -19,7 +20,7 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
         builder: (context) => const OnBoardingView(),
       );
 
-    case AppRoutes.singIn:
+    case AppRoutes.singInView:
       return MaterialPageRoute(
         builder: (context) => const SingInView(),
       );
@@ -29,14 +30,19 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
         builder: (context) => const SingupView(),
       );
 
-    case AppRoutes.passwordView:
-      return MaterialPageRoute(
-        builder: (context) => const PasswordView(),
-      );
-
     case AppRoutes.homeView:
       return MaterialPageRoute(
         builder: (context) => const HomeView(),
+      );
+
+    case AppRoutes.bestSellerView:
+      return MaterialPageRoute(
+        builder: (context) => const BestSellerView(),
+      );
+
+    case AppRoutes.appMainViews:
+      return MaterialPageRoute(
+        builder: (context) => const AppMainViews(),
       );
 
     default:

@@ -74,7 +74,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               onTap: () {
                 Prefs.setBool(kIsOnBoardingViewSeen, true);
                 Navigator.of(context).pushReplacementNamed(
-                  AppRoutes.singIn,
+                  AppRoutes.singInView,
                 );
               },
               text: LocaleKeys.start_now.tr(),

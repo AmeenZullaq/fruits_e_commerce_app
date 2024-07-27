@@ -67,5 +67,19 @@
     "invalid_phone_number": "رقم الهاتف غير صحيح",
     "we_have_already_sent_a_message_to_your_email_address": "لقد أرسلنا بالفعل رسالة إلى عنوان بريدك الإلكتروني",
     "please_re_authenticate_by_logging_in_again_to_perform_this_action": "يرجى إعادة المصادقة عن طريق تسجيل الدخول مرة أخرى لتنفيذ هذا الإجراء",
-    "Sorry_we_couldnt_find_an_account_with_that_email_address": "عذرًا، لم نتمكن من العثور على حساب باستخدام عنوان البريد الإلكتروني هذا"
+    "Sorry_we_couldnt_find_an_account_with_that_email_address": "عذرًا، لم نتمكن من العثور على حساب باستخدام عنوان البريد الإلكتروني هذا",
+    "Good_morning": "صباح الخير !..",
+    "Look_for": "ابحث عن.......",
+    "Eid_offers": "عروض العيد",
+    "discount": "خصم 25%",
+    "Shop_now": "تسوق الان",
+    "best_seller": "الأكثر مبيعًا",
+    "More": "المزيد",
+    "Main": "الرئيسية",
+    "straw_perry": "فراولة",
+    "pound": "جنيه",
+    "kilo": "الكيلو",
+    "Products": "المنتجات",
+    "my_account": "حسابي",
+    "Shopping_basket": "سلة التسوق"
 }

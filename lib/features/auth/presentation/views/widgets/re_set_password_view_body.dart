@@ -2,7 +2,7 @@ import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/auth/presentation/cubits/password_cubit/password_cubit.dart';
+import 'package:e_commerce_app/features/auth/presentation/cubits/re_set_password_cubit/re_set_password_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/email_field.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -10,12 +10,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class PasswordViewBody extends StatelessWidget {
-  const PasswordViewBody({super.key});
+class ReSetPasswordViewBody extends StatelessWidget {
+  const ReSetPasswordViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    PasswordCubit passwordCubit = context.read<PasswordCubit>();
+    ReSetPasswordCubit passwordCubit = context.read<ReSetPasswordCubit>();
     return Form(
       key: passwordCubit.formKey,
       child: SymetricPadding(

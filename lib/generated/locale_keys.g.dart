@@ -70,5 +70,19 @@ abstract class  LocaleKeys {
   static const we_have_already_sent_a_message_to_your_email_address = 'we_have_already_sent_a_message_to_your_email_address';
   static const please_re_authenticate_by_logging_in_again_to_perform_this_action = 'please_re_authenticate_by_logging_in_again_to_perform_this_action';
   static const Sorry_we_couldnt_find_an_account_with_that_email_address = 'Sorry_we_couldnt_find_an_account_with_that_email_address';
+  static const Good_morning = 'Good_morning';
+  static const Look_for = 'Look_for';
+  static const Eid_offers = 'Eid_offers';
+  static const discount = 'discount';
+  static const Shop_now = 'Shop_now';
+  static const best_seller = 'best_seller';
+  static const More = 'More';
+  static const Main = 'Main';
+  static const straw_perry = 'straw_perry';
+  static const pound = 'pound';
+  static const kilo = 'kilo';
+  static const Products = 'Products';
+  static const my_account = 'my_account';
+  static const Shopping_basket = 'Shopping_basket';
 
 }

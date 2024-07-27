@@ -67,5 +67,19 @@
     "invalid_phone_number": "Invalid phone number",
     "we_have_already_sent_a_message_to_your_email_address": "We have already sent a message to your email address",
     "please_re_authenticate_by_logging_in_again_to_perform_this_action": "please re-authenticate by logging in again to perform this action",
-    "Sorry_we_couldnt_find_an_account_with_that_email_address": "Sorry, we couldn't find an account with that email address"
+    "Sorry_we_couldnt_find_an_account_with_that_email_address": "Sorry, we couldn't find an account with that email address",
+    "Good_morning": "Good morning !..",
+    "Look_for": "Look for.......",
+    "Eid_offers": "Eid offers",
+    "discount": "25% discount",
+    "Shop_now": "Shop now",
+    "best_seller": "best seller",
+    "More": "More",
+    "Main": "Main",
+    "straw_perry": "Straw perry",
+    "pound": "Pound",
+    "kilo": "kilo",
+    "Products": "Products",
+    "my_account": "My account",
+    "Shopping_basket": "Shopping basket"
 }

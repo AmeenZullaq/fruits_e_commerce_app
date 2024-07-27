@@ -17,7 +17,7 @@ class ForgetPassword extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).pushNamed(
-            AppRoutes.passwordView,
+            AppRoutes.resetPasswordView,
           );
         },
         child: Text(

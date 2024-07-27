@@ -13,6 +13,10 @@ class Assets {
   /// assets/images/bottom_splah.svg
   static const String imagesBottomSplah = "assets/images/bottom_splah.svg";
 
+  /// Assets for imagesBoy
+  /// assets/images/boy.svg
+  static const String imagesBoy = "assets/images/boy.svg";
+
   /// Assets for imagesCheckDialog
   /// assets/images/check_dialog.svg
   static const String imagesCheckDialog = "assets/images/check_dialog.svg";
@@ -33,9 +37,25 @@ class Assets {
   /// assets/images/FruitBasket.svg
   static const String imagesFruitBasket = "assets/images/FruitBasket.svg";
 
+  /// Assets for imagesFruitsPng
+  /// assets/images/fruits_png.png
+  static const String imagesFruitsPng = "assets/images/fruits_png.png";
+
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
+
+  /// Assets for imagesHeart
+  /// assets/images/heart.svg
+  static const String imagesHeart = "assets/images/heart.svg";
+
+  /// Assets for imagesHome
+  /// assets/images/home.svg
+  static const String imagesHome = "assets/images/home.svg";
+
+  /// Assets for imagesHorizontaItem
+  /// assets/images/horizonta_item.svg
+  static const String imagesHorizontaItem = "assets/images/horizonta_item.svg";
 
   /// Assets for imagesLogo
   /// assets/images/logo.svg
@@ -49,6 +69,10 @@ class Assets {
   /// assets/images/onBoarding_background_yellow.svg
   static const String imagesOnBoardingBackgroundYellow = "assets/images/onBoarding_background_yellow.svg";
 
+  /// Assets for imagesPell
+  /// assets/images/pell.svg
+  static const String imagesPell = "assets/images/pell.svg";
+
   /// Assets for imagesPineapple
   /// assets/images/pineapple.svg
   static const String imagesPineapple = "assets/images/pineapple.svg";
@@ -56,5 +80,29 @@ class Assets {
   /// Assets for imagesPlant
   /// assets/images/plant.svg
   static const String imagesPlant = "assets/images/plant.svg";
+
+  /// Assets for imagesSearchNormal
+  /// assets/images/search-normal.svg
+  static const String imagesSearchNormal = "assets/images/search-normal.svg";
+
+  /// Assets for imagesSetting
+  /// assets/images/setting.svg
+  static const String imagesSetting = "assets/images/setting.svg";
+
+  /// Assets for imagesShoppingCart
+  /// assets/images/shopping-cart.svg
+  static const String imagesShoppingCart = "assets/images/shopping-cart.svg";
+
+  /// Assets for imagesStrawPerry
+  /// assets/images/straw_perry.svg
+  static const String imagesStrawPerry = "assets/images/straw_perry.svg";
+
+  /// Assets for imagesStrawPerryPng
+  /// assets/images/straw_perry_png.png
+  static const String imagesStrawPerryPng = "assets/images/straw_perry_png.png";
+
+  /// Assets for imagesUser
+  /// assets/images/user.svg
+  static const String imagesUser = "assets/images/user.svg";
 }
 

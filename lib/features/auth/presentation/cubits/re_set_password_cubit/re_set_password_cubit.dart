@@ -1,10 +1,10 @@
 import 'package:e_commerce_app/features/auth/domain/repos/auth_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-part 'password_state.dart';
+part 're_set_password_state.dart';
 
-class PasswordCubit extends Cubit<PasswordState> {
-  PasswordCubit(this.authRepo) : super(PasswordInitial());
+class ReSetPasswordCubit extends Cubit<ReSetPasswordState> {
+  ReSetPasswordCubit(this.authRepo) : super(ReSetPasswordInitial());
 
   final AuthRepo authRepo;
   final TextEditingController emailController = TextEditingController();
@@ -12,7 +12,7 @@ class PasswordCubit extends Cubit<PasswordState> {
 
   Future<void> createNewPassword() async {
     emit(
-      PasswordLoading(),
+      ReSetPasswordLoading(),
     );
     var resulte = await authRepo.createNewPassword(
       userEmail: emailController.text,
@@ -20,12 +20,12 @@ class PasswordCubit extends Cubit<PasswordState> {
     resulte.fold(
       (failure) {
         emit(
-          PasswordFailure(errMessage: failure.errMessage),
+          ReSetPasswordFailure(errMessage: failure.errMessage),
         );
       },
       (_) {
         emit(
-          PasswordSuccess(),
+          ReSetPasswordSuccess(),
         );
       },
     );
