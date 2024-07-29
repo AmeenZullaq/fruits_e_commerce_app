@@ -13,7 +13,7 @@ class EmailField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppTextFormField(
+    return CustomTextFormField(
       validator: (value) {
         return AppValidators.validateEmail(value);
       },

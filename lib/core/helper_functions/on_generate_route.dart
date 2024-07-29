@@ -2,8 +2,9 @@ import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/app_main_views.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';
-import 'package:e_commerce_app/features/home/presentation/views/best_seller_view.dart';
+import 'package:e_commerce_app/features/home/presentation/views/more_popular_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
+import 'package:e_commerce_app/features/home/presentation/views/search_view.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:e_commerce_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -37,12 +38,17 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
 
     case AppRoutes.bestSellerView:
       return MaterialPageRoute(
-        builder: (context) => const BestSellerView(),
+        builder: (context) => const MorePopularView(),
       );
 
     case AppRoutes.appMainViews:
       return MaterialPageRoute(
         builder: (context) => const AppMainViews(),
+      );
+
+    case AppRoutes.searchView:
+      return MaterialPageRoute(
+        builder: (context) => const SearchView(),
       );
 
     default:

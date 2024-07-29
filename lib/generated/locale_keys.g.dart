@@ -84,5 +84,9 @@ abstract class  LocaleKeys {
   static const Products = 'Products';
   static const my_account = 'my_account';
   static const Shopping_basket = 'Shopping_basket';
+  static const search = 'search';
+  static const There_are_no_search_results = 'There_are_no_search_results';
+  static const Sorry_this_information_is_not_available_for_the_moment = 'Sorry_this_information_is_not_available_for_the_moment';
+  static const research_results = 'research_results';
 
 }

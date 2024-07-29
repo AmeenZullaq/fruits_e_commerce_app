@@ -81,5 +81,9 @@
     "kilo": "الكيلو",
     "Products": "المنتجات",
     "my_account": "حسابي",
-    "Shopping_basket": "سلة التسوق"
+    "Shopping_basket": "سلة التسوق",
+    "search": "البحث",
+    "There_are_no_search_results": "لا يوجد نتائج بحث",
+    "Sorry_this_information_is_not_available_for_the_moment": "عفوًا... هذه المعلومات غير متوفرة للحظة",
+    "research_results": "نتائج البحث "
 }

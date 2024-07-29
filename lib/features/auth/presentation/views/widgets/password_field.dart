@@ -20,7 +20,7 @@ class _PasswordFieldState extends State<PasswordField> {
   bool obscureText = false;
   @override
   Widget build(BuildContext context) {
-    return AppTextFormField(
+    return CustomTextFormField(
       validator: (value) {
         return AppValidators.validatePassword(value);
       },
