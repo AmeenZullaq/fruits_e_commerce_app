@@ -61,6 +61,10 @@ class Assets {
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
 
+  /// Assets for imagesNotifications
+  /// assets/images/notifications.svg
+  static const String imagesNotifications = "assets/images/notifications.svg";
+
   /// Assets for imagesOnBoardingBackGroundGreen
   /// assets/images/onBoarding_backGround_green.svg
   static const String imagesOnBoardingBackGroundGreen = "assets/images/onBoarding_backGround_green.svg";

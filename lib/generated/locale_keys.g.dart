@@ -76,7 +76,7 @@ abstract class  LocaleKeys {
   static const discount = 'discount';
   static const Shop_now = 'Shop_now';
   static const best_seller = 'best_seller';
-  static const More = 'More';
+  static const more = 'more';
   static const Main = 'Main';
   static const straw_perry = 'straw_perry';
   static const pound = 'pound';
@@ -88,5 +88,12 @@ abstract class  LocaleKeys {
   static const There_are_no_search_results = 'There_are_no_search_results';
   static const Sorry_this_information_is_not_available_for_the_moment = 'Sorry_this_information_is_not_available_for_the_moment';
   static const research_results = 'research_results';
+  static const notifications = 'notifications';
+  static const n_ew = 'n_ew';
+  static const Mark_all_as_read = 'Mark_all_as_read';
+  static const Discount_on_fruit_prices_on_the_occasion = 'Discount_on_fruit_prices_on_the_occasion';
+  static const al_eid = 'al_eid';
+  static const Earlier = 'Earlier';
+  static const morning = 'morning';
 
 }

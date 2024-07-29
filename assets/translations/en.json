@@ -74,7 +74,7 @@
     "discount": "25% discount",
     "Shop_now": "Shop now",
     "best_seller": "best seller",
-    "More": "More",
+    "more": "More",
     "Main": "Main",
     "straw_perry": "Straw perry",
     "pound": "Pound",
@@ -85,5 +85,12 @@
     "search": "Search",
     "There_are_no_search_results": "There are no search results",
     "Sorry_this_information_is_not_available_for_the_moment": "Sorry...this information is not available for the moment",
-    "research_results": "research results"
+    "research_results": "research results",
+    "notifications": "Notifications",
+    "n_ew": "New",
+    "Mark_all_as_read": "Mark all as read",
+    "Discount_on_fruit_prices_on_the_occasion": "Discount on fruit prices on the occasion",
+    "al_eid": "Al_eid",
+    "Earlier": "Earlier",
+    "morning": "A.M"
 }

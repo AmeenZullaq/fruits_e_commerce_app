@@ -3,7 +3,6 @@ import 'package:e_commerce_app/core/services/bloc_observer.dart';
 import 'package:e_commerce_app/core/services/get_it_service.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/features/home/presentation/views/search_view.dart';
 import 'package:e_commerce_app/firebase_options.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -53,9 +52,8 @@ class FruitsApp extends StatelessWidget {
           supportedLocales: context.supportedLocales,
           locale: context.locale,
           debugShowCheckedModeBanner: false,
-          // onGenerateRoute: onGenerateRoute,
-          // initialRoute: AppRoutes.splashView,
-          home: SearchView(),
+          onGenerateRoute: onGenerateRoute,
+          initialRoute: AppRoutes.splashView,
           theme: ThemeData(
             fontFamily: 'Cairo',
             scaffoldBackgroundColor: const Color(0xFFFFFFFF),

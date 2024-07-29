@@ -5,6 +5,7 @@ import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart
 import 'package:e_commerce_app/features/home/presentation/views/more_popular_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/search_view.dart';
+import 'package:e_commerce_app/features/notifications/presentation/views/notifications_view.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:e_commerce_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -49,6 +50,11 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case AppRoutes.searchView:
       return MaterialPageRoute(
         builder: (context) => const SearchView(),
+      );
+
+    case AppRoutes.notificationsView:
+      return MaterialPageRoute(
+        builder: (context) => const NotificationsView(),
       );
 
     default:

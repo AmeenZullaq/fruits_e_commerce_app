@@ -63,10 +63,10 @@ class DynamicPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsetsDirectional.only(
-        top: top,
-        bottom: bottom,
-        end: end,
-        start: start,
+        top: top.h,
+        bottom: bottom.h,
+        end: end.w,
+        start: start.w,
       ),
       child: child,
     );
@@ -107,7 +107,7 @@ class EndPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsetsDirectional.only(
-        end: end,
+        end: end.w,
       ),
       child: child,
     );
@@ -127,7 +127,7 @@ class TopPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsetsDirectional.only(
-        top: top,
+        top: top.h,
       ),
       child: child,
     );
@@ -147,7 +147,7 @@ class BottomPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsetsDirectional.only(
-        bottom: bottom,
+        bottom: bottom.h,
       ),
       child: child,
     );

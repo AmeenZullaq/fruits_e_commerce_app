@@ -74,7 +74,7 @@
     "discount": "خصم 25%",
     "Shop_now": "تسوق الان",
     "best_seller": "الأكثر مبيعًا",
-    "More": "المزيد",
+    "more": "المزيد",
     "Main": "الرئيسية",
     "straw_perry": "فراولة",
     "pound": "جنيه",
@@ -85,5 +85,12 @@
     "search": "البحث",
     "There_are_no_search_results": "لا يوجد نتائج بحث",
     "Sorry_this_information_is_not_available_for_the_moment": "عفوًا... هذه المعلومات غير متوفرة للحظة",
-    "research_results": "نتائج البحث "
+    "research_results": "نتائج البحث ",
+    "notifications": "الاشعارات",
+    "n_ew": "جديد",
+    "Mark_all_as_read": "تحديد الكل مقروء",
+    "Discount_on_fruit_prices_on_the_occasion": "خصم علي اسعار الفواكه بمناسبه",
+    "al_eid": "العيد",
+    "Earlier": "في وقت سابق",
+    "morning": "صباحا"
 }

@@ -11,6 +11,7 @@ AppBar buildAppBar(
   bool isActionsShow = false,
 }) {
   return AppBar(
+    toolbarHeight: 66,
     backgroundColor: Colors.white,
     leading: isLeadingShow
         ? GestureDetector(
