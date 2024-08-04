@@ -7,17 +7,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 AppBar buildAppBar(
   context, {
   required String title,
-  bool isLeadingShow = false,
-  bool isActionsShow = false,
+  bool isArrowBackShow = false,
+  bool isNotificationsShow = false,
+  void Function()? onArrowTapped,
 }) {
   return AppBar(
-    toolbarHeight: 66,
+    forceMaterialTransparency: true,
+    toolbarHeight: 66.h,
     backgroundColor: Colors.white,
-    leading: isLeadingShow
+    leading: isArrowBackShow
         ? GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
+            onTap: onArrowTapped ??
+                () {
+                  Navigator.pop(context);
+                },
             child: Icon(
               Icons.arrow_back_ios_new,
               size: 22.sp,
@@ -32,7 +35,7 @@ AppBar buildAppBar(
         color: AppColors.gray950,
       ),
     ),
-    actions: isActionsShow
+    actions: isNotificationsShow
         ? [
             const BellNotifications(),
             SizedBox(

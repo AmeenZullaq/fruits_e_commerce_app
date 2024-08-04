@@ -9,4 +9,7 @@ abstract class AppRoutes {
   static const appMainViews = 'appMainViews';
   static const searchView = 'searchView';
   static const notificationsView = 'notificationsView';
+  static const sortedProductsView = 'sortedProductsView';
+  static const itemDetailsView = 'itemDetailsView';
+  static const cartView = 'cartView';
 }

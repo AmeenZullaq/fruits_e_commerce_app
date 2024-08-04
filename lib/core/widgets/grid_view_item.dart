@@ -1,14 +1,16 @@
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/widgets/custom_icon.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
 
-class BestSellerGridViewItem extends StatelessWidget {
-  const BestSellerGridViewItem({super.key});
+class GridViewItem extends StatelessWidget {
+  const GridViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,15 +57,8 @@ class BestSellerGridViewItem extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              CircleAvatar(
-                radius: 18.r,
-                backgroundColor: AppColors.green1_500,
-                child: const Center(
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
-                ),
+              CustomIcon(
+                onTap: () {},
               ),
             ],
           ),

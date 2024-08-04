@@ -15,8 +15,8 @@ class CustomTextFormField extends StatelessWidget {
     this.contentPadding,
     this.fillColor,
     this.prefixIcon,
-    this.readOnly,
     this.widthBorderSide,
+    this.focusNode,
   });
   final String hintText;
   final Widget? suffixIcon;
@@ -27,13 +27,13 @@ class CustomTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final Color? fillColor;
   final Widget? prefixIcon;
-  final bool? readOnly;
   final double? widthBorderSide;
+  final FocusNode? focusNode;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      readOnly: readOnly ?? false,
+      focusNode: focusNode,
       obscureText: obscureText!,
       validator: validator,
       controller: controller,

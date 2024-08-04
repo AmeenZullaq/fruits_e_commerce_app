@@ -1,9 +1,9 @@
-import 'package:e_commerce_app/features/home/presentation/views/widgets/horizontal_list_view_item.dart';
+import 'package:e_commerce_app/features/home/presentation/views/widgets/discount_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HorizontalListView extends StatelessWidget {
-  const HorizontalListView({super.key});
+class DiscountListView extends StatelessWidget {
+  const DiscountListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class HorizontalListView extends StatelessWidget {
         width: 8.w,
       ),
       itemBuilder: (context, index) {
-        return const HorizontalListViewItem();
+        return const DiscountListViewItem();
       },
     );
   }

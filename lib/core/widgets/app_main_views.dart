@@ -1,6 +1,8 @@
 import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/widgets/app_bottom_nav_bar.dart';
+import 'package:e_commerce_app/features/products/presentation/cubits/bottom_nav_cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
@@ -18,7 +20,7 @@ class _AppMainViewsState extends State<AppMainViews> {
   @override
   void initState() {
     super.initState();
-    controller = PersistentTabController(initialIndex: 0);
+    controller = PersistentTabController();
   }
 
   @override
@@ -29,15 +31,23 @@ class _AppMainViewsState extends State<AppMainViews> {
 
   @override
   Widget build(BuildContext context) {
-    return PersistentTabView.custom(
-      context,
-      controller: controller,
-      resizeToAvoidBottomInset: true,
-      screens: views,
-      itemCount: appViews.length,
-      navBarHeight: 56.h,
-      customWidget: AppBottomNavBar(
-        controller: controller,
+    return BlocProvider(
+      create: (context) => BottomNavCubit(),
+      child: BlocBuilder<BottomNavCubit, bool>(
+        builder: (context, state) {
+          return PersistentTabView.custom(
+            isVisible: state,
+            context,
+            controller: controller,
+            resizeToAvoidBottomInset: true,
+            screens: views,
+            itemCount: appViews.length,
+            navBarHeight: 56.h,
+            customWidget: AppBottomNavBar(
+              controller: controller,
+            ),
+          );
+        },
       ),
     );
   }

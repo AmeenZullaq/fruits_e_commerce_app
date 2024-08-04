@@ -31,7 +31,7 @@ void main() async {
       supportedLocales: const [Locale('ar'), Locale('en')],
       path: 'assets/translations',
       fallbackLocale: const Locale('ar'),
-      startLocale: const Locale('ar'),
+      startLocale: const Locale('en'),
       child: const FruitsApp(),
     ),
   );
@@ -63,3 +63,5 @@ class FruitsApp extends StatelessWidget {
     );
   }
 }
+
+

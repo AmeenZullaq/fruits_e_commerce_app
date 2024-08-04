@@ -7,6 +7,9 @@ import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/search_view.dart';
 import 'package:e_commerce_app/features/notifications/presentation/views/notifications_view.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:e_commerce_app/features/products/presentation/views/cart_view.dart';
+import 'package:e_commerce_app/features/products/presentation/views/item_details_view.dart';
+import 'package:e_commerce_app/features/products/presentation/views/sorted_products_view.dart';
 import 'package:e_commerce_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -55,6 +58,21 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case AppRoutes.notificationsView:
       return MaterialPageRoute(
         builder: (context) => const NotificationsView(),
+      );
+
+    case AppRoutes.sortedProductsView:
+      return MaterialPageRoute(
+        builder: (context) => const SortedProductsView(),
+      );
+
+    case AppRoutes.itemDetailsView:
+      return MaterialPageRoute(
+        builder: (context) => const ItemDetailsView(),
+      );
+
+    case AppRoutes.cartView:
+      return MaterialPageRoute(
+        builder: (context) => const CartView(),
       );
 
     default:

@@ -21,7 +21,7 @@ class ReSetPasswordView extends StatelessWidget {
         appBar: buildAppBar(
           context,
           title: LocaleKeys.Forgetting_Password.tr(),
-          isLeadingShow: true,
+          isArrowBackShow: true,
         ),
         body: const ReSetPasswordViewBodyBloc(),
       ),

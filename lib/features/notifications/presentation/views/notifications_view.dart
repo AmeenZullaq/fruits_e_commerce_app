@@ -13,8 +13,8 @@ class NotificationsView extends StatelessWidget {
       appBar: buildAppBar(
         context,
         title: LocaleKeys.notifications.tr(),
-        isActionsShow: true,
-        isLeadingShow: true,
+        isNotificationsShow: true,
+        isArrowBackShow: true,
       ),
       body: const NotificationsViewBody(),
     );

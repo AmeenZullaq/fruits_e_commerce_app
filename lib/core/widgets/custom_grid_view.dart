@@ -1,9 +1,11 @@
-import 'package:e_commerce_app/features/home/presentation/views/widgets/best_seller_grid_view_item.dart';
+import 'package:e_commerce_app/core/widgets/grid_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class BestSellerGridView extends StatelessWidget {
-  const BestSellerGridView({super.key});
+class CustomGridView extends StatelessWidget {
+  const CustomGridView({super.key, this.onItemTapped});
+
+  final void Function()? onItemTapped;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,10 @@ class BestSellerGridView extends StatelessWidget {
       ),
       itemCount: 6,
       itemBuilder: (context, index) {
-        return const BestSellerGridViewItem();
+        return GestureDetector(
+          onTap: onItemTapped,
+          child: const GridViewItem(),
+        );
       },
     );
   }
