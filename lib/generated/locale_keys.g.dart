@@ -141,5 +141,18 @@ abstract class  LocaleKeys {
   static const Watermelon = 'Watermelon';
   static const Xigua = 'Xigua';
   static const Yellow_Passion_Fruit = 'Yellow_Passion_Fruit';
+  static const Reviews = 'Reviews';
+  static const write_a_comment = 'write_a_comment';
+  static const My_account = 'My_account';
+  static const Profile = 'Profile';
+  static const Favorites = 'Favorites';
+  static const Notifications = 'Notifications';
+  static const the_language = 'the_language';
+  static const Mode = 'Mode';
+  static const Help = 'Help';
+  static const Who_are_we = 'Who_are_we';
+  static const Log_out = 'Log_out';
+  static const select_source = 'select_source';
+  static const Cancle = 'Cancle';
 
 }

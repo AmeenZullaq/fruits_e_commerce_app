@@ -19,7 +19,6 @@ class FirebaseAuthService {
       email: email,
       password: password,
     );
-    firebaseAuth.currentUser!.sendEmailVerification();
     return userCredential.user!;
   }
 

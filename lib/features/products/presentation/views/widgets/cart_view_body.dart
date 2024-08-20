@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/core/widgets/custom_button.dart';
+import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/cart_list_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/cart_view_title.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +20,20 @@ class CartViewBody extends StatelessWidget {
         SizedBox(
           height: 16.h,
         ),
-        const CartListView()
+        const CartListView(),
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height * .1,
+        ),
+        SymetricPadding(
+          horizontal: 16,
+          child: CustomButton(
+            text: 'الدفع  120جنيه',
+            onTap: () {},
+          ),
+        ),
+        SizedBox(
+          height: 16.h,
+        ),
       ],
     );
   }

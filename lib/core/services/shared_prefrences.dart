@@ -14,4 +14,12 @@ abstract class Prefs {
   static bool getBool(String key) {
     return _initState.getBool(key) ?? false;
   }
+
+  static void setStringList(String key, List<String> value) {
+    _initState.setStringList(key, value);
+  }
+
+  static List<String> getStringList(String key) {
+    return _initState.getStringList(key) ?? [];
+  }
 }

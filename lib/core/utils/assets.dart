@@ -29,6 +29,10 @@ class Assets {
   /// assets/images/calories.svg
   static const String imagesCalories = "assets/images/calories.svg";
 
+  /// Assets for imagesCamera
+  /// assets/images/Camera.svg
+  static const String imagesCamera = "assets/images/Camera.svg";
+
   /// Assets for imagesCarbonTime
   /// assets/images/carbon_time.svg
   static const String imagesCarbonTime = "assets/images/carbon_time.svg";
@@ -45,6 +49,10 @@ class Assets {
   /// assets/images/circle.svg
   static const String imagesCircle = "assets/images/circle.svg";
 
+  /// Assets for imagesDefaultHuman
+  /// assets/images/default_human.jpg
+  static const String imagesDefaultHuman = "assets/images/default_human.jpg";
+
   /// Assets for imagesEye
   /// assets/images/Eye.svg
   static const String imagesEye = "assets/images/Eye.svg";
@@ -52,6 +60,10 @@ class Assets {
   /// Assets for imagesFacebookIcon
   /// assets/images/Facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/Facebook_icon.svg";
+
+  /// Assets for imagesFavorites
+  /// assets/images/favorites.svg
+  static const String imagesFavorites = "assets/images/favorites.svg";
 
   /// Assets for imagesFruitBasket
   /// assets/images/FruitBasket.svg
@@ -61,9 +73,25 @@ class Assets {
   /// assets/images/fruits_png.png
   static const String imagesFruitsPng = "assets/images/fruits_png.png";
 
+  /// Assets for imagesGallery
+  /// assets/images/gallery.jpg
+  static const String imagesGallery = "assets/images/gallery.jpg";
+
+  /// Assets for imagesGoogleCamera11
+  /// assets/images/google_camera_11.png
+  static const String imagesGoogleCamera11 = "assets/images/google_camera_11.png";
+
+  /// Assets for imagesGoogleCamera22
+  /// assets/images/google_camera_22.png
+  static const String imagesGoogleCamera22 = "assets/images/google_camera_22.png";
+
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
+
+  /// Assets for imagesGooglePhotosIcon
+  /// assets/images/Google_Photos_icon.png
+  static const String imagesGooglePhotosIcon = "assets/images/Google_Photos_icon.png";
 
   /// Assets for imagesHeart
   /// assets/images/heart.svg
@@ -77,9 +105,29 @@ class Assets {
   /// assets/images/horizonta_item.svg
   static const String imagesHorizontaItem = "assets/images/horizonta_item.svg";
 
+  /// Assets for imagesInfoCircle
+  /// assets/images/info-circle.svg
+  static const String imagesInfoCircle = "assets/images/info-circle.svg";
+
+  /// Assets for imagesLanguage
+  /// assets/images/language.svg
+  static const String imagesLanguage = "assets/images/language.svg";
+
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
+
+  /// Assets for imagesLogout
+  /// assets/images/logout.svg
+  static const String imagesLogout = "assets/images/logout.svg";
+
+  /// Assets for imagesMode
+  /// assets/images/mode.svg
+  static const String imagesMode = "assets/images/mode.svg";
+
+  /// Assets for imagesNotificationProfile
+  /// assets/images/notification_profile.svg
+  static const String imagesNotificationProfile = "assets/images/notification_profile.svg";
 
   /// Assets for imagesNotifications
   /// assets/images/notifications.svg
@@ -137,9 +185,17 @@ class Assets {
   /// assets/images/straw_perry_png.png
   static const String imagesStrawPerryPng = "assets/images/straw_perry_png.png";
 
+  /// Assets for imagesSvgCamera
+  /// assets/images/svg_camera.svg
+  static const String imagesSvgCamera = "assets/images/svg_camera.svg";
+
   /// Assets for imagesTrash
   /// assets/images/trash.svg
   static const String imagesTrash = "assets/images/trash.svg";
+
+  /// Assets for imagesUnnamed
+  /// assets/images/unnamed.jpg
+  static const String imagesUnnamed = "assets/images/unnamed.jpg";
 
   /// Assets for imagesUser
   /// assets/images/user.svg

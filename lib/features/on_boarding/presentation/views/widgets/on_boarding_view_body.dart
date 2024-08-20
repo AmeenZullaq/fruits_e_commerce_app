@@ -43,9 +43,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(
-          height: MediaQuery.sizeOf(context).height * .8,
+        Expanded(
           child: OnBoardingPageView(
             pageController: pageController,
           ),
@@ -80,6 +80,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               text: LocaleKeys.start_now.tr(),
             ),
           ),
+        ),
+        SizedBox(
+          height: 10.h,
         ),
       ],
     );

@@ -44,6 +44,9 @@ class SortedProductsBody extends StatelessWidget {
             );
           },
         ),
+        SizedBox(
+          height: 16.h,
+        ),
       ],
     );
   }

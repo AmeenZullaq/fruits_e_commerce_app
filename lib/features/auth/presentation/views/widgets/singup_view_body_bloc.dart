@@ -15,7 +15,7 @@ class SingUpViewBodyBloc extends StatelessWidget {
       listener: (context, state) {
         if (state is SingUpSuccess) {
           Navigator.of(context).pushNamedAndRemoveUntil(
-            AppRoutes.homeView,
+            AppRoutes.appMainViews,
             (route) => false,
           );
         }

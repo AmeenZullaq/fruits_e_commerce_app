@@ -1,7 +1,5 @@
-import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/custom_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/products/presentation/cubits/bottom_nav_cubit/bottom_nav_cubit.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/Item_rating.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/item_description.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/item_details_grid_view.dart';
@@ -10,7 +8,6 @@ import 'package:e_commerce_app/features/products/presentation/views/widgets/item
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ItemDetailsViewBody extends StatelessWidget {
@@ -59,12 +56,7 @@ class ItemDetailsViewBody extends StatelessWidget {
           horizontal: 16,
           child: CustomButton(
             text: LocaleKeys.add_to_cart.tr(),
-            onTap: () {
-              context.read<BottomNavCubit>().show();
-              Navigator.of(context).pushNamed(
-                AppRoutes.cartView,
-              );
-            },
+            onTap: () {},
           ),
         ),
         SizedBox(

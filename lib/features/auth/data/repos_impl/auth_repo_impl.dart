@@ -34,7 +34,6 @@ class AuthRepoImpl extends AuthRepo {
         name: name,
         uId: user.uid,
       );
-      await firebaseAuthService.sendEmailVerification();
       await addUserData(user: userEntity);
       return right(userEntity);
     } catch (e) {

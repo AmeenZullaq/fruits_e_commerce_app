@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/constants.dart';
+import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
@@ -24,11 +25,13 @@ class SearchField extends StatefulWidget {
 class _SearchFieldState extends State<SearchField> {
   final List<String> fruits = fruitNames;
   late TextEditingController controller;
+  List<String> recentSearches = [];
 
   @override
   void initState() {
     super.initState();
     controller = TextEditingController();
+    Prefs.setStringList(kRecentSearches, recentSearches);
   }
 
   @override
@@ -72,6 +75,9 @@ class _SearchFieldState extends State<SearchField> {
       },
       onSelected: (value) {
         controller.text = value;
+        if (!recentSearches.contains(value)) {
+          recentSearches.add(value);
+        }
       },
       builder: (context, controller, focusNode) {
         return CustomTextFormField(
@@ -84,10 +90,18 @@ class _SearchFieldState extends State<SearchField> {
           fillColor: Colors.white,
           prefixIcon: SymetricPadding(
             horizontal: 13,
-            child: SvgPicture.asset(
-              width: 20.w,
-              height: 20.h,
-              Assets.imagesSearchNormal,
+            child: GestureDetector(
+              onTap: () {
+                if (controller.text.isNotEmpty &&
+                    !recentSearches.contains(controller.text)) {
+                  recentSearches.add(controller.text);
+                }
+              },
+              child: SvgPicture.asset(
+                width: 20.w,
+                height: 20.h,
+                Assets.imagesSearchNormal,
+              ),
             ),
           ),
           suffixIcon: EndPadding(

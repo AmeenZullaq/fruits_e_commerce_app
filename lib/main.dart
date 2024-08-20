@@ -20,18 +20,19 @@ void main() async {
   getItService();
   Bloc.observer = MyBlocObserver();
   await EasyLocalization.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark,
-    ),
+  SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.manual,
+    overlays: [
+      SystemUiOverlay.top,
+    ],
   );
+
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('ar'), Locale('en')],
       path: 'assets/translations',
       fallbackLocale: const Locale('ar'),
-      startLocale: const Locale('en'),
+      startLocale: const Locale('ar'),
       child: const FruitsApp(),
     ),
   );
@@ -63,5 +64,3 @@ class FruitsApp extends StatelessWidget {
     );
   }
 }
-
-

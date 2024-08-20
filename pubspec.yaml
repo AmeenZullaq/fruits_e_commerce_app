@@ -41,16 +41,17 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_facebook_auth: ^7.0.1
   flutter_screenutil: ^5.9.3
+  flutter_typeahead: ^5.2.0
   get_it: ^7.7.0
   google_nav_bar: ^5.0.6
   google_sign_in: ^6.2.1
   modal_progress_hud_nsn: ^0.5.1
+  persistent_bottom_nav_bar: ^6.2.1
   restart_app: ^1.2.1
   shared_preferences: ^2.2.3
   sign_in_with_apple: ^6.1.1
   svg_flutter: ^0.0.1
-  persistent_bottom_nav_bar: ^6.2.1
-  flutter_typeahead: ^5.2.0
+  image_picker: ^1.1.2
 dev_dependencies:
   flutter_launcher_icons: "^0.13.1"
 

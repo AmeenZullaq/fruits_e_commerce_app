@@ -40,6 +40,7 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
         ],
       ),
       child: GNav(
+        gap: 4.w,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         selectedIndex: currentIndex,
         color: AppColors.gray400,
