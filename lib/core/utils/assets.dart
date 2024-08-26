@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
   
@@ -33,6 +34,10 @@ class Assets {
   /// assets/images/Camera.svg
   static const String imagesCamera = "assets/images/Camera.svg";
 
+  /// Assets for imagesCancle
+  /// assets/images/cancle.svg
+  static const String imagesCancle = "assets/images/cancle.svg";
+
   /// Assets for imagesCarbonTime
   /// assets/images/carbon_time.svg
   static const String imagesCarbonTime = "assets/images/carbon_time.svg";
@@ -52,6 +57,10 @@ class Assets {
   /// Assets for imagesDefaultHuman
   /// assets/images/default_human.jpg
   static const String imagesDefaultHuman = "assets/images/default_human.jpg";
+
+  /// Assets for imagesEdit
+  /// assets/images/Edit.svg
+  static const String imagesEdit = "assets/images/Edit.svg";
 
   /// Assets for imagesEye
   /// assets/images/Eye.svg
@@ -189,9 +198,17 @@ class Assets {
   /// assets/images/svg_camera.svg
   static const String imagesSvgCamera = "assets/images/svg_camera.svg";
 
+  /// Assets for imagesSyrianflage
+  /// assets/images/syrianflage.png
+  static const String imagesSyrianflage = "assets/images/syrianflage.png";
+
   /// Assets for imagesTrash
   /// assets/images/trash.svg
   static const String imagesTrash = "assets/images/trash.svg";
+
+  /// Assets for imagesUnitedstate
+  /// assets/images/unitedstate.png
+  static const String imagesUnitedstate = "assets/images/unitedstate.png";
 
   /// Assets for imagesUnnamed
   /// assets/images/unnamed.jpg

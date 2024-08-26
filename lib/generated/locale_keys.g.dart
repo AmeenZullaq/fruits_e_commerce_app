@@ -154,5 +154,23 @@ abstract class  LocaleKeys {
   static const Log_out = 'Log_out';
   static const select_source = 'select_source';
   static const Cancle = 'Cancle';
+  static const Do_you_want_to_log_out = 'Do_you_want_to_log_out';
+  static const I_dont_want = 'I_dont_want';
+  static const sure = 'sure';
+  static const Personal_information = 'Personal_information';
+  static const change_password = 'change_password';
+  static const Current_password = 'Current_password';
+  static const New_Password = 'New_Password';
+  static const Confirm_the_new_password = 'Confirm_the_new_password';
+  static const Save_changes = 'Save_changes';
+  static const and_we_will_send_you_a_link_to_reset_your_password = 'and_we_will_send_you_a_link_to_reset_your_password';
+  static const who_are_we_1 = 'who_are_we_1';
+  static const who_are_we_2 = 'who_are_we_2';
+  static const who_are_we_3 = 'who_are_we_3';
+  static const who_are_we_4 = 'who_are_we_4';
+  static const who_are_we_5 = 'who_are_we_5';
+  static const select_language = 'select_language';
+  static const arabic = 'arabic';
+  static const english = 'english';
 
 }

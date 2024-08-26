@@ -5,7 +5,7 @@ import 'package:e_commerce_app/features/auth/presentation/cubits/singup_cubit/si
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/already_have_account.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/email_field.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/our_terms.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/widgets/password_field.dart';
+import 'package:e_commerce_app/core/widgets/password_field.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/user_name_field.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -46,6 +46,7 @@ class SingupViewBody extends StatelessWidget {
               ),
               PasswordField(
                 passwordController: singUpCubit.passwordController,
+                hintText: LocaleKeys.password.tr(),
               ),
               SizedBox(
                 height: 16.h,

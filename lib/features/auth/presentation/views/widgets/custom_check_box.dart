@@ -12,7 +12,7 @@ class CustomCheckBox extends StatefulWidget {
   });
 
   @override
-  State<CustomCheckBox> createState() => _CustomCheckBoxState();
+ State<CustomCheckBox> createState() => _CustomCheckBoxState();
 }
 
 class _CustomCheckBoxState extends State<CustomCheckBox> {

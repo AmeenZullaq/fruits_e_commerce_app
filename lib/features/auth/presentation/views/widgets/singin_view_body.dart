@@ -4,7 +4,7 @@ import 'package:e_commerce_app/features/auth/presentation/cubits/singin_cubit/si
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/dont_have_account.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/email_field.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/forget_password.dart';
-import 'package:e_commerce_app/features/auth/presentation/views/widgets/password_field.dart';
+import 'package:e_commerce_app/core/widgets/password_field.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/social_login_fields.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
@@ -40,6 +40,7 @@ class SinginViewBody extends StatelessWidget {
               ),
               PasswordField(
                 passwordController: singInCubit.passwordController,
+                hintText: LocaleKeys.password.tr(),
               ),
               SizedBox(
                 height: 16.h,

@@ -2,7 +2,7 @@ import 'package:e_commerce_app/core/helper_functions/on_generate_route.dart';
 import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/cart_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/products_view.dart';
-import 'package:e_commerce_app/features/profile/presentation/views/profile_view.dart';
+import 'package:e_commerce_app/features/profile/presentation/views/account_view.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
@@ -29,7 +29,7 @@ const List<CustomNavBarScreen> views = [
     ),
   ),
   CustomNavBarScreen(
-    screen: ProfileView(),
+    screen: AccountView(),
     routeAndNavigatorSettings: RouteAndNavigatorSettings(
       onGenerateRoute: onGenerateRoute,
     ),

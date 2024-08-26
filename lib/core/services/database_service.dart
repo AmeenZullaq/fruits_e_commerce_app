@@ -10,4 +10,9 @@ abstract class DatabaseService {
     required String collectionPath,
     required String docPath,
   });
+
+  Future<void> deleteData({
+    required String collectionPath,
+    required String docPath,
+  });
 }

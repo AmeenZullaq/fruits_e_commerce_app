@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/app_main_views.dart';
+import 'package:e_commerce_app/features/auth/presentation/views/re_set_password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/more_popular_view.dart';
@@ -10,6 +11,10 @@ import 'package:e_commerce_app/features/on_boarding/presentation/views/on_boardi
 import 'package:e_commerce_app/features/products/presentation/views/cart_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/item_details_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/sorted_products_view.dart';
+import 'package:e_commerce_app/features/profile/presentation/views/account_view.dart';
+import 'package:e_commerce_app/features/profile/presentation/views/language_view.dart';
+import 'package:e_commerce_app/features/profile/presentation/views/profile_view.dart';
+import 'package:e_commerce_app/features/profile/presentation/views/who_are_we_view.dart';
 import 'package:e_commerce_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +38,11 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case AppRoutes.singupView:
       return MaterialPageRoute(
         builder: (context) => const SingupView(),
+      );
+
+    case AppRoutes.resetPasswordView:
+      return MaterialPageRoute(
+        builder: (context) => const ReSetPasswordView(),
       );
 
     case AppRoutes.homeView:
@@ -73,6 +83,26 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case AppRoutes.cartView:
       return MaterialPageRoute(
         builder: (context) => const CartView(),
+      );
+
+    case AppRoutes.accountView:
+      return MaterialPageRoute(
+        builder: (context) => const AccountView(),
+      );
+
+    case AppRoutes.profileView:
+      return MaterialPageRoute(
+        builder: (context) => const ProfileView(),
+      );
+
+    case AppRoutes.whoAreWeView:
+      return MaterialPageRoute(
+        builder: (context) => const WhoAreWeView(),
+      );
+
+    case AppRoutes.languageView:
+      return MaterialPageRoute(
+        builder: (context) => const LanguageView(),
       );
 
     default:

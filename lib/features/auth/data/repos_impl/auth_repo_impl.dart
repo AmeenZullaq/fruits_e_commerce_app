@@ -148,23 +148,14 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, Null>> createNewPassword({
+  Future<Either<Failure, Null>> sendPasswordResetEmail({
     required String userEmail,
   }) async {
     try {
-      if (firebaseAuthService.isUserLoggedIn()) {
-        firebaseAuthService.reSetPassword(
-          userEmail: userEmail,
-        );
-        //
-        return right(null);
-      }
-      return left(
-        ServerFailure(
-          errMessage: LocaleKeys
-              .Sorry_we_couldnt_find_an_account_with_that_email_address.tr(),
-        ),
+      firebaseAuthService.sendPasswordResetEmail(
+        userEmail: userEmail,
       );
+      return right(null);
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(

@@ -36,4 +36,10 @@ class SingUpCubit extends Cubit<SingUpState> {
       },
     );
   }
+
+  update(SingUpState state) {
+    if (!isClosed) {
+      emit(state);
+    }
+  }
 }

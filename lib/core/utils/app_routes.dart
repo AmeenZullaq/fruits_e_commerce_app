@@ -12,4 +12,8 @@ abstract class AppRoutes {
   static const sortedProductsView = 'sortedProductsView';
   static const itemDetailsView = 'itemDetailsView';
   static const cartView = 'cartView';
+  static const accountView = 'accountView';
+  static const profileView = 'profileView';
+  static const whoAreWeView = 'whoAreWeView';
+  static const languageView = 'languageView';
 }

@@ -5,17 +5,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
 
-class ProfileCustomRow extends StatelessWidget {
-  const ProfileCustomRow({
+class AccountCustomRow extends StatelessWidget {
+  const AccountCustomRow({
     super.key,
     required this.text,
     required this.iconName,
     this.suffixWidget,
+    this.onTap,
   });
 
   final String text;
   final String iconName;
   final Widget? suffixWidget;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class ProfileCustomRow extends StatelessWidget {
               const Spacer(),
               suffixWidget ??
                   GestureDetector(
-                    onTap: () {},
+                    onTap: onTap,
                     child: Transform.rotate(
                       angle: 3.14159,
                       child: Icon(

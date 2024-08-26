@@ -21,4 +21,12 @@ class FirestoreService implements DatabaseService {
     var data = await firestore.collection(collectionPath).doc(docPath).get();
     return UserModel.fromJson(data.data() as Map<String, dynamic>);
   }
+
+  @override
+  Future<void> deleteData({
+    required String collectionPath,
+    required String docPath,
+  }) async {
+    await firestore.collection(collectionPath).doc(docPath).delete();
+  }
 }

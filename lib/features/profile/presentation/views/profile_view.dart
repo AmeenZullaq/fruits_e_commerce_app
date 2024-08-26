@@ -8,7 +8,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SingleChildScrollView(
-        child: ProfileViewBody() ,
+        child: ProfileViewBody(),
       ),
     );
   }

@@ -15,9 +15,9 @@ class ReSetPasswordViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ReSetPasswordCubit passwordCubit = context.read<ReSetPasswordCubit>();
+    ReSetPasswordCubit resetPasswordCubit = context.read<ReSetPasswordCubit>();
     return Form(
-      key: passwordCubit.formKey,
+      key: resetPasswordCubit.formKey,
       child: SymetricPadding(
         horizontal: 16,
         child: Column(
@@ -32,11 +32,18 @@ class ReSetPasswordViewBody extends StatelessWidget {
                 color: AppColors.gray600,
               ),
             ),
+            Text(
+              LocaleKeys.and_we_will_send_you_a_link_to_reset_your_password
+                  .tr(),
+              style: AppTextStyles.bold16.copyWith(
+                color: AppColors.gray600,
+              ),
+            ),
             SizedBox(
               height: 30.h,
             ),
             EmailField(
-              emailController: passwordCubit.emailController,
+              emailController: resetPasswordCubit.emailController,
             ),
             SizedBox(
               height: 30.h,
@@ -44,8 +51,8 @@ class ReSetPasswordViewBody extends StatelessWidget {
             AppButton(
               text: LocaleKeys.forget_password.tr(),
               onTap: () async {
-                if (passwordCubit.formKey.currentState!.validate()) {
-                  await passwordCubit.createNewPassword();
+                if (resetPasswordCubit.formKey.currentState!.validate()) {
+                  await resetPasswordCubit.createNewPassword();
                 }
               },
             ),

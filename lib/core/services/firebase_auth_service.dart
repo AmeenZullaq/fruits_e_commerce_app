@@ -115,7 +115,7 @@ class FirebaseAuthService {
   }
 
   // ******************** createNewPassword ********************
-  Future<void> reSetPassword({
+  Future<void> sendPasswordResetEmail({
     required String userEmail,
   }) async {
     await firebaseAuth.sendPasswordResetEmail(email: userEmail);
@@ -136,5 +136,9 @@ class FirebaseAuthService {
 
   bool isEmailVerified() {
     return firebaseAuth.currentUser!.emailVerified;
+  }
+
+  Future<void> logOut() async {
+    await firebaseAuth.signOut();
   }
 }

@@ -14,7 +14,7 @@ class ReSetPasswordCubit extends Cubit<ReSetPasswordState> {
     emit(
       ReSetPasswordLoading(),
     );
-    var resulte = await authRepo.createNewPassword(
+    var resulte = await authRepo.sendPasswordResetEmail(
       userEmail: emailController.text,
     );
     resulte.fold(
@@ -23,7 +23,7 @@ class ReSetPasswordCubit extends Cubit<ReSetPasswordState> {
           ReSetPasswordFailure(errMessage: failure.errMessage),
         );
       },
-      (_) {
+      (r) {
         emit(
           ReSetPasswordSuccess(),
         );
