@@ -23,24 +23,20 @@ class AuthRepoImpl extends AuthRepo {
     required String password,
     required String name,
   }) async {
-    User? user;
+    User? userCred;
     try {
-      user = await firebaseAuthService.createUserWithEmailAndPassword(
+      userCred = await firebaseAuthService.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-      UserEntity userEntity = UserEntity(
-        email: email,
-        name: name,
-        uId: user.uid,
-      );
-      await addUserData(user: userEntity);
-      return right(userEntity);
+      final user = UserModel.fromAuthFirebase(userCred);
+      await addUserData(user: user);
+      return right(user);
     } catch (e) {
-      await deleteUser(user);
+      await deleteUser(userCred);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromAuthFirebase(e),
+          ServerFailure.fromFirebase(e),
         );
       }
       return left(
@@ -67,7 +63,7 @@ class AuthRepoImpl extends AuthRepo {
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromAuthFirebase(e),
+          ServerFailure.fromFirebase(e),
         );
       }
       return left(
@@ -90,7 +86,7 @@ class AuthRepoImpl extends AuthRepo {
       await deleteUser(user);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromAuthFirebase(e),
+          ServerFailure.fromFirebase(e),
         );
       }
       return left(
@@ -113,7 +109,7 @@ class AuthRepoImpl extends AuthRepo {
       await deleteUser(user);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromAuthFirebase(e),
+          ServerFailure.fromFirebase(e),
         );
       }
       return left(
@@ -136,7 +132,7 @@ class AuthRepoImpl extends AuthRepo {
       await deleteUser(user);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromAuthFirebase(e),
+          ServerFailure.fromFirebase(e),
         );
       }
       return left(
@@ -159,7 +155,7 @@ class AuthRepoImpl extends AuthRepo {
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromAuthFirebase(e),
+          ServerFailure.fromFirebase(e),
         );
       }
       return left(

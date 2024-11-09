@@ -39,85 +39,8 @@ class _UserImageState extends State<UserImage> {
               context.read<BottomNavCubit>().hide();
               showingBottomSheet(
                 context,
-                widget: SizedBox(
-                  height: MediaQuery.sizeOf(context).height * .3,
-                  child: Column(
-                    children: [
-                      Text(
-                        LocaleKeys.select_source.tr(),
-                        style: AppTextStyles.bold14.copyWith(
-                          color: AppColors.gray950,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      const Divider(
-                        color: AppColors.gray100,
-                      ),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      SymetricPadding(
-                        horizontal: 30,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            GestureDetector(
-                              onTap: () async {
-                                fileImage.value = await pickImage(
-                                  ImageSource.camera,
-                                );
-                                setState(() {
-                                  Navigator.of(context).pop();
-                                });
-                              },
-                              child: Image.asset(
-                                height: 60.h,
-                                width: 60.w,
-                                Assets.imagesGoogleCamera11,
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () async {
-                                fileImage.value = await pickImage(
-                                  ImageSource.camera,
-                                );
-                                setState(() {
-                                  Navigator.of(context).pop();
-                                });
-                              },
-                              child: Image.asset(
-                                height: 60.h,
-                                width: 60.w,
-                                Assets.imagesGooglePhotosIcon,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      const Divider(
-                        color: AppColors.gray100,
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text(
-                          LocaleKeys.Cancle.tr(),
-                          style: AppTextStyles.bold14.copyWith(
-                            color: AppColors.gray950,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                widget: UserImageBottomSheet(
+                  fileImage: fileImage,
                 ),
               );
             },
@@ -125,6 +48,124 @@ class _UserImageState extends State<UserImage> {
           ),
         ),
       ],
+    );
+  }
+}
+
+class UserImageBottomSheet extends StatefulWidget {
+  const UserImageBottomSheet({
+    super.key,
+    required this.fileImage,
+  });
+
+  final ValueNotifier<File?> fileImage;
+
+  @override
+  State<UserImageBottomSheet> createState() => _UserImageBottomSheetState();
+}
+
+class _UserImageBottomSheetState extends State<UserImageBottomSheet> {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.sizeOf(context).height * .3,
+      child: Column(
+        children: [
+          Text(
+            LocaleKeys.select_source.tr(),
+            style: AppTextStyles.bold14.copyWith(
+              color: AppColors.gray950,
+            ),
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          const Divider(
+            color: AppColors.gray100,
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          SymetricPadding(
+            horizontal: 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                  onTap: () async {
+                    widget.fileImage.value = await pickImage(
+                      ImageSource.camera,
+                    );
+                    setState(() {
+                      Navigator.of(context).pop();
+                    });
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        height: 60.h,
+                        width: 60.w,
+                        Assets.imagesGoogleCamera11,
+                      ),
+                      Text(
+                        LocaleKeys.camera.tr(),
+                        style: AppTextStyles.bold14.copyWith(
+                          color: AppColors.gray950,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () async {
+                    widget.fileImage.value = await pickImage(
+                      ImageSource.camera,
+                    );
+                    setState(() {
+                      Navigator.of(context).pop();
+                    });
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        height: 60.h,
+                        width: 60.w,
+                        Assets.imagesGooglePhotosIcon,
+                      ),
+                      Text(
+                        LocaleKeys.gallery.tr(),
+                        style: AppTextStyles.bold14.copyWith(
+                          color: AppColors.gray950,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          const Divider(
+            color: AppColors.gray100,
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: Text(
+              LocaleKeys.Cancle.tr(),
+              style: AppTextStyles.bold14.copyWith(
+                color: AppColors.gray950,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

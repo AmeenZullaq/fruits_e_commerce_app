@@ -172,5 +172,7 @@ abstract class  LocaleKeys {
   static const select_language = 'select_language';
   static const arabic = 'arabic';
   static const english = 'english';
+  static const gallery = 'gallery';
+  static const camera = 'camera';
 
 }

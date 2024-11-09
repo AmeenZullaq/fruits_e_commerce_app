@@ -20,9 +20,6 @@ void getItService() {
     ),
   );
 
-  getIt.registerSingleton<ProfileRepoImpl>(
-    ProfileRepoImpl(
-      getIt.get<FirebaseAuthService>(),
-    ),
-  );
+
+  
 }

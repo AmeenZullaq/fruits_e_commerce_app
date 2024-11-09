@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 class ServerFailure extends Failure {
   ServerFailure({required super.errMessage});
 
-  factory ServerFailure.fromAuthFirebase(FirebaseAuthException e) {
+  factory ServerFailure.fromFirebase(FirebaseAuthException e) {
     switch (e.code) {
       case 'weak-password':
         return ServerFailure(
