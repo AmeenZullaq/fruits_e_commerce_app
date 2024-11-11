@@ -58,6 +58,11 @@ class FruitsApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'Cairo',
             scaffoldBackgroundColor: const Color(0xFFFFFFFF),
+            pageTransitionsTheme: const PageTransitionsTheme(
+              builders: {
+                TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+              },
+            ),
           ),
         );
       },

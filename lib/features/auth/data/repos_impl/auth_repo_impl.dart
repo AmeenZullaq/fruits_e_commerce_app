@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/server_failure.dart';
+import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
-import 'package:e_commerce_app/core/services/firestore_service.dart';
 import 'package:e_commerce_app/core/utils/endoints.dart';
 import 'package:e_commerce_app/features/auth/data/models/user_model.dart';
 import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
@@ -13,9 +13,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;
-  final FirestoreService firestoreService;
+  final DatabaseService dataBaseService;
 
-  AuthRepoImpl(this.firebaseAuthService, this.firestoreService);
+  AuthRepoImpl(this.firebaseAuthService, this.dataBaseService);
 
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword({
@@ -33,7 +33,7 @@ class AuthRepoImpl extends AuthRepo {
       await addUserData(user: user);
       return right(user);
     } catch (e) {
-      await deleteUser(userCred);
+      deleteUser(userCred);
       if (e is FirebaseAuthException) {
         return left(
           ServerFailure.fromFirebase(e),
@@ -76,14 +76,14 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> singInWithGoogle() async {
-    User? user;
+    User? userCreed;
     try {
-      user = await firebaseAuthService.singInWithGoogle();
-      return right(
-        UserModel.fromAuthFirebase(user),
-      );
+      userCreed = await firebaseAuthService.singInWithGoogle();
+      final user = UserModel.fromAuthFirebase(userCreed);
+      await addUserData(user: user);
+      return right(user);
     } catch (e) {
-      await deleteUser(user);
+      deleteUser(userCreed);
       if (e is FirebaseAuthException) {
         return left(
           ServerFailure.fromFirebase(e),
@@ -99,14 +99,14 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> singInWithFacebook() async {
-    User? user;
+    User? userCreed;
     try {
-      user = await firebaseAuthService.singInWithFacebook();
-      return right(
-        UserModel.fromAuthFirebase(user),
-      );
+      userCreed = await firebaseAuthService.singInWithGoogle();
+      final user = UserModel.fromAuthFirebase(userCreed);
+      await addUserData(user: user);
+      return right(user);
     } catch (e) {
-      await deleteUser(user);
+      deleteUser(userCreed);
       if (e is FirebaseAuthException) {
         return left(
           ServerFailure.fromFirebase(e),
@@ -122,14 +122,14 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> singInWithApple() async {
-    User? user;
+    User? userCreed;
     try {
-      user = await firebaseAuthService.signInWithApple();
-      return right(
-        UserModel.fromAuthFirebase(user),
-      );
+      userCreed = await firebaseAuthService.singInWithGoogle();
+      final user = UserModel.fromAuthFirebase(userCreed);
+      await addUserData(user: user);
+      return right(user);
     } catch (e) {
-      await deleteUser(user);
+      deleteUser(userCreed);
       if (e is FirebaseAuthException) {
         return left(
           ServerFailure.fromFirebase(e),
@@ -166,9 +166,10 @@ class AuthRepoImpl extends AuthRepo {
     }
   }
 
+  @override
   Future<void> addUserData({required UserEntity user}) async {
-    firestoreService.addData(
-      collectionPath: Endpoints.users,
+    dataBaseService.addData(
+      path: Endpoints.users,
       data: user.toMap(),
     );
   }

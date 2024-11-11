@@ -11,7 +11,7 @@ class DiscountListViewItem extends StatelessWidget {
     return SvgPicture.asset(
       height: 158.h,
       width: 342.w,
-      Assets.imagesHorizontaItem,
+      Assets.imagesCarbonTime,
     );
   }
 }

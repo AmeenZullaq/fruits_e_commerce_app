@@ -36,6 +36,13 @@ class _AppMainViewsState extends State<AppMainViews> {
       child: BlocBuilder<BottomNavCubit, bool>(
         builder: (context, state) {
           return PersistentTabView.custom(
+            animationSettings: const NavBarAnimationSettings(
+              screenTransitionAnimation: ScreenTransitionAnimationSettings(
+                screenTransitionAnimationType:
+                    ScreenTransitionAnimationType.slide,
+                animateTabTransition: true,
+              ),
+            ),
             isVisible: state,
             context,
             controller: controller,

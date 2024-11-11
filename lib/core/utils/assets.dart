@@ -110,10 +110,6 @@ class Assets {
   /// assets/images/home.svg
   static const String imagesHome = "assets/images/home.svg";
 
-  /// Assets for imagesHorizontaItem
-  /// assets/images/horizonta_item.svg
-  static const String imagesHorizontaItem = "assets/images/horizonta_item.svg";
-
   /// Assets for imagesInfoCircle
   /// assets/images/info-circle.svg
   static const String imagesInfoCircle = "assets/images/info-circle.svg";
@@ -125,6 +121,10 @@ class Assets {
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
+
+  /// Assets for imagesLogo1
+  /// assets/images/logo1.svg
+  static const String imagesLogo1 = "assets/images/logo1.svg";
 
   /// Assets for imagesLogout
   /// assets/images/logout.svg

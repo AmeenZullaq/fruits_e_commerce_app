@@ -7,26 +7,26 @@ class FirestoreService implements DatabaseService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   @override
   Future<void> addData({
-    required String collectionPath,
+    required String path,
     required Map<String, dynamic> data,
   }) async {
-    await firestore.collection(collectionPath).add(data);
+    await firestore.collection(path).add(data);
   }
 
   @override
-  Future<UserEntity> getData({
-    required String collectionPath,
-    required String docPath,
+  Future<UserEntity> getUserData({
+    required String path,
+    required String uid,
   }) async {
-    var data = await firestore.collection(collectionPath).doc(docPath).get();
+    var data = await firestore.collection(path).doc(uid).get();
     return UserModel.fromJson(data.data() as Map<String, dynamic>);
   }
 
   @override
   Future<void> deleteData({
-    required String collectionPath,
+    required String path,
     required String docPath,
   }) async {
-    await firestore.collection(collectionPath).doc(docPath).delete();
+    await firestore.collection(path).doc(docPath).delete();
   }
 }
