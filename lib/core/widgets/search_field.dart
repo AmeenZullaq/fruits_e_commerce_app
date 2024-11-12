@@ -31,7 +31,7 @@ class _SearchFieldState extends State<SearchField> {
   void initState() {
     super.initState();
     controller = TextEditingController();
-    Prefs.setStringList(kRecentSearches, recentSearches);
+    SharedPrefs.setStringList(kRecentSearches, recentSearches);
   }
 
   @override

@@ -1,8 +1,11 @@
+import 'dart:convert';
 import 'package:dartz/dartz.dart';
+import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/server_failure.dart';
 import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
+import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/endoints.dart';
 import 'package:e_commerce_app/features/auth/data/models/user_model.dart';
 import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
@@ -53,13 +56,12 @@ class AuthRepoImpl extends AuthRepo {
     required String password,
   }) async {
     try {
-      User user = await firebaseAuthService.singInwithEmailAndPassword(
+      User userCred = await firebaseAuthService.singInwithEmailAndPassword(
         email: email,
         password: password,
       );
-      return right(
-        UserModel.fromAuthFirebase(user),
-      );
+      final user = await getUserData(userId: userCred.uid);
+      return right(user);
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
@@ -80,7 +82,15 @@ class AuthRepoImpl extends AuthRepo {
     try {
       userCreed = await firebaseAuthService.singInWithGoogle();
       final user = UserModel.fromAuthFirebase(userCreed);
-      await addUserData(user: user);
+      bool isExist = await dataBaseService.checkIfDataExists(
+        path: Endpoints.users,
+        docuementId: userCreed.uid,
+      );
+      if (isExist) {
+        await getUserData(userId: userCreed.uid);
+      } else {
+        await addUserData(user: user);
+      }
       return right(user);
     } catch (e) {
       deleteUser(userCreed);
@@ -170,8 +180,24 @@ class AuthRepoImpl extends AuthRepo {
   Future<void> addUserData({required UserEntity user}) async {
     dataBaseService.addData(
       path: Endpoints.users,
-      data: user.toMap(),
+      data: UserModel.fromEntity(user).toJson(),
+      documentId: user.uId,
     );
+  }
+
+  @override
+  Future<UserEntity> getUserData({required String userId}) async {
+    final userData = await dataBaseService.getData(
+      path: Endpoints.users,
+      documentId: userId,
+    );
+    return UserModel.fromJson(userData);
+  }
+
+  @override
+  Future<void> saveUserData({required UserEntity user}) async {
+    final jsonData = jsonEncode(UserModel.fromEntity(user).toJson());
+    SharedPrefs.setString(kUserData, jsonData);
   }
 
   Future<void> deleteUser(User? user) async {

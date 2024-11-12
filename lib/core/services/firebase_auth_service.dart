@@ -126,17 +126,17 @@ class FirebaseAuthService {
     await firebaseAuth.currentUser!.delete();
   }
 
-  Future<void> sendEmailVerification() async {
-    await firebaseAuth.currentUser!.sendEmailVerification();
-  }
+  // Future<void> sendEmailVerification() async {
+  //   await firebaseAuth.currentUser!.sendEmailVerification();
+  // }
 
   bool isUserLoggedIn() {
     return firebaseAuth.currentUser != null;
   }
 
-  bool isEmailVerified() {
-    return firebaseAuth.currentUser!.emailVerified;
-  }
+  // bool isEmailVerified() {
+  //   return firebaseAuth.currentUser!.emailVerified;
+  // }
 
   Future<void> logOut() async {
     await firebaseAuth.signOut();

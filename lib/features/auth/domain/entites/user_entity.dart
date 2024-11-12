@@ -8,12 +8,4 @@ class UserEntity {
     required this.name,
     required this.uId,
   });
-
-  toMap() {
-    return {
-      'name': name,
-      'email': email,
-      'uId': uId,
-    };
-  }
 }

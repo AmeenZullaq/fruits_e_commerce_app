@@ -74,6 +74,10 @@ class Assets {
   /// assets/images/favorites.svg
   static const String imagesFavorites = "assets/images/favorites.svg";
 
+  /// Assets for imagesFeaturedItemBackground
+  /// assets/images/featured_item_background.svg
+  static const String imagesFeaturedItemBackground = "assets/images/featured_item_background.svg";
+
   /// Assets for imagesFruitBasket
   /// assets/images/FruitBasket.svg
   static const String imagesFruitBasket = "assets/images/FruitBasket.svg";

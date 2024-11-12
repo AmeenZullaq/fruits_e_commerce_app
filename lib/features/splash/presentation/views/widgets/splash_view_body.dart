@@ -1,8 +1,8 @@
 import 'package:e_commerce_app/constants.dart';
+import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -24,12 +24,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        bool isOnBoardingViewSeen = Prefs.getBool(kIsOnBoardingViewSeen);
+        bool isOnBoardingViewSeen = SharedPrefs.getBool(kIsOnBoardingViewSeen);
+        bool isLoggedIn = FirebaseAuthService().isUserLoggedIn();
         if (isOnBoardingViewSeen) {
-          if (FirebaseAuth.instance.currentUser != null) {
+          if (isLoggedIn) {
             Navigator.of(context).pushReplacementNamed(AppRoutes.appMainViews);
-          }
-          if (FirebaseAuth.instance.currentUser == null) {
+          } else {
             Navigator.of(context).pushReplacementNamed(AppRoutes.singInView);
           }
         } else {

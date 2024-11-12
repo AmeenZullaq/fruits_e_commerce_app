@@ -4,7 +4,7 @@ import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/core/widgets/custom_grid_view.dart';
 import 'package:e_commerce_app/core/widgets/best_seller_text.dart';
 import 'package:e_commerce_app/features/home/presentation/views/widgets/home_app_bar.dart';
-import 'package:e_commerce_app/features/home/presentation/views/widgets/discount_list_view.dart';
+import 'package:e_commerce_app/features/home/presentation/views/widgets/featured_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
@@ -24,22 +24,22 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(
             height: 16.h,
           ),
-           SymetricPadding(
+          SymetricPadding(
             horizontal: 16,
-            child:       GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushNamed(
-                AppRoutes.searchView,
-              );
-            },
-            child: Row(
-              children: [
-                SvgPicture.asset(
-                  Assets.imagesSearchNormal,
-                ),
-              ],
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.searchView,
+                );
+              },
+              child: Row(
+                children: [
+                  SvgPicture.asset(
+                    Assets.imagesSearchNormal,
+                  ),
+                ],
+              ),
             ),
-          ),
             // child: LookingForField(
             //   readOnly: true,
             // ),
@@ -49,7 +49,7 @@ class HomeViewBody extends StatelessWidget {
           ),
           SizedBox(
             height: 158.h,
-            child: const DiscountListView(),
+            child: const FeaturedListView(),
           ),
           SizedBox(
             height: 16.h,

@@ -1,18 +1,19 @@
-import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
-
 abstract class DatabaseService {
   Future<void> addData({
-    required String path,
+    required String path, // collection
     required Map<String, dynamic> data,
+    String? documentId,
   });
 
-  Future<UserEntity> getUserData({
+  Future<Map<String, dynamic>> getData({
     required String path,
-    required String uid,
+    required String documentId,
   });
 
-  Future<void> deleteData({
+  Future<bool> checkIfDataExists({
     required String path,
-    required String docPath,
+    required String docuementId,
   });
+
+
 }

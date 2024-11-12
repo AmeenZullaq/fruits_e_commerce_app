@@ -72,7 +72,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             horizontal: 16,
             child: AppButton(
               onTap: () {
-                Prefs.setBool(kIsOnBoardingViewSeen, true);
+                SharedPrefs.setBool(kIsOnBoardingViewSeen, true);
                 Navigator.of(context).pushReplacementNamed(
                   AppRoutes.singInView,
                 );

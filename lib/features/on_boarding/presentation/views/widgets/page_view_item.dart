@@ -61,7 +61,7 @@ class PageViewItem extends StatelessWidget {
           visible: isVisible,
           child: GestureDetector(
             onTap: () {
-              Prefs.setBool(kIsOnBoardingViewSeen, true);
+              SharedPrefs.setBool(kIsOnBoardingViewSeen, true);
               Navigator.of(context).pushReplacementNamed(
                 AppRoutes.singInView,
               );

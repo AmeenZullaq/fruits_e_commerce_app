@@ -9,6 +9,7 @@ import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 const String kRecentSearches = 'recentSearches';
 const String kIsOnBoardingViewSeen = 'kIsOnBoardingViewSeen';
+const String kUserData = 'userData';
 const List<CustomNavBarScreen> views = [
   CustomNavBarScreen(
     screen: HomeView(),
