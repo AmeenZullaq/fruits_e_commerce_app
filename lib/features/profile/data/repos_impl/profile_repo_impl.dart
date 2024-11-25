@@ -24,7 +24,7 @@ class ProfileRepoImpl extends ProfileRepo {
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(

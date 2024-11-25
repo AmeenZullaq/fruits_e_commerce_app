@@ -39,7 +39,7 @@ class AuthRepoImpl extends AuthRepo {
       deleteUser(userCred);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(
@@ -65,7 +65,7 @@ class AuthRepoImpl extends AuthRepo {
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(
@@ -96,7 +96,7 @@ class AuthRepoImpl extends AuthRepo {
       deleteUser(userCreed);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(
@@ -119,7 +119,7 @@ class AuthRepoImpl extends AuthRepo {
       deleteUser(userCreed);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(
@@ -142,7 +142,7 @@ class AuthRepoImpl extends AuthRepo {
       deleteUser(userCreed);
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(
@@ -165,7 +165,7 @@ class AuthRepoImpl extends AuthRepo {
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
-          ServerFailure.fromFirebase(e),
+          ServerFailure.fromAuthFirebase(e),
         );
       }
       return left(

@@ -11,3 +11,17 @@ class FirebaseStorageService {
     return url;
   }
 }
+
+
+  // final storageRef = FirebaseStorage.instance.ref();
+  // @override
+  // Future<String> uploadFile({required File file, required String path}) async {
+  //   // get the name of the file.
+  //   String fileName = basename(file.path);
+  //   // get the extension of the file, like png.
+  //   String fileExtension = extension(file.path);
+  //   final fileRef = storageRef.child('$path/$fileName.$fileExtension');
+  //   await fileRef.putFile(file);
+  //   String fileUrl = await fileRef.getDownloadURL();
+  //   return fileUrl;
+  // }
