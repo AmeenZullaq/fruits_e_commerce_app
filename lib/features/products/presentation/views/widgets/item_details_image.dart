@@ -1,8 +1,6 @@
 import 'package:e_commerce_app/core/utils/assets.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/products/presentation/cubits/bottom_nav_cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -30,7 +28,6 @@ class ItemDetailsImage extends StatelessWidget {
             child: IconButton(
               onPressed: () {
                 Navigator.pop(context);
-                context.read<BottomNavCubit>().show();
               },
               icon: Icon(
                 Icons.arrow_back_ios_new,

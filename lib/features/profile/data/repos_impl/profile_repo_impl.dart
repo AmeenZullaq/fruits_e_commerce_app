@@ -16,25 +16,7 @@ class ProfileRepoImpl extends ProfileRepo {
   final FirebaseAuthService firebaseAuthService;
   final FirebaseStorageService firebaseStorageService;
 
-  @override
-  Future<Either<Failure, Null>> logOut() async {
-    try {
-      await firebaseAuthService.logOut();
-      return right(null);
-    } catch (e) {
-      if (e is FirebaseAuthException) {
-        return left(
-          ServerFailure.fromAuthFirebase(e),
-        );
-      }
-      return left(
-        ServerFailure(
-          errMessage: LocaleKeys.An_error_occurred_Please_try_again_later.tr(),
-        ),
-      );
-    }
-  }
-
+ 
   // @override
   // Future<Either<Failure, String>> putImage({required File imageFile}) async {
   //   try {

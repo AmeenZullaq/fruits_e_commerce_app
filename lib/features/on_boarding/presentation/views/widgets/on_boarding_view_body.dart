@@ -1,7 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/utils/app_keys.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
@@ -72,7 +72,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             horizontal: 16,
             child: AppButton(
               onTap: () {
-                SharedPrefs.setBool(kIsOnBoardingViewSeen, true);
+                SharedPrefs.setBool(AppKeys.isOnBoardingViewSeen, true);
                 Navigator.of(context).pushReplacementNamed(
                   AppRoutes.singInView,
                 );

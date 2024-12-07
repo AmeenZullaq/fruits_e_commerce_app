@@ -2,6 +2,7 @@ import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/utils/app_keys.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
 import 'package:e_commerce_app/core/widgets/custom_text_form_field.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
@@ -31,7 +32,7 @@ class _SearchFieldState extends State<SearchField> {
   void initState() {
     super.initState();
     controller = TextEditingController();
-    SharedPrefs.setStringList(kRecentSearches, recentSearches);
+    SharedPrefs.setStringList(AppKeys.recentSearches, recentSearches);
   }
 
   @override

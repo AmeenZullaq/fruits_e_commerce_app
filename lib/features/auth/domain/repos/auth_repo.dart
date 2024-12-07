@@ -14,14 +14,14 @@ abstract class AuthRepo {
     required String password,
   });
 
-  Future<Either<Failure, Null>> sendPasswordResetEmail({
+  Future<Either<Failure, void>> sendPasswordResetEmail({
     required String userEmail,
   });
 
   Future<Either<Failure, UserEntity>> singInWithGoogle();
 
   Future<void> addUserData({required UserEntity user});
-  
+
   Future<void> saveUserData({required UserEntity user});
 
   Future<UserEntity> getUserData({required String userId});
@@ -29,4 +29,5 @@ abstract class AuthRepo {
   Future<Either<Failure, UserEntity>> singInWithFacebook();
 
   Future<Either<Failure, UserEntity>> singInWithApple();
+  Future<Either<Failure, void>> logOut();
 }

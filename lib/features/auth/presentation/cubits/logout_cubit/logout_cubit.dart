@@ -1,17 +1,17 @@
-import 'package:e_commerce_app/features/profile/domain/repos/profile_repo.dart';
+import 'package:e_commerce_app/features/auth/domain/repos/auth_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'logout_state.dart';
 
 class LogoutCubit extends Cubit<LogoutState> {
-  LogoutCubit(this.profileRepo) : super(LogoutInitial());
+  LogoutCubit(this.authRepo) : super(LogoutInitial());
 
-  final ProfileRepo profileRepo;
+  final AuthRepo authRepo;
 
   Future<void> logOut() async {
     emit(
       LogoutLoading(),
     );
-    var resulte = await profileRepo.logOut();
+    var resulte = await authRepo.logOut();
     resulte.fold(
       (failure) {
         emit(

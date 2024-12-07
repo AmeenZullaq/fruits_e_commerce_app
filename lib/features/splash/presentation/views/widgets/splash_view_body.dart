@@ -1,6 +1,6 @@
-import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
+import 'package:e_commerce_app/core/utils/app_keys.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +24,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        bool isOnBoardingViewSeen = SharedPrefs.getBool(kIsOnBoardingViewSeen);
+        bool isOnBoardingViewSeen = SharedPrefs.getBool(AppKeys.isOnBoardingViewSeen);
         bool isLoggedIn = FirebaseAuthService().isUserLoggedIn();
         if (isOnBoardingViewSeen) {
           if (isLoggedIn) {

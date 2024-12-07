@@ -12,11 +12,11 @@ class NavCircleAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      radius: 15.r,
+      radius: 17.r,
       backgroundColor: AppColors.green1_500,
       child: Icon(
         icon,
-        size: 20.sp,
+        size: 24.sp,
         color: Colors.white,
       ),
     );

@@ -1,6 +1,6 @@
-import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/utils/app_keys.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
@@ -61,7 +61,7 @@ class PageViewItem extends StatelessWidget {
           visible: isVisible,
           child: GestureDetector(
             onTap: () {
-              SharedPrefs.setBool(kIsOnBoardingViewSeen, true);
+              SharedPrefs.setBool(AppKeys.isOnBoardingViewSeen, true);
               Navigator.of(context).pushReplacementNamed(
                 AppRoutes.singInView,
               );

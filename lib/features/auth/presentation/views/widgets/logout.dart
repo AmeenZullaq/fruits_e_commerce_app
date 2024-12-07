@@ -1,11 +1,10 @@
-import 'package:e_commerce_app/core/services/get_it_service.dart';
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
-import 'package:e_commerce_app/features/profile/data/repos_impl/profile_repo_impl.dart';
-import 'package:e_commerce_app/features/profile/presentation/cubits/logout_cubit/logout_cubit.dart';
-import 'package:e_commerce_app/features/profile/presentation/views/widgets/logout_dialog_bloc.dart';
+import 'package:e_commerce_app/features/auth/presentation/cubits/logout_cubit/logout_cubit.dart';
+import 'package:e_commerce_app/features/auth/presentation/views/widgets/logout_dialog_bloc.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
+import 'package:e_commerce_app/injection_container.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,7 +24,7 @@ class LogOut extends StatelessWidget {
           context: context,
           builder: (context) {
             return BlocProvider(
-              create: (context) => LogoutCubit(getIt.get<ProfileRepoImpl>()),
+              create: (context) => InjectionContainer.getIt.get<LogoutCubit>(),
               child: const LogOutDialogBloc(),
             );
           },

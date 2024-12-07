@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/features/profile/presentation/cubits/logout_cubit/logout_cubit.dart';
+import 'package:e_commerce_app/features/auth/presentation/cubits/logout_cubit/logout_cubit.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/logout_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

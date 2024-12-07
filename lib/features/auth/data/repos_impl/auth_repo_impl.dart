@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:e_commerce_app/constants.dart';
 import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/server_failure.dart';
 import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/core/services/shared_prefrences.dart';
+import 'package:e_commerce_app/core/utils/app_keys.dart';
 import 'package:e_commerce_app/core/utils/endoints.dart';
 import 'package:e_commerce_app/features/auth/data/models/user_model.dart';
 import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
@@ -154,7 +154,7 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, Null>> sendPasswordResetEmail({
+  Future<Either<Failure, void>> sendPasswordResetEmail({
     required String userEmail,
   }) async {
     try {
@@ -197,12 +197,31 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<void> saveUserData({required UserEntity user}) async {
     final jsonData = jsonEncode(UserModel.fromEntity(user).toJson());
-    SharedPrefs.setString(kUserData, jsonData);
+    SharedPrefs.setString(AppKeys.userData, jsonData);
   }
 
   Future<void> deleteUser(User? user) async {
     if (user != null) {
       await firebaseAuthService.deleteUser();
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> logOut() async {
+    try {
+      await firebaseAuthService.logOut();
+      return right(null);
+    } catch (e) {
+      if (e is FirebaseAuthException) {
+        return left(
+          ServerFailure.fromAuthFirebase(e),
+        );
+      }
+      return left(
+        ServerFailure(
+          errMessage: LocaleKeys.An_error_occurred_Please_try_again_later.tr(),
+        ),
+      );
     }
   }
 }

@@ -4,7 +4,7 @@ import 'package:e_commerce_app/core/utils/app_colors.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/profile/presentation/views/widgets/logout.dart';
+import 'package:e_commerce_app/features/auth/presentation/views/widgets/logout.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/account_config.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/account_custom_row.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/user_image.dart';

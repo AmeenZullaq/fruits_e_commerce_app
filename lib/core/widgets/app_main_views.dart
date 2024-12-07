@@ -1,10 +1,12 @@
 import 'package:e_commerce_app/constants.dart';
-import 'package:e_commerce_app/core/widgets/app_bottom_nav_bar.dart';
-import 'package:e_commerce_app/features/products/presentation/cubits/bottom_nav_cubit/bottom_nav_cubit.dart';
+import 'package:e_commerce_app/core/utils/app__text_styles.dart';
+import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/widgets/nav_circle_avatar.dart';
+import 'package:e_commerce_app/generated/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class AppMainViews extends StatefulWidget {
   const AppMainViews({super.key});
@@ -14,47 +16,84 @@ class AppMainViews extends StatefulWidget {
 }
 
 class _AppMainViewsState extends State<AppMainViews> {
-  late PersistentTabController controller;
-  final List<CustomNavBarScreen> appViews = views;
-
-  @override
-  void initState() {
-    super.initState();
-    controller = PersistentTabController();
-  }
-
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
+  final List<Widget> appMainViews = views;
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => BottomNavCubit(),
-      child: BlocBuilder<BottomNavCubit, bool>(
-        builder: (context, state) {
-          return PersistentTabView.custom(
-            animationSettings: const NavBarAnimationSettings(
-              screenTransitionAnimation: ScreenTransitionAnimationSettings(
-                screenTransitionAnimationType:
-                    ScreenTransitionAnimationType.slide,
-                animateTabTransition: true,
-              ),
+    return Scaffold(
+      body: appMainViews[currentIndex],
+      bottomNavigationBar: Container(
+        height: 70.h,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadiusDirectional.only(
+            topEnd: Radius.circular(24.r),
+            topStart: Radius.circular(24.r),
+          ),
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 7,
+              color: const Color(0xff000000).withOpacity(.10),
+              spreadRadius: 0,
+              offset: const Offset(0, -2),
             ),
-            isVisible: state,
-            context,
-            controller: controller,
-            resizeToAvoidBottomInset: true,
-            screens: views,
-            itemCount: appViews.length,
-            navBarHeight: 56.h,
-            customWidget: AppBottomNavBar(
-              controller: controller,
+          ],
+        ),
+        child: GNav(
+          gap: 4.w,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          selectedIndex: currentIndex,
+          color: AppColors.gray400,
+          iconSize: 24.sp,
+          tabBackgroundColor: const Color(0xffEEEEEE),
+          padding: EdgeInsetsDirectional.only(end: 8.w),
+          textStyle: AppTextStyles.semiBold11.copyWith(
+            color: AppColors.green1_500,
+          ),
+          onTabChange: (index) {
+            currentIndex = index;
+            setState(() {});
+          },
+          tabs: [
+            GButton(
+              icon: Icons.home_outlined,
+              text: LocaleKeys.Main.tr(),
+              leading: currentIndex == 0
+                  ? const NavCircleAvatar(
+                      icon: Icons.home,
+                    )
+                  : null,
             ),
-          );
-        },
+            GButton(
+              icon: Icons.widgets_outlined,
+              text: LocaleKeys.Products.tr(),
+              leading: currentIndex == 1
+                  ? const NavCircleAvatar(
+                      icon: Icons.widgets,
+                    )
+                  : null,
+            ),
+            GButton(
+              icon: Icons.shopping_cart_outlined,
+              text: LocaleKeys.Shopping_basket.tr(),
+              leading: currentIndex == 2
+                  ? const NavCircleAvatar(
+                      icon: Icons.shopping_cart,
+                    )
+                  : null,
+            ),
+            GButton(
+              icon: Icons.person_outline,
+              text: LocaleKeys.my_account.tr(),
+              leading: currentIndex == 3
+                  ? const NavCircleAvatar(
+                      icon: Icons.person,
+                    )
+                  : null,
+            ),
+          ],
+        ),
       ),
     );
   }
