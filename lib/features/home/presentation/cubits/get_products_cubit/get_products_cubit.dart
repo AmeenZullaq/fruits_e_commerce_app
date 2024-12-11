@@ -11,14 +11,20 @@ class GetProductsCubit extends Cubit<GetProductsState> {
   final ProductRepo productRepo;
 
   Future<void> getProducts() async {
-    emit(GetProductsLoading());
+    emit(
+      GetProductsLoading(),
+    );
     var result = await productRepo.getProducts();
     result.fold(
       (failure) {
-        emit(GetProductsFailure(errMessage: failure.errMessage));
+        emit(
+          GetProductsFailure(errMessage: failure.errMessage),
+        );
       },
       (products) {
-        emit(GetProductsSuccess(products: products));
+        emit(
+          GetProductsSuccess(products: products),
+        );
       },
     );
   }

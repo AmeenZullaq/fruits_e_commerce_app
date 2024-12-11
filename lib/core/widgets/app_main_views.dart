@@ -31,7 +31,7 @@ class _AppMainViewsState extends State<AppMainViews> {
             topEnd: Radius.circular(24.r),
             topStart: Radius.circular(24.r),
           ),
-          boxShadow: [
+          boxShadow: [ 
             BoxShadow(
               blurRadius: 7,
               color: const Color(0xff000000).withOpacity(.10),

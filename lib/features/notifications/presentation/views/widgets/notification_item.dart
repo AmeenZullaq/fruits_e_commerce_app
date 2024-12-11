@@ -7,12 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
 
-class NotificationsListViewItem extends StatelessWidget {
-  const NotificationsListViewItem({super.key});
+class NotificationItem extends StatelessWidget {
+  const NotificationItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.none,
       children: [
         Container(
           height: 78.h,
@@ -60,8 +61,7 @@ class NotificationsListViewItem extends StatelessWidget {
         ),
         PositionedDirectional(
           start: 20.w,
-          height: 8,
-
+          top: -3.r,
           child: CircleAvatar(
             radius: 4.r,
             backgroundColor: AppColors.green1_500,

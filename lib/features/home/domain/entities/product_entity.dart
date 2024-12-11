@@ -11,7 +11,6 @@ class ProductEntity {
   final num avgRating;
   final int ratingCount;
   final num sellingCount;
-
   final String description;
   final int expirationMonths;
   final bool isOrganic;

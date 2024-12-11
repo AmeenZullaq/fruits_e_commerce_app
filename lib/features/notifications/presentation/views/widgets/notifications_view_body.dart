@@ -1,5 +1,6 @@
+import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/notifications/presentation/views/widgets/new_text_widget.dart';
-import 'package:e_commerce_app/features/notifications/presentation/views/widgets/notifications_list_view.dart';
+import 'package:e_commerce_app/features/notifications/presentation/views/widgets/notification_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,7 +16,13 @@ class NotificationsViewBody extends StatelessWidget {
           SizedBox(
             height: 16.h,
           ),
-          const NotificationsListView(),
+          ...List.generate(
+            5,
+            (index) => const BottomPadding(
+              bottom: 8,
+              child: NotificationItem(),
+            ),
+          ),
         ],
       ),
     );

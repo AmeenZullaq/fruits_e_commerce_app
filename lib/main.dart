@@ -1,7 +1,9 @@
 import 'package:e_commerce_app/core/helper_functions/on_generate_route.dart';
 import 'package:e_commerce_app/core/services/bloc_observer.dart';
-import 'package:e_commerce_app/core/services/shared_prefrences.dart';
+import 'package:e_commerce_app/core/services/shared_preferences.dart';
+import 'package:e_commerce_app/core/services/supabase_storage_service.dart';
 import 'package:e_commerce_app/core/utils/app_routes.dart';
+import 'package:e_commerce_app/core/utils/app_strings.dart';
 import 'package:e_commerce_app/firebase_options.dart';
 import 'package:e_commerce_app/injection_container.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -24,6 +26,7 @@ void main() async {
     url: dotenv.env['supabase_project_url'].toString(),
     anonKey: dotenv.env['supabase_api_key'].toString(),
   );
+
   InjectionContainer.initAppDependencies();
   Bloc.observer = MyBlocObserver();
   await EasyLocalization.ensureInitialized();

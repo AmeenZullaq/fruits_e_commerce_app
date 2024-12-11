@@ -4,7 +4,7 @@ import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/server_failure.dart';
 import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
-import 'package:e_commerce_app/core/services/shared_prefrences.dart';
+import 'package:e_commerce_app/core/services/shared_preferences.dart';
 import 'package:e_commerce_app/core/utils/app_keys.dart';
 import 'package:e_commerce_app/core/utils/endoints.dart';
 import 'package:e_commerce_app/features/auth/data/models/user_model.dart';

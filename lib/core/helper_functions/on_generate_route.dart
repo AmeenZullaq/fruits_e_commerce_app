@@ -3,7 +3,7 @@ import 'package:e_commerce_app/core/widgets/app_main_views.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/re_set_password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';
-import 'package:e_commerce_app/features/home/presentation/views/more_popular_view.dart';
+import 'package:e_commerce_app/features/home/presentation/views/best_selling_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/search_view.dart';
 import 'package:e_commerce_app/features/notifications/presentation/views/notifications_view.dart';
@@ -52,7 +52,7 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
 
     case AppRoutes.bestSellerView:
       return MaterialPageRoute(
-        builder: (context) => const MorePopularView(),
+        builder: (context) => const BestSellingView(),
       );
 
     case AppRoutes.appMainViews:

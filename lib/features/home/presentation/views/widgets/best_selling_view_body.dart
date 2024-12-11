@@ -8,8 +8,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MorePopularViewBody extends StatelessWidget {
-  const MorePopularViewBody({super.key});
+class BestSellingViewBody extends StatelessWidget {
+  const BestSellingViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
