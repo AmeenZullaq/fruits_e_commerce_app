@@ -19,12 +19,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     super.initState();
     excuteNavigation();
   }
-
   void excuteNavigation() {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        bool isOnBoardingViewSeen = SharedPrefs.getBool(AppKeys.isOnBoardingViewSeen);
+        bool isOnBoardingViewSeen =
+            SharedPrefs.getBool(AppKeys.isOnBoardingViewSeen);
         bool isLoggedIn = FirebaseAuthService().isUserLoggedIn();
         if (isOnBoardingViewSeen) {
           if (isLoggedIn) {

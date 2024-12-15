@@ -1,7 +1,7 @@
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
-import 'package:e_commerce_app/core/widgets/custom_icon.dart';
+import 'package:e_commerce_app/core/widgets/custom_add_icon.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -56,7 +56,7 @@ class CartListViewItem extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    CustomIcon(
+                    CustomAddIcon(
                       raduis: 12.r,
                       iconSize: 10.sp,
                     ),
@@ -72,7 +72,7 @@ class CartListViewItem extends StatelessWidget {
                     SizedBox(
                       width: 16.w,
                     ),
-                    CustomIcon(
+                    CustomAddIcon(
                       raduis: 12.r,
                       backgroundColor: const Color(0xFFF3F5F7),
                       icon: CupertinoIcons.minus,

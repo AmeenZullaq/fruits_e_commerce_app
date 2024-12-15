@@ -1,8 +1,6 @@
 import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/core/services/firestore_service.dart';
-import 'package:e_commerce_app/core/services/storage_service.dart';
-import 'package:e_commerce_app/core/services/supabase_storage_service.dart';
 import 'package:e_commerce_app/features/auth/data/repos_impl/auth_repo_impl.dart';
 import 'package:e_commerce_app/features/auth/domain/repos/auth_repo.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/re_set_password_cubit/re_set_password_cubit.dart';
@@ -63,11 +61,6 @@ abstract class InjectionContainer {
   }
 
   static Future<void> initGetProductsDependencies() async {
-    /// Data source
-    getIt.registerLazySingleton<StorageService>(
-      () => SupabaseStorageService(),
-    );
-
     /// Repos
     getIt.registerLazySingleton<ProductRepo>(
       () => ProductRepoImpl(

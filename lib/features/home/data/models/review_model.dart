@@ -3,14 +3,14 @@ import 'package:e_commerce_app/features/home/domain/entities/review_entity.dart'
 class ReviewModel {
   final String image;
   final String name;
-  final num avgRating;
+  final num rating;
   final String date;
   final String reviewDescription;
 
   ReviewModel({
     required this.image,
     required this.name,
-    required this.avgRating,
+    required this.rating,
     required this.date,
     required this.reviewDescription,
   });
@@ -19,7 +19,7 @@ class ReviewModel {
     return ReviewModel(
       image: json['image'],
       name: json['name'],
-      avgRating: json['avgRating'],
+      rating: json['rating'],
       date: json['date'],
       reviewDescription: json['reviewDescription'],
     );
@@ -28,7 +28,7 @@ class ReviewModel {
     return ReviewEntity(
       image: image,
       name: name,
-      avgRating: avgRating,
+      rating: rating,
       date: date,
       reviewDescription: reviewDescription,
     );
@@ -38,7 +38,7 @@ class ReviewModel {
     return {
       'image': image,
       'name': name,
-      'avgRating': avgRating,
+      'avgRating': rating,
       'date': date,
       'reviewDescription': reviewDescription,
     };

@@ -1,10 +1,9 @@
 import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomIcon extends StatelessWidget {
-  const CustomIcon({
+class CustomAddIcon extends StatelessWidget {
+  const CustomAddIcon({
     super.key,
     this.raduis,
     this.iconColor,
@@ -29,7 +28,7 @@ class CustomIcon extends StatelessWidget {
         backgroundColor: backgroundColor ?? AppColors.green1_500,
         child: Center(
           child: Icon(
-            icon ?? CupertinoIcons.add,
+            icon ?? Icons.add,
             size: iconSize ?? 22.sp,
             color: iconColor ?? Colors.white,
           ),

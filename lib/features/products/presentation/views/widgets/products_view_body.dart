@@ -1,5 +1,4 @@
 import 'package:e_commerce_app/core/helper_functions/build_app_bar.dart';
-import 'package:e_commerce_app/core/widgets/custom_grid_view.dart';
 import 'package:e_commerce_app/core/widgets/best_seller_text.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/our_products_list_view.dart';
@@ -48,7 +47,7 @@ class ProductsViewBody extends StatelessWidget {
         const BestSellerText(),
         const SymetricPadding(
           horizontal: 16,
-          child: CustomGridView(),
+          // child: BestSellingGridView(),
         ),
         SizedBox(
           height: 16.h,

@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/core/widgets/app_main_views.dart';
+import 'package:e_commerce_app/features/home/presentation/views/widgets/app_main_views.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/re_set_password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';

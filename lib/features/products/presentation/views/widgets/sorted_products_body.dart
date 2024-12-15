@@ -1,7 +1,5 @@
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/core/widgets/custom_grid_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/sorted_icon.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -34,13 +32,13 @@ class SortedProductsBody extends StatelessWidget {
         SizedBox(
           height: 16.h,
         ),
-        CustomGridView(
-          onItemTapped: () {
-            Navigator.of(context).pushNamed(
-              AppRoutes.itemDetailsView,
-            );
-          },
-        ),
+        // BestSellingGridView(
+        //   onItemTapped: () {
+        //     Navigator.of(context).pushNamed(
+        //       AppRoutes.itemDetailsView,
+        //     );
+        //   },
+        // ),
         SizedBox(
           height: 16.h,
         ),

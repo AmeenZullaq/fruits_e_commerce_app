@@ -1,15 +1,12 @@
-import 'dart:io';
 import 'package:e_commerce_app/features/home/domain/entities/review_entity.dart';
 
 class ProductEntity {
   final String name;
   final String code;
-  final String price;
-  final File image;
-  final String? imageUrl;
-  final bool isFeatured;
+  final num price;
+  final String imageUrl;
   final num avgRating;
-  final int ratingCount;
+  final bool isFeatured;
   final num sellingCount;
   final String description;
   final int expirationMonths;
@@ -19,15 +16,13 @@ class ProductEntity {
   final List<ReviewEntity> reviews;
 
   ProductEntity({
-    this.imageUrl,
+    required this.avgRating,
+    required this.imageUrl,
     required this.name,
     required this.code,
     required this.price,
-    required this.image,
     required this.isFeatured,
-    required this.avgRating,
     required this.sellingCount,
-    required this.ratingCount,
     required this.description,
     required this.expirationMonths,
     required this.isOrganic,

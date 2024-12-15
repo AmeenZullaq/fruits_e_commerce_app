@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/server_failure.dart';
@@ -51,6 +53,7 @@ class ProductRepoImpl extends ProductRepo {
       for (var element in data) {
         products.add(ProductModel.fromJson(element).toEntity());
       }
+      log('====================================${products[0].imageUrl}');
       return right(products);
     } catch (e) {
       if (e is FirebaseException) {
@@ -58,6 +61,7 @@ class ProductRepoImpl extends ProductRepo {
           ServerFailure.fromFirestore(e),
         );
       } else {
+        log('====================================$e');
         return left(
           ServerFailure(errMessage: 'Failed to get products'),
         );

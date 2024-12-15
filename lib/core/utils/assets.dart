@@ -78,6 +78,10 @@ class Assets {
   /// assets/images/featured_item_background.svg
   static const String imagesFeaturedItemBackground = "assets/images/featured_item_background.svg";
 
+  /// Assets for imagesFiltter
+  /// assets/images/filtter.svg
+  static const String imagesFiltter = "assets/images/filtter.svg";
+
   /// Assets for imagesFruitBasket
   /// assets/images/FruitBasket.svg
   static const String imagesFruitBasket = "assets/images/FruitBasket.svg";
