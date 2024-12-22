@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_commerce_app/features/home/domain/entities/product_entity.dart';
-import 'package:e_commerce_app/features/home/domain/repos/product_repo.dart';
+import 'package:e_commerce_app/core/entities/product_entity.dart';
+import 'package:e_commerce_app/core/repos/product_repo.dart';
 import 'package:meta/meta.dart';
 
 part 'get_products_state.dart';
@@ -29,12 +29,19 @@ class GetProductsCubit extends Cubit<GetProductsState> {
     );
   }
 
-  Future<void> getBestSellingProducts() async {
+  Future<void> getOrderedProducts({
+    bool isDescending = false,
+    bool orderByAlphabet = false,
+  }) async {
     emit(
       GetProductsLoading(),
     );
-    var result = await productRepo.getBestSellingProducts();
-    result.fold(
+    final resulte = await productRepo.getOrderedProducts(
+      isDescending: isDescending,
+      orderByAlphabet: orderByAlphabet,
+    );
+
+    resulte.fold(
       (failure) {
         emit(
           GetProductsFailure(errMessage: failure.errMessage),

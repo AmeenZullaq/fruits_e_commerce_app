@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/features/home/domain/entities/review_entity.dart';
+import 'package:e_commerce_app/core/entities/review_entity.dart';
 
 class ProductEntity {
   final String name;
@@ -13,7 +13,7 @@ class ProductEntity {
   final bool isOrganic;
   final int numberOfCalories;
   final int unitWeight;
-  final List<ReviewEntity> reviews;
+  final List<ReviewEntity>? reviews;
 
   ProductEntity({
     required this.avgRating,

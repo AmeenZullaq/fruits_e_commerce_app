@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/features/home/domain/entities/review_entity.dart';
+import 'package:e_commerce_app/core/entities/review_entity.dart';
 
 class ReviewModel {
   final String image;

@@ -14,6 +14,14 @@ class Assets {
   /// assets/images/arrow-swap-horizontal.svg
   static const String imagesArrowSwapHorizontal = "assets/images/arrow-swap-horizontal.svg";
 
+  /// Assets for imagesAvokadow
+  /// assets/images/avokadow.svg
+  static const String imagesAvokadow = "assets/images/avokadow.svg";
+
+  /// Assets for imagesBanana
+  /// assets/images/banana.svg
+  static const String imagesBanana = "assets/images/banana.svg";
+
   /// Assets for imagesBottomSplah
   /// assets/images/bottom_splah.svg
   static const String imagesBottomSplah = "assets/images/bottom_splah.svg";
@@ -53,6 +61,10 @@ class Assets {
   /// Assets for imagesCircle
   /// assets/images/circle.svg
   static const String imagesCircle = "assets/images/circle.svg";
+
+  /// Assets for imagesCircleContainer
+  /// assets/images/circle_container.svg
+  static const String imagesCircleContainer = "assets/images/circle_container.svg";
 
   /// Assets for imagesDefaultHuman
   /// assets/images/default_human.jpg
@@ -137,6 +149,10 @@ class Assets {
   /// Assets for imagesLogout
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
+
+  /// Assets for imagesMango
+  /// assets/images/mango.svg
+  static const String imagesMango = "assets/images/mango.svg";
 
   /// Assets for imagesMode
   /// assets/images/mode.svg
@@ -225,5 +241,9 @@ class Assets {
   /// Assets for imagesUser
   /// assets/images/user.svg
   static const String imagesUser = "assets/images/user.svg";
+
+  /// Assets for imagesWaterMelon
+  /// assets/images/water_melon.svg
+  static const String imagesWaterMelon = "assets/images/water_melon.svg";
 }
 

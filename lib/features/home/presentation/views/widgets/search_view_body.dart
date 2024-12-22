@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/widgets/search_field.dart';
+import 'package:e_commerce_app/core/widgets/type_ahead_field.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/home/presentation/views/widgets/search_image.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +36,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
       vertical: 16,
       child: Column(
         children: [
-          SearchField(
+          TyoeAheadField(
             focusNode: focusNode,
           ),
           const Spacer(

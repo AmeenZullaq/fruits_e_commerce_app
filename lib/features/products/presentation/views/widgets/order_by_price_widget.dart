@@ -4,7 +4,9 @@ import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 
 class OrderByPriceWidget extends StatefulWidget {
-  const OrderByPriceWidget({super.key});
+  const OrderByPriceWidget({super.key, required this.onSelect});
+
+  final Function(int onSelectedOption) onSelect;
 
   @override
   State<OrderByPriceWidget> createState() => _OrderByPriceWidgetState();
@@ -26,6 +28,7 @@ class _OrderByPriceWidgetState extends State<OrderByPriceWidget> {
           int index = e.key;
           return GestureDetector(
             onTap: () {
+              widget.onSelect(index);
               setState(() {
                 selectedIndex = index;
               });

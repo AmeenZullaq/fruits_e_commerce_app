@@ -1,17 +1,15 @@
 import 'package:e_commerce_app/core/widgets/fruit_item.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/home/domain/entities/product_entity.dart';
+import 'package:e_commerce_app/core/entities/product_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductsGridView extends StatelessWidget {
   const ProductsGridView({
     super.key,
-    this.onItemTapped,
     required this.products,
   });
 
-  final void Function()? onItemTapped;
   final List<ProductEntity> products;
 
   @override
@@ -29,11 +27,8 @@ class ProductsGridView extends StatelessWidget {
         ),
         itemCount: products.length,
         itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: onItemTapped,
-            child: FruitItem(
-              product: products[index],
-            ),
+          return FruitItem(
+            product: products[index],
           );
         },
       ),

@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
+    this.borderColor,
     required this.hintText,
     this.suffixIcon,
     this.keyboardType,
@@ -17,8 +18,10 @@ class CustomTextFormField extends StatelessWidget {
     this.prefixIcon,
     this.widthBorderSide,
     this.focusNode,
+    this.readOnly = false,
   });
   final String hintText;
+  final Color? borderColor;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
   final TextEditingController controller;
@@ -29,10 +32,12 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? prefixIcon;
   final double? widthBorderSide;
   final FocusNode? focusNode;
+  final bool readOnly;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: readOnly,
       focusNode: focusNode,
       obscureText: obscureText!,
       validator: validator,
@@ -42,11 +47,11 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        enabledBorder: getBorder(),
-        focusedBorder: getBorder(),
-        disabledBorder: getBorder(),
-        errorBorder: getBorder(errColor: Colors.red),
-        focusedErrorBorder: getBorder(errColor: Colors.red),
+        enabledBorder: getBorder(color: borderColor),
+        focusedBorder: getBorder(color: borderColor),
+        disabledBorder: getBorder(color: borderColor),
+        errorBorder: getBorder(color: Colors.red),
+        focusedErrorBorder: getBorder(color: Colors.red),
         fillColor: fillColor ?? const Color(0xffF9FAFA),
         filled: true,
         hintText: hintText,
@@ -72,12 +77,12 @@ class CustomTextFormField extends StatelessWidget {
     );
   }
 
-  OutlineInputBorder getBorder({Color? errColor}) {
+  OutlineInputBorder getBorder({Color? color}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(4),
       borderSide: BorderSide(
         width: widthBorderSide ?? 1,
-        color: errColor ?? const Color(0xffE6E9EA),
+        color: color ?? const Color(0xffE6E9EA),
       ),
     );
   }

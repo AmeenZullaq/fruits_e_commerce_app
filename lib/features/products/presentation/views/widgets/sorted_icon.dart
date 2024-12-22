@@ -1,14 +1,19 @@
 import 'package:e_commerce_app/core/helper_functions/showing_bottom_sheet.dart';
 import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/features/products/presentation/cubits/get_products_cubit/get_products_cubit.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/products_view_bottom_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
 
 class SortedIcon extends StatelessWidget {
   const SortedIcon({
     super.key,
+    required this.getProductsCubit,
   });
+
+  final GetProductsCubit getProductsCubit;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,10 @@ class SortedIcon extends StatelessWidget {
       onTap: () {
         showingBottomSheet(
           context,
-          widget: const ProductsViewBottomSheet(),
+          widget: BlocProvider.value(
+            value: getProductsCubit,
+            child: const ProductsViewBottomSheet(),
+          ),
         );
       },
       child: Container(

@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/core/helper_functions/get_avg_rating.dart';
-import 'package:e_commerce_app/features/home/data/models/review_model.dart';
-import 'package:e_commerce_app/features/home/domain/entities/product_entity.dart';
+import 'package:e_commerce_app/core/models/review_model.dart';
+import 'package:e_commerce_app/core/entities/product_entity.dart';
 
 class ProductModel {
   final String name;
@@ -15,7 +15,7 @@ class ProductModel {
   final bool isOrganic;
   final int numberOfCalories;
   final int unitWeight;
-  final List<ReviewModel> reviews;
+  final List<ReviewModel>? reviews;
 
   ProductModel({
     required this.avgRating,
@@ -75,7 +75,7 @@ class ProductModel {
       numberOfCalories: numberOfCalories,
       unitWeight: unitWeight,
       avgRating: avgRating,
-      reviews: reviews.map((e) => e.toEntity()).toList(),
+      reviews: reviews?.map((e) => e.toEntity()).toList(),
     );
   }
 

@@ -6,14 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
 
-class DetailsGridViewItem extends StatelessWidget {
-  const DetailsGridViewItem({
+class Expiration extends StatelessWidget {
+  const Expiration({
     super.key,
     required this.item,
+    required this.expirationMonths,
   });
 
   final ItemModel item;
-
+  final int expirationMonths;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,29 +29,35 @@ class DetailsGridViewItem extends StatelessWidget {
           color: const Color(0xffF1F1F5),
         ),
       ),
-      child: IntrinsicHeight(
-        child: ListTile(
-          title: BottomPadding(
-            bottom: 4,
-            child: Text(
-              item.title.tr(),
-              style: AppTextStyles.bold16.copyWith(
-                color: const Color(0xFF23AA49),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              BottomPadding(
+                bottom: 8,
+                child: Text(
+                  '$expirationMonths ${item.title.tr()}',
+                  style: AppTextStyles.bold16.copyWith(
+                    color: const Color(0xFF23AA49),
+                  ),
+                ),
               ),
-            ),
+              Text(
+                item.subTitle.tr(),
+                style: AppTextStyles.semiBold13.copyWith(
+                  color: const Color(0xFF979899),
+                ),
+              ),
+            ],
           ),
-          subtitle: Text(
-            item.subTitle.tr(),
-            style: AppTextStyles.semiBold13.copyWith(
-              color: const Color(0xFF979899),
-            ),
-          ),
-          trailing: SvgPicture.asset(
+          SvgPicture.asset(
             height: 35.h,
             width: 35.w,
             item.trailing,
           ),
-        ),
+        ],
       ),
     );
   }

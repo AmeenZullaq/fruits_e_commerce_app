@@ -6,10 +6,11 @@ import 'package:e_commerce_app/features/auth/domain/repos/auth_repo.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/re_set_password_cubit/re_set_password_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/singin_cubit/sing_in_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/singup_cubit/sing_up_cubit.dart';
-import 'package:e_commerce_app/features/home/data/repos_impl/product_repo_impl.dart';
-import 'package:e_commerce_app/features/home/domain/repos/product_repo.dart';
-import 'package:e_commerce_app/features/home/presentation/cubits/get_products_cubit/get_products_cubit.dart';
+import 'package:e_commerce_app/core/repos/product_repo_impl.dart';
+import 'package:e_commerce_app/core/repos/product_repo.dart';
+import 'package:e_commerce_app/features/products/presentation/cubits/get_products_cubit/get_products_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/logout_cubit/logout_cubit.dart';
+import 'package:e_commerce_app/features/home/presentation/cubits/get_best_selling_products_cubit/get_best_selling_products_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 abstract class InjectionContainer {
@@ -71,7 +72,12 @@ abstract class InjectionContainer {
     /// Cubits
     getIt.registerLazySingleton<GetProductsCubit>(
       () => GetProductsCubit(
-        getIt.get<ProductRepoImpl>(),
+        getIt.get<ProductRepo>(),
+      ),
+    );
+    getIt.registerLazySingleton<GetBestSellingProductsCubit>(
+      () => GetBestSellingProductsCubit(
+        getIt.get<ProductRepo>(),
       ),
     );
   }

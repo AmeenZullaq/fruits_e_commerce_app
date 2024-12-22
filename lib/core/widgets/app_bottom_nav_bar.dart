@@ -6,24 +6,22 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
-class AppBottomNavBar extends StatefulWidget {
-  const AppBottomNavBar({
-    super.key,
-    required this.controller,
-  });
-  final PersistentTabController controller;
+class AppBottomNavigationBar extends StatefulWidget {
+  const AppBottomNavigationBar({super.key, required this.onTapChanged});
+
+  final Function(int index) onTapChanged;
 
   @override
-  State<AppBottomNavBar> createState() => _AppBottomNavBarState();
+  State<AppBottomNavigationBar> createState() => _AppBottomNavigationBarState();
 }
 
-class _AppBottomNavBarState extends State<AppBottomNavBar> {
+class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 70.h,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadiusDirectional.only(
@@ -44,7 +42,7 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         selectedIndex: currentIndex,
         color: AppColors.gray400,
-        iconSize: 20.sp,
+        iconSize: 24.sp,
         tabBackgroundColor: const Color(0xffEEEEEE),
         padding: EdgeInsetsDirectional.only(end: 8.w),
         textStyle: AppTextStyles.semiBold11.copyWith(
@@ -52,13 +50,11 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
         ),
         onTabChange: (index) {
           currentIndex = index;
+          widget.onTapChanged(index);
           setState(() {});
         },
         tabs: [
           GButton(
-            onPressed: () {
-              widget.controller.jumpToTab(0);
-            },
             icon: Icons.home_outlined,
             text: LocaleKeys.Main.tr(),
             leading: currentIndex == 0
@@ -68,9 +64,6 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
                 : null,
           ),
           GButton(
-            onPressed: () {
-              widget.controller.jumpToTab(1);
-            },
             icon: Icons.widgets_outlined,
             text: LocaleKeys.Products.tr(),
             leading: currentIndex == 1
@@ -80,9 +73,6 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
                 : null,
           ),
           GButton(
-            onPressed: () {
-              widget.controller.jumpToTab(2);
-            },
             icon: Icons.shopping_cart_outlined,
             text: LocaleKeys.Shopping_basket.tr(),
             leading: currentIndex == 2
@@ -92,9 +82,6 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
                 : null,
           ),
           GButton(
-            onPressed: () {
-              widget.controller.jumpToTab(3);
-            },
             icon: Icons.person_outline,
             text: LocaleKeys.my_account.tr(),
             leading: currentIndex == 3
@@ -104,8 +91,6 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
                 : null,
           ),
         ],
-   
-   
       ),
     );
   }

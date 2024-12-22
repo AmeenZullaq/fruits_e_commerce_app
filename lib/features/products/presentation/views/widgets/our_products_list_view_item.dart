@@ -1,33 +1,35 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_commerce_app/core/utils/app__text_styles.dart';
 import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/widgets/padding.dart';
+import 'package:e_commerce_app/core/entities/product_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OurProductsListViewItem extends StatelessWidget {
-  const OurProductsListViewItem({super.key});
+  const OurProductsListViewItem({super.key, required this.product});
+
+  final ProductEntity product;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 64.h,
-          width: 64.w,
-          padding: EdgeInsets.all(8.r),
-          decoration: const BoxDecoration(
-            color: Color(0xFFF3F5F7),
-            shape: BoxShape.circle,
-          ),
-          child: Image.asset(
-            Assets.imagesStrawPerryPng,
+        CircleAvatar(
+          radius: 32.r,
+          backgroundColor: const Color(0xFFF3F5F7),
+          child: AllPadding(
+            all: 8,
+            child: CachedNetworkImage(
+              imageUrl: product.imageUrl,
+            ),
           ),
         ),
         SizedBox(
           height: 2.h,
         ),
         Text(
-          'افوكادو',
+          product.name,
           style: AppTextStyles.semiBold13.copyWith(
             color: AppColors.gray950,
           ),

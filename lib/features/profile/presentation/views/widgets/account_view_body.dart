@@ -47,7 +47,7 @@ class AccountViewBody extends StatelessWidget {
         SymetricPadding(
           horizontal: 16,
           child: Text(
-            LocaleKeys.general.tr(),
+            LocaleKeys.month.tr(),
             style: AppTextStyles.semiBold13.copyWith(
               color: AppColors.gray950,
             ),
