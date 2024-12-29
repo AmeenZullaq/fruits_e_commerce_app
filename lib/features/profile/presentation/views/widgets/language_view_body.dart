@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/core/helper_functions/build_app_bar.dart';
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
-import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/app_colors.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/arabic.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/english.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';

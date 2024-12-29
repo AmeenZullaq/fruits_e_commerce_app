@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/singin_cubit/sing_in_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';

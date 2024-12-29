@@ -30,4 +30,8 @@ abstract class SharedPrefs {
   static List<String>? getStringList(String key) {
     return _initState.getStringList(key);
   }
+
+  static void remove(String key) {
+    _initState.remove(key);
+  }
 }

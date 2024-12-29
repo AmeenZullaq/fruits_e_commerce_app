@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
-import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/app_routes.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/app_colors.dart';
+import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/custom_add_icon.dart';
 import 'package:e_commerce_app/core/entities/product_entity.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';

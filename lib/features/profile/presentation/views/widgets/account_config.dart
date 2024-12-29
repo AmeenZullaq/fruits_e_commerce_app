@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/constants/app_routes.dart';
+import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/account_custom_row.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/switch_widget.dart';

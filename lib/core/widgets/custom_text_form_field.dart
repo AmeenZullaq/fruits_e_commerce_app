@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/app_colors.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,7 +7,7 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
     this.borderColor,
-    required this.hintText,
+    this.hintText,
     this.suffixIcon,
     this.keyboardType,
     required this.controller,
@@ -19,8 +19,11 @@ class CustomTextFormField extends StatelessWidget {
     this.widthBorderSide,
     this.focusNode,
     this.readOnly = false,
+    this.onTap,
+    this.enabled,
+    this.style,
   });
-  final String hintText;
+  final String? hintText;
   final Color? borderColor;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
@@ -33,10 +36,16 @@ class CustomTextFormField extends StatelessWidget {
   final double? widthBorderSide;
   final FocusNode? focusNode;
   final bool readOnly;
+  final void Function()? onTap;
+  final bool? enabled;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onTap: onTap,
+      style: style,
+      enabled: enabled,
       readOnly: readOnly,
       focusNode: focusNode,
       obscureText: obscureText!,

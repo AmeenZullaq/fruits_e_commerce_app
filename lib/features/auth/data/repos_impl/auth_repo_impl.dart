@@ -5,10 +5,10 @@ import 'package:e_commerce_app/core/error/server_failure.dart';
 import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/core/services/shared_preferences.dart';
-import 'package:e_commerce_app/core/utils/app_keys.dart';
-import 'package:e_commerce_app/core/utils/endoints.dart';
-import 'package:e_commerce_app/features/auth/data/models/user_model.dart';
-import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
+import 'package:e_commerce_app/core/constants/app_keys.dart';
+import 'package:e_commerce_app/core/constants/endoints.dart';
+import 'package:e_commerce_app/core/models/user_model.dart';
+import 'package:e_commerce_app/core/entities/user_entity.dart';
 import 'package:e_commerce_app/features/auth/domain/repos/auth_repo.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -32,7 +32,11 @@ class AuthRepoImpl extends AuthRepo {
         email: email,
         password: password,
       );
-      final user = UserModel.fromAuthFirebase(userCred);
+      final user = UserEntity(
+        email: userCred.email!,
+        name: name,
+        uId: userCred.uid,
+      );
       await addUserData(user: user);
       return right(user);
     } catch (e) {

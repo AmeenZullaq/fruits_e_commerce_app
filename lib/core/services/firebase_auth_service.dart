@@ -141,4 +141,29 @@ class FirebaseAuthService {
   Future<void> logOut() async {
     await firebaseAuth.signOut();
   }
+
+  Future<void> updateUserEmail({required String newEmail}) async {
+    if (isUserLoggedIn()) {
+      await firebaseAuth.currentUser!.verifyBeforeUpdateEmail(newEmail);
+    }
+  }
+
+  Future<void> reauthenticateUser({required String currentPassword}) async {
+    if (isUserLoggedIn()) {
+      // Create a credential for reauthentication
+
+      final credential = EmailAuthProvider.credential(
+        email: FirebaseAuth.instance.currentUser!.email!,
+        password: currentPassword,
+      );
+
+      // Reauthenticate the user
+      await FirebaseAuth.instance.currentUser!
+          .reauthenticateWithCredential(credential);
+    }
+  }
+
+  Future<User> getCurrentUser() async {
+    return firebaseAuth.currentUser!;
+  }
 }

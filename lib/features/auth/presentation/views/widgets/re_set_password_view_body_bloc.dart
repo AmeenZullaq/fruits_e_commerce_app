@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
-import 'package:e_commerce_app/core/utils/app_routes.dart';
+import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/custom_Progross_hud.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/re_set_password_cubit/re_set_password_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/re_set_password_view_body.dart';
@@ -28,7 +28,6 @@ class ReSetPasswordViewBodyBloc extends StatelessWidget {
                 .we_have_already_sent_a_message_to_your_email_address
                 .tr(),
           );
-          Navigator.of(context).pushReplacementNamed(AppRoutes.singInView);
         }
       },
       builder: (context, state) {

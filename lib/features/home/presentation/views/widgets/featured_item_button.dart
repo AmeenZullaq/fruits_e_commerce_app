@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedItemButton extends StatelessWidget {

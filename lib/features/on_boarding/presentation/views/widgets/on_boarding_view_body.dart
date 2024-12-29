@@ -1,8 +1,8 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:e_commerce_app/core/services/shared_preferences.dart';
-import 'package:e_commerce_app/core/utils/app_colors.dart';
-import 'package:e_commerce_app/core/utils/app_keys.dart';
-import 'package:e_commerce_app/core/utils/app_routes.dart';
+import 'package:e_commerce_app/core/constants/app_colors.dart';
+import 'package:e_commerce_app/core/constants/app_keys.dart';
+import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';

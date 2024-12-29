@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/utils/app_routes.dart';
+import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/entities/product_entity.dart';
 import 'package:e_commerce_app/features/home/presentation/views/widgets/app_main_views.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/re_set_password_view.dart';

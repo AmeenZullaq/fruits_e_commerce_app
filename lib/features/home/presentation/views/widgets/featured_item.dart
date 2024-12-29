@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
-import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/features/home/presentation/views/widgets/featured_item_button.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';

@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
-import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/app_colors.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

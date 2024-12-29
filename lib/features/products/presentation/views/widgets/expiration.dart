@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/products/data/models/item_model.dart';
 import 'package:easy_localization/easy_localization.dart';

@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/features/auth/domain/entites/user_entity.dart';
+import 'package:e_commerce_app/core/entities/user_entity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class UserModel extends UserEntity {
@@ -6,6 +6,7 @@ class UserModel extends UserEntity {
     required super.email,
     required super.name,
     required super.uId,
+    super.imageUrl,
   });
 
   factory UserModel.fromAuthFirebase(User user) {
@@ -21,6 +22,7 @@ class UserModel extends UserEntity {
       email: json['email'],
       name: json['name'],
       uId: json['uId'],
+      imageUrl: json['imageUrl'],
     );
   }
 
@@ -29,6 +31,7 @@ class UserModel extends UserEntity {
       email: user.email,
       name: user.name,
       uId: user.uId,
+      imageUrl: user.imageUrl,
     );
   }
 

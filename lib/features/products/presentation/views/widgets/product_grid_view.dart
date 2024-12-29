@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/core/entities/product_entity.dart';
 import 'package:e_commerce_app/features/products/data/models/item_model.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/avg_reviews_rating.dart';

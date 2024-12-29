@@ -8,9 +8,11 @@ class PasswordField extends StatefulWidget {
     super.key,
     required this.passwordController,
     required this.hintText,
+    this.validator,
   });
   final TextEditingController passwordController;
   final String hintText;
+  final String? Function(String?)? validator;
 
   @override
   State<PasswordField> createState() => _PasswordFieldState();
@@ -22,15 +24,16 @@ class _PasswordFieldState extends State<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
-      validator: (value) {
-        return AppValidators.validatePassword(value);
-      },
+      validator: widget.validator ??
+          (value) {
+            return AppValidators.validatePassword(value);
+          },
       obscureText: obscureText,
       controller: widget.passwordController,
       keyboardType: TextInputType.visiblePassword,
       hintText: widget.hintText,
       suffixIcon: EndPadding(
-        end: 32,
+        end: 20,
         child: GestureDetector(
           onTap: () {
             setState(() {

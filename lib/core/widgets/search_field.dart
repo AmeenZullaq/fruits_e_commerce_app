@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/core/widgets/custom_text_form_field.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';

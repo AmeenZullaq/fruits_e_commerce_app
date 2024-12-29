@@ -1,8 +1,8 @@
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/core/services/shared_preferences.dart';
-import 'package:e_commerce_app/core/utils/app_keys.dart';
-import 'package:e_commerce_app/core/utils/app_routes.dart';
-import 'package:e_commerce_app/core/utils/assets.dart';
+import 'package:e_commerce_app/core/constants/app_keys.dart';
+import 'package:e_commerce_app/core/constants/app_routes.dart';
+import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -19,6 +19,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     super.initState();
     excuteNavigation();
   }
+
   void excuteNavigation() {
     Future.delayed(
       const Duration(seconds: 3),

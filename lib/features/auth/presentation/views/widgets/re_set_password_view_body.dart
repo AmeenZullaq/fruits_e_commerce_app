@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/core/utils/app__text_styles.dart';
-import 'package:e_commerce_app/core/utils/app_colors.dart';
+import 'package:e_commerce_app/core/constants/app__text_styles.dart';
+import 'package:e_commerce_app/core/constants/app_colors.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/re_set_password_cubit/re_set_password_cubit.dart';
@@ -28,14 +28,14 @@ class ReSetPasswordViewBody extends StatelessWidget {
             ),
             Text(
               LocaleKeys.Dont_worry_just_enter_your_email_address.tr(),
-              style: AppTextStyles.bold16.copyWith(
+              style: AppTextStyles.bold13.copyWith(
                 color: AppColors.gray600,
               ),
             ),
             Text(
               LocaleKeys.and_we_will_send_you_a_link_to_reset_your_password
                   .tr(),
-              style: AppTextStyles.bold16.copyWith(
+              style: AppTextStyles.bold13.copyWith(
                 color: AppColors.gray600,
               ),
             ),
