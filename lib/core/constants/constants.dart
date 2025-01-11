@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
-import 'package:e_commerce_app/features/products/presentation/views/cart_view.dart';
+import 'package:e_commerce_app/features/cart/presentation/views/cart_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/products_view.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/account_view.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';

@@ -189,7 +189,8 @@ class CodegenLoader extends AssetLoader{
   "gallery": "المعرض",
   "camera": "الكاميرا",
   "enterNewName": "أدخل الاسم الجديد",
-  "enterNewEmail": "أدخل الايميل الجديد"
+  "enterNewEmail": "أدخل الايميل الجديد",
+  "kg": "كغ"
 };
 static const Map<String,dynamic> en = {
   "you_welcom_in": "You welcom in ",
@@ -366,7 +367,8 @@ static const Map<String,dynamic> en = {
   "gallery": "Gallery",
   "camera": "Camera",
   "enterNewName": "Enter the new name",
-  "enterNewEmail": "Enter the new email"
+  "enterNewEmail": "Enter the new email",
+  "kg": "kg"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/entities/product_entity.dart';
-import 'package:e_commerce_app/features/home/presentation/views/widgets/app_main_views.dart';
+import 'package:e_commerce_app/features/main/presentation/views/app_main_views.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/re_set_password_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singin_view.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/singup_view.dart';
@@ -8,7 +8,7 @@ import 'package:e_commerce_app/features/home/presentation/views/home_view.dart';
 import 'package:e_commerce_app/features/home/presentation/views/search_view.dart';
 import 'package:e_commerce_app/features/notifications/presentation/views/notifications_view.dart';
 import 'package:e_commerce_app/features/on_boarding/presentation/views/on_boarding_view.dart';
-import 'package:e_commerce_app/features/products/presentation/views/cart_view.dart';
+import 'package:e_commerce_app/features/cart/presentation/views/cart_view.dart';
 import 'package:e_commerce_app/features/products/presentation/views/product_details_view.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/account_view.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/language_view.dart';

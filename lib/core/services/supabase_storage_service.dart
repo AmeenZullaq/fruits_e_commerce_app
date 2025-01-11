@@ -9,22 +9,22 @@ class SupabaseStorageService extends StorageService {
   static SupabaseStorageClient supabaseStorage =
       Supabase.instance.client.storage;
 
-// create bucket using code, the recomended way is create bucket from supabase consol
-  static createBucket({required String bucketName}) async {
-    // List all buckets
-    final buckets = await supabaseStorage.listBuckets();
-    // Check if the bucket already exists
-    final bucketExists = buckets.any(
-      (bucket) => bucket.name == bucketName,
-    );
-    if (!bucketExists) {
-      // create a bucet
-      await supabaseStorage.createBucket(
-        AppStrings.usersImage,
-        const BucketOptions(public: true),
-      );
-    }
-  }
+// // create bucket using code, the recomended way is create bucket from supabase consol
+//   static createBucket({required String bucketName}) async {
+//     // List all buckets
+//     final buckets = await supabaseStorage.listBuckets();
+//     // Check if the bucket already exists
+//     final bucketExists = buckets.any(
+//       (bucket) => bucket.name == bucketName,
+//     );
+//     if (!bucketExists) {
+//       // create a bucet
+//       await supabaseStorage.createBucket(
+//         AppStrings.usersImage,
+//         const BucketOptions(public: true),
+//       );
+//     }
+//   }
 
   @override
   Future<String> uploadFile({

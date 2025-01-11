@@ -115,7 +115,6 @@
   "h100": "100%",
   "add_to_cart": "add to cart",
   "cart": "Cart",
-  "You_have_products_in_your_shopping_cart": "You have products in your shopping cart",
   "Apple": "Apple",
   "Banana": "Banana",
   "Cherry": "Cherry",
@@ -173,5 +172,10 @@
   "gallery": "Gallery",
   "camera": "Camera",
   "enterNewName": "Enter the new name",
-  "enterNewEmail": "Enter the new email"
+  "enterNewEmail": "Enter the new email",
+  "kg": "kg",
+  "youHave": "you have",
+  "products_in_your_shopping_cart": "products in your shopping cart",
+  "payment": "payment",
+  "productAdded": "product added successfully"
 }

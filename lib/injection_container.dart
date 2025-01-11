@@ -10,6 +10,8 @@ import 'package:e_commerce_app/features/auth/presentation/cubits/singin_cubit/si
 import 'package:e_commerce_app/features/auth/presentation/cubits/singup_cubit/sing_up_cubit.dart';
 import 'package:e_commerce_app/core/repos/product_repo_impl.dart';
 import 'package:e_commerce_app/core/repos/product_repo.dart';
+import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
+import 'package:e_commerce_app/features/cart/presentation/cubits/cart_item_cubit/cart_item_cubit.dart';
 import 'package:e_commerce_app/features/products/presentation/cubits/get_products_cubit/get_products_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/logout_cubit/logout_cubit.dart';
 import 'package:e_commerce_app/features/home/presentation/cubits/get_best_selling_products_cubit/get_best_selling_products_cubit.dart';
@@ -27,6 +29,7 @@ abstract class InjectionContainer {
     await initAuthDependencies();
     await initGetProductsDependencies();
     await initProfileDependency();
+    await initCartDependency();
   }
 
   static Future<void> initAuthDependencies() async {
@@ -118,6 +121,16 @@ abstract class InjectionContainer {
       () => UpdateUserInfoCubit(
         getIt.get<ProfileRepo>(),
       ),
+    );
+  }
+
+  static Future<void> initCartDependency() async {
+    /// cubits
+    getIt.registerLazySingleton<CartCubit>(
+      () => CartCubit(),
+    );
+    getIt.registerLazySingleton<CartItemCubit>(
+      () => CartItemCubit(),
     );
   }
 }

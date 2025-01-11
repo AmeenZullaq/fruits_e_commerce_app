@@ -2,11 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_commerce_app/core/constants/app__text_styles.dart';
 import 'package:e_commerce_app/core/constants/app_colors.dart';
 import 'package:e_commerce_app/core/constants/app_routes.dart';
+import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/custom_add_icon.dart';
 import 'package:e_commerce_app/core/entities/product_entity.dart';
+import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FruitItem extends StatelessWidget {
@@ -88,7 +91,12 @@ class FruitItem extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: CustomAddIcon(
-                          onTap: () {},
+                          onTap: () {
+                            context.read<CartCubit>().addProductToCart(
+                                  productEntity: product,
+                                  selectedCountOfProduct: 1,
+                                );
+                          },
                         ),
                       ),
                     ],

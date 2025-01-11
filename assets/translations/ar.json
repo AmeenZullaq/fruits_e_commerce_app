@@ -115,7 +115,6 @@
   "h100": "100%",
   "add_to_cart": "أضف إلى السلة",
   "cart": "السلة",
-  "You_have_products_in_your_shopping_cart": "لديك منتجات في سله التسوق",
   "Apple": "تفاح",
   "Banana": "موز",
   "Cherry": "كرز",
@@ -173,5 +172,10 @@
   "gallery": "المعرض",
   "camera": "الكاميرا",
   "enterNewName": "أدخل الاسم الجديد",
-  "enterNewEmail": "أدخل الايميل الجديد"
+  "enterNewEmail": "أدخل الايميل الجديد",
+  "kg": "كغ",
+  "youHave": "لديك",
+  "products_in_your_shopping_cart": "منتجات في سله التسوق",
+  "payment": "الدفع",
+  "productAdded": "تمت إضافة المنتج بنجاح"
 }

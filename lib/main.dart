@@ -1,9 +1,8 @@
 import 'package:e_commerce_app/core/helper_functions/on_generate_route.dart';
 import 'package:e_commerce_app/core/services/bloc_observer.dart';
 import 'package:e_commerce_app/core/services/shared_preferences.dart';
-import 'package:e_commerce_app/core/services/supabase_storage_service.dart';
 import 'package:e_commerce_app/core/constants/app_routes.dart';
-import 'package:e_commerce_app/core/constants/app_strings.dart';
+import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'package:e_commerce_app/firebase_options.dart';
 import 'package:e_commerce_app/injection_container.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -36,9 +35,9 @@ void main() async {
       SystemUiOverlay.top,
     ],
   );
-  await SupabaseStorageService.createBucket(
-    bucketName: AppStrings.usersImage,
-  );
+  // await SupabaseStorageService.createBucket(
+  //   bucketName: AppStrings.usersImage,
+  // );
 
   runApp(
     EasyLocalization(
@@ -61,21 +60,24 @@ class FruitsApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return MaterialApp(
-          localizationsDelegates: context.localizationDelegates,
-          supportedLocales: context.supportedLocales,
-          locale: context.locale,
-          debugShowCheckedModeBanner: false,
-          onGenerateRoute: onGenerateRoute,
-          initialRoute: AppRoutes.splashView,
-          builder: EasyLoading.init(),
-          theme: ThemeData(
-            fontFamily: 'Cairo',
-            scaffoldBackgroundColor: const Color(0xFFFFFFFF),
-            pageTransitionsTheme: const PageTransitionsTheme(
-              builders: {
-                TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-              },
+        return BlocProvider(
+          create: (context) => InjectionContainer.getIt.get<CartCubit>(),
+          child: MaterialApp(
+            localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
+            locale: context.locale,
+            debugShowCheckedModeBanner: false,
+            onGenerateRoute: onGenerateRoute,
+            initialRoute: AppRoutes.splashView,
+            builder: EasyLoading.init(),
+            theme: ThemeData(
+              fontFamily: 'Cairo',
+              scaffoldBackgroundColor: const Color(0xFFFFFFFF),
+              pageTransitionsTheme: const PageTransitionsTheme(
+                builders: {
+                  TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+                },
+              ),
             ),
           ),
         );

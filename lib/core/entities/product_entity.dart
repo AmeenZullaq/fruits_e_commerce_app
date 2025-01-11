@@ -30,4 +30,12 @@ class ProductEntity {
     required this.unitWeight,
     required this.reviews,
   });
+
+  @override
+  String toString() {
+    return 'ProductEntity{name: $name, code: $code, price: $price, imageUrl: $imageUrl, avgRating: $avgRating, '
+        'isFeatured: $isFeatured, sellingCount: $sellingCount, description: $description, '
+        'expirationMonths: $expirationMonths, isOrganic: $isOrganic, numberOfCalories: $numberOfCalories, '
+        'unitWeight: $unitWeight, reviews: ${reviews?.map((review) => review.toString()).toList()}}';
+  }
 }
