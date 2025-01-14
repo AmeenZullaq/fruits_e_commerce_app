@@ -2,7 +2,7 @@ import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/profile/presentation/views/widgets/account_custom_row.dart';
-import 'package:e_commerce_app/features/profile/presentation/views/widgets/switch_widget.dart';
+import 'package:e_commerce_app/core/widgets/switch_widget.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

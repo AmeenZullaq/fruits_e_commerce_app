@@ -16,8 +16,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 29.w,
-      height: 17.h,
+      height: 20.h,
       child: Switch(
         activeColor: AppColors.green1_500,
         inactiveTrackColor: AppColors.gray300,

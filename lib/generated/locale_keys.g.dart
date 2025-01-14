@@ -1,7 +1,5 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-// ignore_for_file: constant_identifier_names
-
 abstract class  LocaleKeys {
   static const you_welcom_in = 'you_welcom_in';
   static const Fruit = 'Fruit';
@@ -182,5 +180,24 @@ abstract class  LocaleKeys {
   static const products_in_your_shopping_cart = 'products_in_your_shopping_cart';
   static const payment = 'payment';
   static const productAdded = 'productAdded';
+  static const shipping = 'shipping';
+  static const address = 'address';
+  static const paymentWhenRecive = 'paymentWhenRecive';
+  static const deliveryFromPlace = 'deliveryFromPlace';
+  static const buyNowAndPayLater = 'buyNowAndPayLater';
+  static const pleaseSelectPaymentMethod = 'pleaseSelectPaymentMethod';
+  static const free = 'free';
+  static const city = 'city';
+  static const floorNumber = 'floorNumber';
+  static const saveAddress = 'saveAddress';
+  static const requestSummary = 'requestSummary';
+  static const subtotal = 'subtotal';
+  static const total = 'total';
+  static const pleaseConfirmYourOrder = 'pleaseConfirmYourOrder';
+  static const delivery = 'delivery';
+  static const next = 'next';
+  static const payWithPaypal = 'payWithPaypal';
+  static const thereAreNoProductsInheart = 'thereAreNoProductsInheart';
+  static const deliveryAddress = 'deliveryAddress';
 
 }

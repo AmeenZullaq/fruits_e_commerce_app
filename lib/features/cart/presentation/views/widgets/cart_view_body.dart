@@ -40,16 +40,13 @@ class CartViewBody extends StatelessWidget {
                   : CartListView(
                       cartProducts: context.read<CartCubit>().cartProducts,
                     ),
-              SizedBox(
-                height: MediaQuery.sizeOf(context).height * .1,
-              ),
             ],
           ),
         ),
         const Align(
           alignment: Alignment.bottomCenter,
           child: CartButton(),
-        )
+        ),
       ],
     );
   }
