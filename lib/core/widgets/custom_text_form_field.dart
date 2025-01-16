@@ -22,6 +22,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onTap,
     this.enabled,
     this.style,
+    this.onSaved,
   });
   final String? hintText;
   final Color? borderColor;
@@ -39,10 +40,12 @@ class CustomTextFormField extends StatelessWidget {
   final void Function()? onTap;
   final bool? enabled;
   final TextStyle? style;
+  final void Function(String?)? onSaved;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onSaved,
       onTap: onTap,
       style: style,
       enabled: enabled,

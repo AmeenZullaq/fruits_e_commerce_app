@@ -26,7 +26,7 @@ class _OrderByPriceWidgetState extends State<OrderByPriceWidget> {
       children: texts.asMap().entries.map(
         (e) {
           int index = e.key;
-          return GestureDetector(
+          return InkWell(
             onTap: () {
               widget.onSelect(index);
               setState(() {

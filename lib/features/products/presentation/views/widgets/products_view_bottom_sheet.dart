@@ -48,7 +48,7 @@ class _ProductsViewBottomSheetState extends State<ProductsViewBottomSheet> {
             ),
             const Spacer(),
             CustomButton(
-              text: LocaleKeys.filtering,
+              text: LocaleKeys.filtering.tr(),
               onTap: () {
                 if (selectedOption == 0) {
                   context.read<GetProductsCubit>().getOrderedProducts();

@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class OrderByPriceItem extends StatelessWidget {
+class OrderByPriceItem extends StatefulWidget {
   const OrderByPriceItem({
     super.key,
     required this.text,
@@ -14,6 +14,11 @@ class OrderByPriceItem extends StatelessWidget {
   final String text;
   final bool isChecked;
 
+  @override
+  State<OrderByPriceItem> createState() => _OrderByPriceItemState();
+}
+
+class _OrderByPriceItemState extends State<OrderByPriceItem> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,7 +32,7 @@ class OrderByPriceItem extends StatelessWidget {
             shape: BoxShape.circle,
             border: Border.all(color: AppColors.gray400),
           ),
-          child: isChecked
+          child: widget.isChecked
               ? CircleAvatar(
                   radius: 5.r,
                   backgroundColor: AppColors.green1_500,
@@ -38,7 +43,7 @@ class OrderByPriceItem extends StatelessWidget {
           width: 16.w,
         ),
         Text(
-          text.tr(),
+          widget.text.tr(),
           style: AppTextStyles.bold13.copyWith(
             color: AppColors.gray950,
           ),

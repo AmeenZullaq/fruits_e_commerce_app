@@ -1,0 +1,20 @@
+import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:meta/meta.dart';
+
+part 'checkout_state.dart';
+
+class CheckoutCubit extends Cubit<CheckoutState> {
+  CheckoutCubit() : super(CheckoutInitial());
+
+  final GlobalKey<FormState> addressSectionFormKey = GlobalKey();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController addressController = TextEditingController();
+  final TextEditingController cityController = TextEditingController();
+  final TextEditingController floorController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+
+  bool isSelectedPaymentMethod = false;
+}

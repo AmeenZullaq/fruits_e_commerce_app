@@ -12,6 +12,7 @@ import 'package:e_commerce_app/core/repos/product_repo_impl.dart';
 import 'package:e_commerce_app/core/repos/product_repo.dart';
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_item_cubit/cart_item_cubit.dart';
+import 'package:e_commerce_app/features/checkout/presentation/cubits/checkout_cubit/checkout_cubit.dart';
 import 'package:e_commerce_app/features/products/presentation/cubits/get_products_cubit/get_products_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/logout_cubit/logout_cubit.dart';
 import 'package:e_commerce_app/features/home/presentation/cubits/get_best_selling_products_cubit/get_best_selling_products_cubit.dart';
@@ -30,6 +31,7 @@ abstract class InjectionContainer {
     await initGetProductsDependencies();
     await initProfileDependency();
     await initCartDependency();
+    await checkoutInitDependencies();
   }
 
   static Future<void> initAuthDependencies() async {
@@ -131,6 +133,13 @@ abstract class InjectionContainer {
     );
     getIt.registerLazySingleton<CartItemCubit>(
       () => CartItemCubit(),
+    );
+  }
+
+  static Future<void> checkoutInitDependencies() async {
+    /// Cubits
+    getIt.registerLazySingleton<CheckoutCubit>(
+      () => CheckoutCubit(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
+import 'package:e_commerce_app/features/checkout/presentation/cubits/checkout_cubit/checkout_cubit.dart';
 import 'package:e_commerce_app/features/checkout/presentation/views/widgets/shipping_item.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -13,14 +14,18 @@ class ShippingSection extends StatefulWidget {
   State<ShippingSection> createState() => _ShippingSectionState();
 }
 
-class _ShippingSectionState extends State<ShippingSection> {
+class _ShippingSectionState extends State<ShippingSection>
+    with AutomaticKeepAliveClientMixin {
   int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
+    super.build(context);
+    final CheckoutCubit checkoutCubit = context.read<CheckoutCubit>();
     return Column(
       children: [
         ShippingItem(
           onTap: () {
+            checkoutCubit.isSelectedPaymentMethod = true;
             selectedIndex = 1;
             setState(() {});
           },
@@ -35,6 +40,7 @@ class _ShippingSectionState extends State<ShippingSection> {
         ),
         ShippingItem(
           onTap: () {
+            checkoutCubit.isSelectedPaymentMethod = true;
             selectedIndex = 2;
             setState(() {});
           },
@@ -42,9 +48,12 @@ class _ShippingSectionState extends State<ShippingSection> {
           title: LocaleKeys.deliveryFromPlace.tr(),
           subtitle: LocaleKeys.pleaseSelectPaymentMethod.tr(),
           tralling:
-            '${context.read<CartCubit>().priceOfAllProducts} ${LocaleKeys.pound.tr()}',
+              '${context.read<CartCubit>().priceOfAllProducts} ${LocaleKeys.pound.tr()}',
         ),
       ],
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
