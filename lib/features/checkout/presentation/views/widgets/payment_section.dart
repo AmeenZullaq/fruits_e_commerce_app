@@ -1,12 +1,15 @@
 import 'package:e_commerce_app/core/constants/app__text_styles.dart';
 import 'package:e_commerce_app/core/constants/app_colors.dart';
 import 'package:e_commerce_app/core/constants/app_decorations.dart';
+import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
+import 'package:e_commerce_app/features/checkout/presentation/cubits/checkout_cubit/checkout_cubit.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:svg_flutter/svg.dart';
 
 class PaymentSection extends StatelessWidget {
   const PaymentSection({super.key});
@@ -104,9 +107,37 @@ class PaymentSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                LocaleKeys.deliveryAddress.tr(),
-                style: AppTextStyles.bold13,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    LocaleKeys.deliveryAddress.tr(),
+                    style: AppTextStyles.bold13,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      context.read<CheckoutCubit>().pageController.previousPage(
+                            duration: const Duration(milliseconds: 300),
+                            curve: Curves.easeIn,
+                          );
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          LocaleKeys.modify.tr(),
+                        ),
+                        SizedBox(
+                          width: 5.w,
+                        ),
+                        SvgPicture.asset(
+                          height: 18.h,
+                          width: 18.w,
+                          Assets.imagesAddressEdit,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 12.h,
@@ -116,13 +147,12 @@ class PaymentSection extends StatelessWidget {
                 children: [
                   const Icon(
                     Icons.place_outlined,
-
                   ),
                   SizedBox(
                     width: 8.w,
                   ),
                   Text(
-                    'شارع النيل، مبنى رقم ١٢٣',
+                    '${context.read<CheckoutCubit>().addressController.text}, ${context.read<CheckoutCubit>().floorController.text}',
                     style: AppTextStyles.regular16.copyWith(
                       color: AppColors.gray500,
                     ),

@@ -45,6 +45,7 @@ dependencies:
   flutter_dotenv: ^5.2.1
   flutter_easyloading: ^3.0.5
   flutter_facebook_auth: ^7.0.1
+  flutter_paypal_payment: ^1.0.6
   flutter_screenutil: ^5.9.3
   flutter_svg_provider: ^1.0.7
   flutter_typeahead: ^5.2.0
@@ -128,6 +129,6 @@ flutter_launcher_icons:
 
 flutter_assets:
   assets_path: assets/images/
-  output_path: lib/core/utils/
+  output_path: lib\core\constants
   filename: assets.dart
   field_prefix: null

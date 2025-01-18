@@ -19,20 +19,7 @@ class ShippingViewBody extends StatefulWidget {
 }
 
 class _ShippingViewBodyState extends State<ShippingViewBody> {
-  late PageController pageController;
   int currentStepIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    pageController = PageController();
-  }
-
-  @override
-  void dispose() {
-    pageController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +33,7 @@ class _ShippingViewBodyState extends State<ShippingViewBody> {
           ),
           CheckoutSteps(
             currentStepIndex: currentStepIndex,
-            pageController: pageController,
+            pageController: checkoutCubit.pageController,
           ),
           SizedBox(
             height: 30.h,
@@ -54,7 +41,7 @@ class _ShippingViewBodyState extends State<ShippingViewBody> {
           Expanded(
             child: PageView.builder(
               itemCount: getSteps().length,
-              controller: pageController,
+              controller: checkoutCubit.pageController,
               physics: const NeverScrollableScrollPhysics(),
               onPageChanged: (index) {
                 currentStepIndex = index;
@@ -71,36 +58,44 @@ class _ShippingViewBodyState extends State<ShippingViewBody> {
                 : LocaleKeys.next.tr(),
             onTap: () {
               if (currentStepIndex == 0) {
-                if (checkoutCubit.isSelectedPaymentMethod) {
-                  pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeIn,
-                  );
-                } else {
-                  showingSnackBar(
-                    context,
-                    text: LocaleKeys.pleaseSelectPaymentMethod.tr(),
-                  );
-                }
+                validateShippingSection(checkoutCubit, context);
               }
               if (currentStepIndex == 1) {
-                if (checkoutCubit.addressSectionFormKey.currentState!
-                    .validate()) {
-                  pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeIn,
-                  );
-                } else {
-                  checkoutCubit.autovalidateMode = AutovalidateMode.always;
-                }
+                validateAddressSection(checkoutCubit);
               }
             },
           ),
           SizedBox(
-            height: 50.h,
+            height: 30.h,
           ),
         ],
       ),
     );
+  }
+
+  void validateAddressSection(CheckoutCubit checkoutCubit) {
+    if (checkoutCubit.addressSectionFormKey.currentState!.validate()) {
+      checkoutCubit.pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeIn,
+      );
+    } else {
+      checkoutCubit.autovalidateMode = AutovalidateMode.always;
+    }
+  }
+
+  void validateShippingSection(
+      CheckoutCubit checkoutCubit, BuildContext context) {
+    if (checkoutCubit.isSelectedPaymentMethod) {
+      checkoutCubit.pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeIn,
+      );
+    } else {
+      showingSnackBar(
+        context,
+        text: LocaleKeys.pleaseSelectPaymentMethod.tr(),
+      );
+    }
   }
 }

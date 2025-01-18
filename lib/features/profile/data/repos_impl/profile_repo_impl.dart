@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/server_failure.dart';
+import 'package:e_commerce_app/core/helper_functions/get_user.dart';
 import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/core/services/firebase_auth_service.dart';
 import 'package:e_commerce_app/core/services/shared_preferences.dart';
@@ -56,7 +57,8 @@ class ProfileRepoImpl extends ProfileRepo {
     try {
       final userInfo = await databaseService.getData(
         path: Endpoints.users,
-        documentId: FirebaseAuth.instance.currentUser!.uid,
+        documentId: getUser().uId,
+        // documentId: FirebaseAuth.instance.currentUser!.uid,
       );
       final user = UserModel.fromJson(userInfo);
       SharedPrefs.setString(AppKeys.userEmail, user.email);
@@ -88,7 +90,8 @@ class ProfileRepoImpl extends ProfileRepo {
       if (newName != null) {
         await databaseService.updateData(
           path: Endpoints.users,
-          documentId: FirebaseAuth.instance.currentUser!.uid,
+          documentId: getUser().uId,
+          // documentId: FirebaseAuth.instance.currentUser!.uid,
           data: {
             'name': newName,
           },
@@ -98,7 +101,8 @@ class ProfileRepoImpl extends ProfileRepo {
         await firebaseAuthService.updateUserEmail(newEmail: newEmail);
         await databaseService.updateData(
           path: Endpoints.users,
-          documentId: FirebaseAuth.instance.currentUser!.uid,
+          documentId: getUser().uId,
+          // documentId: FirebaseAuth.instance.currentUser!.uid,
           data: {
             'email': newEmail,
           },

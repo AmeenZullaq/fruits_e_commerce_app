@@ -38,6 +38,7 @@ class AuthRepoImpl extends AuthRepo {
         uId: userCred.uid,
       );
       await addUserData(user: user);
+      saveUserData(user: user);
       return right(user);
     } catch (e) {
       deleteUser(userCred);
@@ -65,6 +66,7 @@ class AuthRepoImpl extends AuthRepo {
         password: password,
       );
       final user = await getUserData(userId: userCred.uid);
+      saveUserData(user: user);
       return right(user);
     } catch (e) {
       if (e is FirebaseAuthException) {
@@ -86,14 +88,15 @@ class AuthRepoImpl extends AuthRepo {
     try {
       userCreed = await firebaseAuthService.singInWithGoogle();
       final user = UserModel.fromAuthFirebase(userCreed);
-      bool isExist = await dataBaseService.checkIfDataExists(
+      bool isUserExist = await dataBaseService.checkIfDataExists(
         path: Endpoints.users,
         docuementId: userCreed.uid,
       );
-      if (isExist) {
+      if (isUserExist) {
         await getUserData(userId: userCreed.uid);
       } else {
         await addUserData(user: user);
+        saveUserData(user: user);
       }
       return right(user);
     } catch (e) {

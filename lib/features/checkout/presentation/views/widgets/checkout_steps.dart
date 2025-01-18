@@ -26,27 +26,27 @@ class CheckoutSteps extends StatelessWidget {
       children: List.generate(
         texts.length,
         (index) {
-          return InkWell(
-            onTap: () {
-              pageController.animateToPage(
-                index,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeIn,
-              );
-            },
-            child: AnimatedCrossFade(
-              firstChild: InActiveStep(
-                title: texts[index].tr(),
-                stepNumber: index + 1,
-              ),
-              secondChild: ActiveStep(
-                title: texts[index].tr(),
-              ),
-              crossFadeState: index > currentStepIndex
-                  ? CrossFadeState.showFirst
-                  : CrossFadeState.showSecond,
-              duration: const Duration(milliseconds: 300),
+          return AnimatedCrossFade(
+            firstChild: InActiveStep(
+              title: texts[index].tr(),
+              stepNumber: index + 1,
             ),
+            secondChild: InkWell(
+              onTap: () {
+                pageController.animateToPage(
+                  index,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeIn,
+                );
+              },
+              child: ActiveStep(
+                title: texts[index].tr(),
+              ),
+            ),
+            crossFadeState: index > currentStepIndex
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            duration: const Duration(milliseconds: 300),
           );
         },
       ),

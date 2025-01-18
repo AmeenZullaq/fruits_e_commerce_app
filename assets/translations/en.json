@@ -196,5 +196,6 @@
   "next": "Next",
   "payWithPaypal": "Pay with paypal",
   "thereAreNoProductsInheart": "There are no products in the cart",
-  "deliveryAddress": "Delivery address"
+  "deliveryAddress": "Delivery address",
+  "modify": "modification"
 }

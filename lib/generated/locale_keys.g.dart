@@ -199,5 +199,6 @@ abstract class  LocaleKeys {
   static const payWithPaypal = 'payWithPaypal';
   static const thereAreNoProductsInheart = 'thereAreNoProductsInheart';
   static const deliveryAddress = 'deliveryAddress';
+  static const modify = 'modify';
 
 }

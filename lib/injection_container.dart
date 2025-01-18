@@ -22,16 +22,24 @@ import 'package:e_commerce_app/features/profile/presentation/cubits/get_user_inf
 import 'package:e_commerce_app/features/profile/presentation/cubits/update_user_info_cubit/update_user_info_cubit.dart';
 import 'package:e_commerce_app/features/profile/presentation/cubits/upload_user_image_cubit/upload_user_image_cubit.dart';
 import 'package:get_it/get_it.dart';
+import 'package:logger/logger.dart';
 
 abstract class InjectionContainer {
   static GetIt getIt = GetIt.instance;
 
   static Future<void> initAppDependencies() async {
+    await initServicesDependencies();
     await initAuthDependencies();
     await initGetProductsDependencies();
     await initProfileDependency();
     await initCartDependency();
     await checkoutInitDependencies();
+  }
+
+  static Future<void> initServicesDependencies() async {
+    getIt.registerLazySingleton<Logger>(
+      () => Logger(),
+    );
   }
 
   static Future<void> initAuthDependencies() async {
