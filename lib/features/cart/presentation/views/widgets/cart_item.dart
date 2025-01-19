@@ -83,7 +83,7 @@ class CartItem extends StatelessWidget {
                       width: 16.w,
                     ),
                     Text(
-                      '${cartItem.count}',
+                      '${cartItem.quantity}',
                       style: AppTextStyles.bold16.copyWith(
                         color: AppColors.gray950,
                       ),

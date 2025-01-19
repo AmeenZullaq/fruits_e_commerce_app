@@ -21,7 +21,7 @@ class CartCubit extends Cubit<CartState> {
     bool isProductExist = isExist(productEntity, cartProducts);
     if (isProductExist) {
       CartItemEntity cartProduct = getCartProduct(productEntity, cartProducts)!;
-      cartProduct.increaseCount(
+      cartProduct.increaseQuantity(
         countIncreasing: selectedCountOfProduct,
       );
 
@@ -31,7 +31,7 @@ class CartCubit extends Cubit<CartState> {
     } else {
       CartItemEntity cartItem = CartItemEntity(
         product: productEntity,
-        count: selectedCountOfProduct,
+        quantity: selectedCountOfProduct,
       );
       cartProducts.add(cartItem);
       emit(
@@ -47,7 +47,7 @@ class CartCubit extends Cubit<CartState> {
       (element) => element == cartItem,
     );
     priceOfAllProducts =
-        priceOfAllProducts - (cartItem.product.price * cartItem.count);
+        priceOfAllProducts - (cartItem.product.price * cartItem.quantity);
     emit(
       CartProductRemoved(),
     );

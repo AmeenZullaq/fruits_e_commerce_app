@@ -2,6 +2,7 @@ import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/custom_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
+import 'package:e_commerce_app/features/cart/domain/entities/cart_entity.dart';
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_item_cubit/cart_item_cubit.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
@@ -32,7 +33,14 @@ class CartButton extends StatelessWidget {
                   text: LocaleKeys.thereAreNoProductsInheart.tr(),
                 );
               } else {
-                Navigator.of(context).pushNamed(AppRoutes.shippingView);
+                Navigator.of(context).pushNamed(
+                  AppRoutes.checkoutView,
+                  arguments: CartEntity(
+                    cartProducts: context.read<CartCubit>().cartProducts,
+                    priceOfAllProducts:
+                        context.read<CartCubit>().priceOfAllProducts,
+                  ),
+                );
               }
             },
           ),

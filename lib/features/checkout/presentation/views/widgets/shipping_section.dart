@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
-import 'package:e_commerce_app/features/checkout/presentation/cubits/checkout_cubit/checkout_cubit.dart';
+import 'package:e_commerce_app/features/checkout/presentation/cubits/add_order_cubit/add_order_cubit.dart';
 import 'package:e_commerce_app/features/checkout/presentation/views/widgets/shipping_item.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -20,12 +20,12 @@ class _ShippingSectionState extends State<ShippingSection>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    final CheckoutCubit checkoutCubit = context.read<CheckoutCubit>();
+    final AddOrderCubit addOrderCubit = context.read<AddOrderCubit>();
     return Column(
       children: [
         ShippingItem(
           onTap: () {
-            checkoutCubit.isSelectedPaymentMethod = true;
+            addOrderCubit.isSelectedPaymentMethod = true;
             selectedIndex = 1;
             setState(() {});
           },
@@ -40,7 +40,7 @@ class _ShippingSectionState extends State<ShippingSection>
         ),
         ShippingItem(
           onTap: () {
-            checkoutCubit.isSelectedPaymentMethod = true;
+            addOrderCubit.isSelectedPaymentMethod = true;
             selectedIndex = 2;
             setState(() {});
           },

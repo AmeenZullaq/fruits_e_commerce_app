@@ -6,12 +6,10 @@ class OrderModel {
   final String uId;
   final List<OrderProductModel> orderProductModel;
   final ShippingAddressModel shippingAddressModel;
-  final String paymentMethod;
   final num priceOffAllProducts;
 
   OrderModel({
-    required this.priceOffAllProducts, 
-    required this.paymentMethod,
+    required this.priceOffAllProducts,
     required this.uId,
     required this.orderProductModel,
     required this.shippingAddressModel,
@@ -20,7 +18,6 @@ class OrderModel {
   factory OrderModel.fromJson(Map<String, dynamic> json) {
     return OrderModel(
       priceOffAllProducts: json['priceOffAllProducts'],
-      paymentMethod: json['paymentMethod'],
       uId: json['uId'],
       orderProductModel: json['orderProductModel'],
       shippingAddressModel: json['shippingAddressModel'],
@@ -29,7 +26,6 @@ class OrderModel {
   factory OrderModel.fromEntity(OrderEntity orderEntity) {
     return OrderModel(
       priceOffAllProducts: orderEntity.priceOffAllProducts,
-      paymentMethod: orderEntity.paymentMethod,
       uId: orderEntity.uId,
       orderProductModel: orderEntity.products
           .map((e) => OrderProductModel.fromEntity(e))
@@ -40,10 +36,19 @@ class OrderModel {
     );
   }
 
+  // toEntity() {
+  //   return OrderEntity(
+  //     uId: uId,
+  //     products: orderProductModel,
+  //     paymentMethod: paymentMethod,
+  //     shippingAddressEntity: shippingAddressEntity,
+  //     priceOffAllProducts: priceOffAllProducts,
+  //   );
+  // }
+
   toJson() {
     return {
       'priceOffAllProducts': priceOffAllProducts,
-      'paymentMethod': paymentMethod,
       'uId': uId,
       'orderProductModel': orderProductModel.map((e) => e.toJson()).toList(),
       'shippingAddressModel': shippingAddressModel.toJson(),

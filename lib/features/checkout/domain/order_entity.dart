@@ -3,7 +3,6 @@ import 'package:e_commerce_app/features/checkout/domain/shipping_address_entity.
 
 class OrderEntity {
   final List<CartItemEntity> products;
-  final String paymentMethod;
   final ShippingAddressEntity shippingAddressEntity;
   final num priceOffAllProducts;
   final String uId;
@@ -11,7 +10,6 @@ class OrderEntity {
   OrderEntity({
     required this.uId,
     required this.products,
-    required this.paymentMethod,
     required this.shippingAddressEntity,
     required this.priceOffAllProducts,
   });

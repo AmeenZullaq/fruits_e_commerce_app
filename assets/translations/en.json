@@ -197,5 +197,6 @@
   "payWithPaypal": "Pay with paypal",
   "thereAreNoProductsInheart": "There are no products in the cart",
   "deliveryAddress": "Delivery address",
-  "modify": "modification"
+  "modify": "modification",
+  "theProcessCompletedSuccessfully": "The process completed successfully"
 }

@@ -24,6 +24,16 @@ class ReviewModel {
       reviewDescription: json['reviewDescription'],
     );
   }
+
+  factory ReviewModel.fromEntity(ReviewEntity reviewEntity) {
+    return ReviewModel(
+      image: reviewEntity.image,
+      name: reviewEntity.name,
+      rating: reviewEntity.rating,
+      date: reviewEntity.date,
+      reviewDescription: reviewEntity.reviewDescription,
+    );
+  }
   ReviewEntity toEntity() {
     return ReviewEntity(
       image: image,

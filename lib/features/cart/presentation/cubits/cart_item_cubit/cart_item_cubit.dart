@@ -10,7 +10,7 @@ class CartItemCubit extends Cubit<CartItemState> {
   void increaseNumberProductInCart({
     required CartItemEntity cartItem,
   }) {
-    cartItem.count++;
+    cartItem.quantity++;
     emit(
       CartItemUpdated(cartItem: cartItem),
     );
@@ -19,8 +19,8 @@ class CartItemCubit extends Cubit<CartItemState> {
   void decreaseNumberProductInCart({
     required CartItemEntity cartItem,
   }) {
-    if (cartItem.count > 0) {
-      cartItem.count--;
+    if (cartItem.quantity > 0) {
+      cartItem.quantity--;
       emit(
         CartItemUpdated(cartItem: cartItem),
       );

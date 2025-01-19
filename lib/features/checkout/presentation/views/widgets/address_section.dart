@@ -6,7 +6,7 @@ import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/core/widgets/switch_widget.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/email_field.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/user_name_field.dart';
-import 'package:e_commerce_app/features/checkout/presentation/cubits/checkout_cubit/checkout_cubit.dart';
+import 'package:e_commerce_app/features/checkout/presentation/cubits/add_order_cubit/add_order_cubit.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -18,22 +18,22 @@ class AddressSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CheckoutCubit checkoutCubit = context.read<CheckoutCubit>();
+    final AddOrderCubit addOrderCubit = context.read<AddOrderCubit>();
     return SingleChildScrollView(
       child: Form(
         autovalidateMode: AutovalidateMode.onUserInteraction,
-        key: checkoutCubit.addressSectionFormKey,
+        key: addOrderCubit.addressSectionFormKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             UserNameField(
-              userNameController: checkoutCubit.nameController,
+              userNameController: addOrderCubit.nameController,
             ),
             SizedBox(
               height: 8.h,
             ),
             EmailField(
-              emailController: checkoutCubit.emailController,
+              emailController: addOrderCubit.emailController,
             ),
             SizedBox(
               height: 8.h,
@@ -42,7 +42,7 @@ class AddressSection extends StatelessWidget {
               validator: (value) {
                 return AppValidators.validatePhoneNumber(value);
               },
-              controller: checkoutCubit.phoneController,
+              controller: addOrderCubit.phoneController,
               hintText: LocaleKeys.mobile_number.tr(),
             ),
             SizedBox(
@@ -52,7 +52,7 @@ class AddressSection extends StatelessWidget {
               validator: (value) {
                 return AppValidators.validateText(value);
               },
-              controller: checkoutCubit.addressController,
+              controller: addOrderCubit.addressController,
               hintText: LocaleKeys.address.tr(),
             ),
             SizedBox(
@@ -62,7 +62,7 @@ class AddressSection extends StatelessWidget {
               validator: (value) {
                 return AppValidators.validateText(value);
               },
-              controller: checkoutCubit.cityController,
+              controller: addOrderCubit.cityController,
               hintText: LocaleKeys.city.tr(),
             ),
             SizedBox(
@@ -72,7 +72,7 @@ class AddressSection extends StatelessWidget {
               validator: (value) {
                 return AppValidators.validateText(value);
               },
-              controller: checkoutCubit.floorController,
+              controller: addOrderCubit.floorController,
               hintText: LocaleKeys.floorNumber.tr(),
             ),
             SizedBox(

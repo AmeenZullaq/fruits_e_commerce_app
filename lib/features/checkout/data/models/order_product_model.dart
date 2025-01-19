@@ -21,7 +21,7 @@ class OrderProductModel {
       name: cartItem.product.name,
       imageUrl: cartItem.product.imageUrl,
       price: cartItem.product.price,
-      quantity: cartItem.count,
+      quantity: cartItem.quantity,
     );
   }
 

@@ -15,5 +15,5 @@ abstract class AppRoutes {
   static const profileView = 'profileView';
   static const whoAreWeView = 'whoAreWeView';
   static const languageView = 'languageView';
-  static const shippingView = 'shippingView';
+  static const checkoutView = 'checkoutView';
 }

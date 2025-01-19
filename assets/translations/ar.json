@@ -197,5 +197,6 @@
   "payWithPaypal": "الدفع عبر بايبال",
   "thereAreNoProductsInheart": "لا يوجد منتجات في السلة",
   "deliveryAddress": "عنوان التوصيل",
-  "modify": "تعديل"
+  "modify": "تعديل",
+  "theProcessCompletedSuccessfully": "تمت العملية بنجاح"
 }

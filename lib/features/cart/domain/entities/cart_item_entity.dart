@@ -2,26 +2,26 @@ import 'package:e_commerce_app/core/entities/product_entity.dart';
 
 class CartItemEntity {
   final ProductEntity product;
-  int count;
+  int quantity;
 
   CartItemEntity({
     required this.product,
-    this.count = 0,
+    this.quantity = 0,
   });
 
   num getTotalPric() {
-    return count * product.price;
+    return quantity * product.price;
   }
 
   num getTotalwight() {
-    return count * product.unitWeight;
+    return quantity * product.unitWeight;
   }
 
-  void increaseCount({required int countIncreasing}) {
-    count = count + countIncreasing;
+  void increaseQuantity({required int countIncreasing}) {
+    quantity = quantity + countIncreasing;
   }
 
-  void decreaseCount({required int countDecreasing}) {
-    count = count - countDecreasing;
+  void decreaseQuantity({required int countDecreasing}) {
+    quantity = quantity - countDecreasing;
   }
 }

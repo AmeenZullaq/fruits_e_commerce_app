@@ -61,6 +61,28 @@ class ProductModel {
     );
   }
 
+  factory ProductModel.fromEntity(ProductEntity productEntity) {
+    return ProductModel(
+      avgRating: productEntity.avgRating,
+      name: productEntity.name,
+      code: productEntity.code,
+      price: productEntity.price,
+      imageUrl: productEntity.imageUrl,
+      isFeatured: productEntity.isFeatured,
+      sellingCount: productEntity.sellingCount,
+      description: productEntity.description,
+      expirationMonths: productEntity.expirationMonths,
+      isOrganic: productEntity.isOrganic,
+      numberOfCalories: productEntity.numberOfCalories,
+      unitWeight: productEntity.unitWeight,
+      reviews: productEntity.reviews!
+          .map(
+            (e) => ReviewModel.fromEntity(e),
+          )
+          .toList(),
+    );
+  }
+
   ProductEntity toEntity() {
     return ProductEntity(
       imageUrl: imageUrl,

@@ -213,7 +213,8 @@ class CodegenLoader extends AssetLoader{
   "payWithPaypal": "الدفع عبر بايبال",
   "thereAreNoProductsInheart": "لا يوجد منتجات في السلة",
   "deliveryAddress": "عنوان التوصيل",
-  "modify": "تعديل"
+  "modify": "تعديل",
+  "theProcessCompletedSuccessfully": "تمت العملية بنجاح"
 };
 static const Map<String,dynamic> en = {
   "you_welcom_in": "You welcom in ",
@@ -414,7 +415,8 @@ static const Map<String,dynamic> en = {
   "payWithPaypal": "Pay with paypal",
   "thereAreNoProductsInheart": "There are no products in the cart",
   "deliveryAddress": "Delivery address",
-  "modify": "modification"
+  "modify": "modification",
+  "theProcessCompletedSuccessfully": "The process completed successfully"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

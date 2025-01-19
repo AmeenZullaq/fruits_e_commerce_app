@@ -1,8 +1,9 @@
+import 'package:e_commerce_app/core/helper_functions/checkout_validation.dart';
 import 'package:e_commerce_app/core/helper_functions/get_steps.dart';
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/custom_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
-import 'package:e_commerce_app/features/checkout/presentation/cubits/checkout_cubit/checkout_cubit.dart';
+import 'package:e_commerce_app/features/cart/domain/entities/cart_entity.dart';
+import 'package:e_commerce_app/features/checkout/presentation/cubits/add_order_cubit/add_order_cubit.dart';
 import 'package:e_commerce_app/features/checkout/presentation/views/widgets/checkout_steps.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -11,19 +12,21 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ShippingViewBody extends StatefulWidget {
-  const ShippingViewBody({super.key});
+class CheckoutViewBody extends StatefulWidget {
+  const CheckoutViewBody({super.key, required this.cartEntity});
+
+  final CartEntity cartEntity;
 
   @override
-  State<ShippingViewBody> createState() => _ShippingViewBodyState();
+  State<CheckoutViewBody> createState() => _CheckoutViewBodyState();
 }
 
-class _ShippingViewBodyState extends State<ShippingViewBody> {
+class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   int currentStepIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    final CheckoutCubit checkoutCubit = context.read<CheckoutCubit>();
+    final AddOrderCubit addOrderCubit = context.read<AddOrderCubit>();
     return AllPadding(
       all: 20,
       child: Column(
@@ -33,7 +36,7 @@ class _ShippingViewBodyState extends State<ShippingViewBody> {
           ),
           CheckoutSteps(
             currentStepIndex: currentStepIndex,
-            pageController: checkoutCubit.pageController,
+            pageController: addOrderCubit.pageController,
           ),
           SizedBox(
             height: 30.h,
@@ -41,7 +44,7 @@ class _ShippingViewBodyState extends State<ShippingViewBody> {
           Expanded(
             child: PageView.builder(
               itemCount: getSteps().length,
-              controller: checkoutCubit.pageController,
+              controller: addOrderCubit.pageController,
               physics: const NeverScrollableScrollPhysics(),
               onPageChanged: (index) {
                 currentStepIndex = index;
@@ -58,10 +61,12 @@ class _ShippingViewBodyState extends State<ShippingViewBody> {
                 : LocaleKeys.next.tr(),
             onTap: () {
               if (currentStepIndex == 0) {
-                validateShippingSection(checkoutCubit, context);
-              }
-              if (currentStepIndex == 1) {
-                validateAddressSection(checkoutCubit);
+                validateShippingSection(addOrderCubit, context);
+              } else if (currentStepIndex == 1) {
+                validateAddressSection(addOrderCubit);
+              } else {
+                context.read<AddOrderCubit>().cartEntity = widget.cartEntity;
+                context.read<AddOrderCubit>().addOrder();
               }
             },
           ),
@@ -71,31 +76,5 @@ class _ShippingViewBodyState extends State<ShippingViewBody> {
         ],
       ),
     );
-  }
-
-  void validateAddressSection(CheckoutCubit checkoutCubit) {
-    if (checkoutCubit.addressSectionFormKey.currentState!.validate()) {
-      checkoutCubit.pageController.nextPage(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeIn,
-      );
-    } else {
-      checkoutCubit.autovalidateMode = AutovalidateMode.always;
-    }
-  }
-
-  void validateShippingSection(
-      CheckoutCubit checkoutCubit, BuildContext context) {
-    if (checkoutCubit.isSelectedPaymentMethod) {
-      checkoutCubit.pageController.nextPage(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeIn,
-      );
-    } else {
-      showingSnackBar(
-        context,
-        text: LocaleKeys.pleaseSelectPaymentMethod.tr(),
-      );
-    }
   }
 }
