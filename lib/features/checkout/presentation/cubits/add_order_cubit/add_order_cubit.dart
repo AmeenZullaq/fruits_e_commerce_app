@@ -1,8 +1,8 @@
 import 'package:e_commerce_app/core/helper_functions/get_user.dart';
 import 'package:e_commerce_app/features/cart/domain/entities/cart_entity.dart';
-import 'package:e_commerce_app/features/checkout/domain/order_entity.dart';
+import 'package:e_commerce_app/features/checkout/domain/entities/order_entity/order_entity.dart';
 import 'package:e_commerce_app/features/checkout/domain/repos/order_repo.dart';
-import 'package:e_commerce_app/features/checkout/domain/shipping_address_entity.dart';
+import 'package:e_commerce_app/features/checkout/domain/entities/order_entity/shipping_address_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
@@ -31,15 +31,18 @@ class AddOrderCubit extends Cubit<AddOrderState> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   bool isSelectedPaymentMethod = false;
   late CartEntity cartEntity;
+  bool payWithcash = false;
 
   /// Functions
   Future<void> addOrder() async {
     emit(
       AddOrderLoading(),
     );
-   final order = OrderEntity(
+    final order = OrderEntity(
       uId: getUser().uId,
+      currency: "USD",
       products: cartEntity.cartProducts,
+      payWithcash: payWithcash,
       shippingAddressEntity: ShippingAddressEntity(
         name: nameController.text,
         email: emailController.text,

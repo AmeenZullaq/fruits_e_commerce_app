@@ -23,9 +23,10 @@ class FeaturedItemButton extends StatelessWidget {
           child: FittedBox(
             child: Text(
               'تسوق الان',
-              style: AppTextStyles.bold13..copyWith(
-                color: const Color(0xff1F5E3B),
-              ),
+              style: AppTextStyles.bold13
+                ..copyWith(
+                  color: const Color(0xff1F5E3B),
+                ),
             ),
           ),
         ),

@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/features/checkout/data/models/order_product_model.dart';
 import 'package:e_commerce_app/features/checkout/data/models/shipping_address_model.dart';
-import 'package:e_commerce_app/features/checkout/domain/order_entity.dart';
+import 'package:e_commerce_app/features/checkout/domain/entities/order_entity/order_entity.dart';
 
 class OrderModel {
   final String uId;

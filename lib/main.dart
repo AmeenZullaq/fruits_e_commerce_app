@@ -85,8 +85,3 @@ class FruitsApp extends StatelessWidget {
     );
   }
 }
-
-
-/// ValueListenable in ValueNotifier
-
-/// onPageChanged in PageView is very important, 

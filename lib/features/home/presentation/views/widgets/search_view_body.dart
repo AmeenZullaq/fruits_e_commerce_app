@@ -24,11 +24,13 @@ class _SearchViewBodyState extends State<SearchViewBody> {
       },
     );
   }
+
   @override
   void dispose() {
     focusNode.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return SymetricPadding(

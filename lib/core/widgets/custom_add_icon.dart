@@ -24,7 +24,6 @@ class CustomAddIcon extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: CircleAvatar(
-        
         radius: raduis ?? 18.r,
         backgroundColor: backgroundColor ?? AppColors.green1_500,
         child: Center(

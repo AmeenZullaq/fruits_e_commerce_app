@@ -4,7 +4,7 @@ import 'package:e_commerce_app/core/error/failure.dart';
 import 'package:e_commerce_app/core/error/server_failure.dart';
 import 'package:e_commerce_app/core/services/database_service.dart';
 import 'package:e_commerce_app/features/checkout/data/models/order_model.dart';
-import 'package:e_commerce_app/features/checkout/domain/order_entity.dart';
+import 'package:e_commerce_app/features/checkout/domain/entities/order_entity/order_entity.dart';
 import 'package:e_commerce_app/features/checkout/domain/repos/order_repo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -34,7 +34,7 @@ class OrderRepoImpl extends OrderRepo {
       }
     }
   }
-  
+
   @override
   Future<Either<Failure, List<OrderEntity>>> getMyOrders() {
     // TODO: implement getMyOrders

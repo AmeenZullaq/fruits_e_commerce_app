@@ -21,7 +21,8 @@ class AlreadyHaveAccount extends StatelessWidget {
               color: AppColors.gray400,
             ),
           ),
-          WidgetSpan(alignment: PlaceholderAlignment.middle,
+          WidgetSpan(
+            alignment: PlaceholderAlignment.middle,
             child: GestureDetector(
               onTap: () {
                 Navigator.of(context).pushReplacementNamed(

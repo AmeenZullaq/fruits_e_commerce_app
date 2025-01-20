@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-  
+
   /// Assets for imagesAddressEdit
   /// assets/images/address_edit.svg
   static const String imagesAddressEdit = "assets/images/address_edit.svg";
@@ -16,7 +16,8 @@ class Assets {
 
   /// Assets for imagesArrowSwapHorizontal
   /// assets/images/arrow-swap-horizontal.svg
-  static const String imagesArrowSwapHorizontal = "assets/images/arrow-swap-horizontal.svg";
+  static const String imagesArrowSwapHorizontal =
+      "assets/images/arrow-swap-horizontal.svg";
 
   /// Assets for imagesAvokadow
   /// assets/images/avokadow.svg
@@ -68,7 +69,8 @@ class Assets {
 
   /// Assets for imagesCircleContainer
   /// assets/images/circle_container.svg
-  static const String imagesCircleContainer = "assets/images/circle_container.svg";
+  static const String imagesCircleContainer =
+      "assets/images/circle_container.svg";
 
   /// Assets for imagesDefaultHuman
   /// assets/images/default_human.jpg
@@ -92,7 +94,8 @@ class Assets {
 
   /// Assets for imagesFeaturedItemBackground
   /// assets/images/featured_item_background.svg
-  static const String imagesFeaturedItemBackground = "assets/images/featured_item_background.svg";
+  static const String imagesFeaturedItemBackground =
+      "assets/images/featured_item_background.svg";
 
   /// Assets for imagesFiltter
   /// assets/images/filtter.svg
@@ -112,11 +115,13 @@ class Assets {
 
   /// Assets for imagesGoogleCamera11
   /// assets/images/google_camera_11.png
-  static const String imagesGoogleCamera11 = "assets/images/google_camera_11.png";
+  static const String imagesGoogleCamera11 =
+      "assets/images/google_camera_11.png";
 
   /// Assets for imagesGoogleCamera22
   /// assets/images/google_camera_22.png
-  static const String imagesGoogleCamera22 = "assets/images/google_camera_22.png";
+  static const String imagesGoogleCamera22 =
+      "assets/images/google_camera_22.png";
 
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
@@ -124,7 +129,8 @@ class Assets {
 
   /// Assets for imagesGooglePhotosIcon
   /// assets/images/Google_Photos_icon.png
-  static const String imagesGooglePhotosIcon = "assets/images/Google_Photos_icon.png";
+  static const String imagesGooglePhotosIcon =
+      "assets/images/Google_Photos_icon.png";
 
   /// Assets for imagesHeart
   /// assets/images/heart.svg
@@ -164,7 +170,8 @@ class Assets {
 
   /// Assets for imagesNotificationProfile
   /// assets/images/notification_profile.svg
-  static const String imagesNotificationProfile = "assets/images/notification_profile.svg";
+  static const String imagesNotificationProfile =
+      "assets/images/notification_profile.svg";
 
   /// Assets for imagesNotifications
   /// assets/images/notifications.svg
@@ -172,11 +179,13 @@ class Assets {
 
   /// Assets for imagesOnBoardingBackGroundGreen
   /// assets/images/onBoarding_backGround_green.svg
-  static const String imagesOnBoardingBackGroundGreen = "assets/images/onBoarding_backGround_green.svg";
+  static const String imagesOnBoardingBackGroundGreen =
+      "assets/images/onBoarding_backGround_green.svg";
 
   /// Assets for imagesOnBoardingBackgroundYellow
   /// assets/images/onBoarding_background_yellow.svg
-  static const String imagesOnBoardingBackgroundYellow = "assets/images/onBoarding_background_yellow.svg";
+  static const String imagesOnBoardingBackgroundYellow =
+      "assets/images/onBoarding_background_yellow.svg";
 
   /// Assets for imagesOrginic
   /// assets/images/orginic.svg
@@ -250,4 +259,3 @@ class Assets {
   /// assets/images/water_melon.svg
   static const String imagesWaterMelon = "assets/images/water_melon.svg";
 }
-

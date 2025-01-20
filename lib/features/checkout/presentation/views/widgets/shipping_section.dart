@@ -27,6 +27,7 @@ class _ShippingSectionState extends State<ShippingSection>
           onTap: () {
             addOrderCubit.isSelectedPaymentMethod = true;
             selectedIndex = 1;
+            addOrderCubit.payWithcash = true;
             setState(() {});
           },
           isSelected: selectedIndex == 1,
@@ -45,7 +46,7 @@ class _ShippingSectionState extends State<ShippingSection>
             setState(() {});
           },
           isSelected: selectedIndex == 2,
-          title: LocaleKeys.deliveryFromPlace.tr(),
+          title: LocaleKeys.buyNowAndPayLater.tr(),
           subtitle: LocaleKeys.pleaseSelectPaymentMethod.tr(),
           tralling:
               '${context.read<CartCubit>().priceOfAllProducts} ${LocaleKeys.pound.tr()}',
