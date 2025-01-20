@@ -198,5 +198,7 @@
   "thereAreNoProductsInheart": "لا يوجد منتجات في السلة",
   "deliveryAddress": "عنوان التوصيل",
   "modify": "تعديل",
-  "theProcessCompletedSuccessfully": "تمت العملية بنجاح"
+  "theProcessCompletedSuccessfully": "تمت العملية بنجاح",
+  "proccessWasCompletedSuccessfully": "تمت العملية بنجاح",
+  "anErrorAccurredTryAgain": "حدث خطأ ماو حاول مرة أخرى"
 }

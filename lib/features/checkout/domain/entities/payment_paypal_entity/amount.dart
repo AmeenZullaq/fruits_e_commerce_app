@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/helper_functions/get_currency.dart';
 import 'package:e_commerce_app/features/checkout/domain/entities/order_entity/order_entity.dart';
 import 'details.dart';
 
@@ -15,7 +16,7 @@ class AmountEntity {
   factory AmountEntity.fromEntity(OrderEntity order) {
     return AmountEntity(
       total: order.getpriceWithShippingcost().toString(),
-      currency: order.currency,
+      currency: getCurrency(),
       details: DetailsEntity.fromEntity(order),
     );
   }

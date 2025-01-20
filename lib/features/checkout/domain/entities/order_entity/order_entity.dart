@@ -7,10 +7,8 @@ class OrderEntity {
   final num priceOffAllProducts;
   final String uId;
   final bool payWithcash;
-  final String currency;
 
   OrderEntity({
-    required this.currency,
     required this.payWithcash,
     required this.uId,
     required this.products,

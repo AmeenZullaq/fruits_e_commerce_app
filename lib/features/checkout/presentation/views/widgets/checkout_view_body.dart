@@ -1,8 +1,10 @@
 import 'package:e_commerce_app/core/helper_functions/checkout_validation.dart';
 import 'package:e_commerce_app/core/helper_functions/get_steps.dart';
+import 'package:e_commerce_app/core/services/payment_ways_service.dart';
 import 'package:e_commerce_app/core/widgets/custom_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/cart/domain/entities/cart_entity.dart';
+import 'package:e_commerce_app/features/checkout/domain/entities/payment_paypal_entity/payment_paypal_entity.dart';
 import 'package:e_commerce_app/features/checkout/presentation/cubits/add_order_cubit/add_order_cubit.dart';
 import 'package:e_commerce_app/features/checkout/presentation/views/widgets/checkout_steps.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
@@ -66,7 +68,14 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
                 validateAddressSection(addOrderCubit);
               } else {
                 context.read<AddOrderCubit>().cartEntity = widget.cartEntity;
-                context.read<AddOrderCubit>().addOrder();
+                // context.read<AddOrderCubit>().addOrder();
+
+                PaymentPaypalEntity paymentPaypalEntity =
+                    PaymentPaypalEntity.fromEntity(
+                  context.read<AddOrderCubit>().createOrder(),
+                );
+
+                PaymentWaysService.paypalPayment(context, paymentPaypalEntity);
               }
             },
           ),

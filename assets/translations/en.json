@@ -198,5 +198,7 @@
   "thereAreNoProductsInheart": "There are no products in the cart",
   "deliveryAddress": "Delivery address",
   "modify": "modification",
-  "theProcessCompletedSuccessfully": "The process completed successfully"
+  "theProcessCompletedSuccessfully": "The process completed successfully",
+  "proccessWasCompletedSuccessfully": "proccess was completed successfully",
+  "anErrorAccurredTryAgain": "An error accurred, try again"
 }

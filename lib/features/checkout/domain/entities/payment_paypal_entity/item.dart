@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/helper_functions/get_currency.dart';
 import 'package:e_commerce_app/features/cart/domain/entities/cart_item_entity.dart';
 
 class ItemEntity {
@@ -18,7 +19,7 @@ class ItemEntity {
       name: cartItemEntity.product.name,
       quantity: cartItemEntity.quantity,
       price: cartItemEntity.product.price.toString(),
-      currency: "USD",
+      currency: getCurrency(),
     );
   }
   Map<String, dynamic> toJson() => {

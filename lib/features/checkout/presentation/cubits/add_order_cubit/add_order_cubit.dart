@@ -34,13 +34,9 @@ class AddOrderCubit extends Cubit<AddOrderState> {
   bool payWithcash = false;
 
   /// Functions
-  Future<void> addOrder() async {
-    emit(
-      AddOrderLoading(),
-    );
-    final order = OrderEntity(
+  OrderEntity createOrder() {
+    return OrderEntity(
       uId: getUser().uId,
-      currency: "USD",
       products: cartEntity.cartProducts,
       payWithcash: payWithcash,
       shippingAddressEntity: ShippingAddressEntity(
@@ -53,6 +49,13 @@ class AddOrderCubit extends Cubit<AddOrderState> {
       ),
       priceOffAllProducts: cartEntity.priceOfAllProducts,
     );
+  }
+
+  Future<void> addOrder() async {
+    emit(
+      AddOrderLoading(),
+    );
+    OrderEntity order = createOrder();
     final resulte = await orderRepo.addOrder(orderEntity: order);
     resulte.fold(
       (failure) => emit(
