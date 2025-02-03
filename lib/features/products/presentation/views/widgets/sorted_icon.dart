@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/helper_functions/showing_bottom_sheet.dart';
+import 'package:e_commerce_app/core/helper_functions/show_bottom_sheet.dart';
 import 'package:e_commerce_app/core/constants/assets.dart';
 import 'package:e_commerce_app/features/products/presentation/cubits/get_products_cubit/get_products_cubit.dart';
 import 'package:e_commerce_app/features/products/presentation/views/widgets/products_view_bottom_sheet.dart';

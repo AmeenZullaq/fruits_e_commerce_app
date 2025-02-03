@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/constants/app_routes.dart';
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/custom_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/cart/domain/entities/cart_entity.dart';
@@ -28,7 +28,7 @@ class CartButton extends StatelessWidget {
                 '${LocaleKeys.payment.tr()} ${context.watch<CartCubit>().priceOfAllProducts} ${LocaleKeys.pound.tr()}',
             onTap: () {
               if (context.read<CartCubit>().cartProducts.isEmpty) {
-                showingSnackBar(
+                showSnackBar(
                   context,
                   text: LocaleKeys.thereAreNoProductsInheart.tr(),
                 );

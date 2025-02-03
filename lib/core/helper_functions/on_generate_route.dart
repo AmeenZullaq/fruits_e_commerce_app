@@ -1,7 +1,6 @@
 import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/entities/product_entity.dart';
 import 'package:e_commerce_app/features/cart/domain/entities/cart_entity.dart';
-import 'package:e_commerce_app/features/cart/domain/entities/cart_item_entity.dart';
 import 'package:e_commerce_app/features/checkout/presentation/views/checkout_view.dart';
 import 'package:e_commerce_app/features/main/presentation/views/app_main_views.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/re_set_password_view.dart';

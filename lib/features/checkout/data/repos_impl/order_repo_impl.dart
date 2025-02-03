@@ -18,7 +18,7 @@ class OrderRepoImpl extends OrderRepo {
   }) async {
     try {
       await firestoreService.addData(
-        path: Endpoints.myOrders,
+        path: Endpoints.orders,
         data: OrderModel.fromEntity(orderEntity).toJson(),
       );
       return right(null);
@@ -34,27 +34,4 @@ class OrderRepoImpl extends OrderRepo {
       }
     }
   }
-
-  @override
-  Future<Either<Failure, List<OrderEntity>>> getMyOrders() {
-    // TODO: implement getMyOrders
-    throw UnimplementedError();
-  }
-
-  // @override
-  // Future<Either<Failure, List<OrderEntity>>> getMyOrders() async {
-  //   try {
-  //     final data = await databaseService.getData(
-  //       path: Endpoints.myOrders,
-  //       documentId: getUser().uId,
-  //     );
-  //     List<OrderEntity> myOrders = [];
-  //     for (var element in data) {
-
-  //       OrderModel.fromJson(element).to
-
-  //     }
-
-  //   } catch (e) {}
-  // }
 }

@@ -6,5 +6,4 @@ abstract class OrderRepo {
   Future<Either<Failure, void>> addOrder({
     required OrderEntity orderEntity,
   });
-  Future<Either<Failure, List<OrderEntity>>> getMyOrders();
 }

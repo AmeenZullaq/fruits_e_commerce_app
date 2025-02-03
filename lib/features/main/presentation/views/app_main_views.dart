@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/constants/constants.dart';
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/app_bottom_nav_bar.dart';
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
@@ -23,7 +23,7 @@ class _AppMainViewsState extends State<AppMainViews> {
     return BlocListener<CartCubit, CartState>(
       listener: (context, state) {
         if (state is CartProductAdded) {
-          showingSnackBar(
+          showSnackBar(
             context,
             text: LocaleKeys.productAdded.tr(),
           );

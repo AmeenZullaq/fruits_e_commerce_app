@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/custom_Progross_hud.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/singin_cubit/sing_in_cubit.dart';
@@ -20,7 +20,7 @@ class SinginViewBodyBlocConsumer extends StatelessWidget {
           );
         }
         if (state is SingInFailure) {
-          showingSnackBar(
+          showSnackBar(
             context,
             text: state.errMessage,
           );

@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_commerce_app/core/constants/app__text_styles.dart';
 import 'package:e_commerce_app/core/constants/app_colors.dart';
 import 'package:e_commerce_app/core/constants/app_routes.dart';
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/custom_add_icon.dart';
 import 'package:e_commerce_app/core/entities/product_entity.dart';
 import 'package:e_commerce_app/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';

@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/app_button.dart';
 import 'package:e_commerce_app/core/widgets/padding.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/singup_cubit/sing_up_cubit.dart';
@@ -61,7 +61,7 @@ class SingupViewBody extends StatelessWidget {
                     if (singUpCubit.isTermsAccepted) {
                       singUpCubit.singUp();
                     } else {
-                      showingSnackBar(
+                      showSnackBar(
                         context,
                         text: LocaleKeys
                             .you_must_agree_to_the_terms_and_conditions

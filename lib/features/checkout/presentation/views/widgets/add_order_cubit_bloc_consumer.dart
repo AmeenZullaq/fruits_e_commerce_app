@@ -1,6 +1,8 @@
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/custom_Progross_hud.dart';
 import 'package:e_commerce_app/features/checkout/presentation/cubits/add_order_cubit/add_order_cubit.dart';
+import 'package:e_commerce_app/generated/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,15 +19,15 @@ class AddOrderCubitBlocConsumer extends StatelessWidget {
     return BlocConsumer<AddOrderCubit, AddOrderState>(
       listener: (context, state) {
         if (state is AddOrderFailure) {
-          showingSnackBar(
+          showSnackBar(
             context,
             text: state.errMessage,
           );
         }
         if (state is AddOrderSuccess) {
-          showingSnackBar(
+          showSnackBar(
             context,
-            text: 'تمت العملية بنجاح',
+            text: LocaleKeys.anErrorAccurredTryAgain.tr(),
           );
         }
       },

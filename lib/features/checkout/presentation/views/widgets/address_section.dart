@@ -21,7 +21,7 @@ class AddressSection extends StatelessWidget {
     final AddOrderCubit addOrderCubit = context.read<AddOrderCubit>();
     return SingleChildScrollView(
       child: Form(
-        autovalidateMode: AutovalidateMode.onUserInteraction,
+        // autovalidateMode: addOrderCubit.autovalidateMode,
         key: addOrderCubit.addressSectionFormKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

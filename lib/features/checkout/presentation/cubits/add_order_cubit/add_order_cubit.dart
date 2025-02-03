@@ -28,7 +28,6 @@ class AddOrderCubit extends Cubit<AddOrderState> {
   final TextEditingController phoneController = TextEditingController();
 
   /// Variables
-  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   bool isSelectedPaymentMethod = false;
   late CartEntity cartEntity;
   bool payWithcash = false;
@@ -51,11 +50,10 @@ class AddOrderCubit extends Cubit<AddOrderState> {
     );
   }
 
-  Future<void> addOrder() async {
+  Future<void> addOrder({required OrderEntity order}) async {
     emit(
       AddOrderLoading(),
     );
-    OrderEntity order = createOrder();
     final resulte = await orderRepo.addOrder(orderEntity: order);
     resulte.fold(
       (failure) => emit(

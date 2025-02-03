@@ -36,16 +36,6 @@ class OrderModel {
     );
   }
 
-  // toEntity() {
-  //   return OrderEntity(
-  //     uId: uId,
-  //     products: orderProductModel,
-  //     paymentMethod: paymentMethod,
-  //     shippingAddressEntity: shippingAddressEntity,
-  //     priceOffAllProducts: priceOffAllProducts,
-  //   );
-  // }
-
   toJson() {
     return {
       'priceOffAllProducts': priceOffAllProducts,

@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/features/checkout/presentation/cubits/add_order_cubit/add_order_cubit.dart';
 import 'package:e_commerce_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -11,7 +11,7 @@ void validateAddressSection(AddOrderCubit addOrderCubit) {
       curve: Curves.easeIn,
     );
   } else {
-    addOrderCubit.autovalidateMode = AutovalidateMode.always;
+    // addOrderCubit.autovalidateMode = AutovalidateMode.onUserInteraction;
   }
 }
 
@@ -25,7 +25,7 @@ void validateShippingSection(
       curve: Curves.easeIn,
     );
   } else {
-    showingSnackBar(
+    showSnackBar(
       context,
       text: LocaleKeys.pleaseSelectPaymentMethod.tr(),
     );

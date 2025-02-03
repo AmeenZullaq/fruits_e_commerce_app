@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/widgets/custom_Progross_hud.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/re_set_password_cubit/re_set_password_cubit.dart';
 import 'package:e_commerce_app/features/auth/presentation/views/widgets/re_set_password_view_body.dart';
@@ -15,13 +15,13 @@ class ReSetPasswordViewBodyBloc extends StatelessWidget {
     return BlocConsumer<ReSetPasswordCubit, ReSetPasswordState>(
       listener: (context, state) {
         if (state is ReSetPasswordFailure) {
-          showingSnackBar(
+          showSnackBar(
             context,
             text: state.errMessage,
           );
         }
         if (state is ReSetPasswordSuccess) {
-          showingSnackBar(
+          showSnackBar(
             context,
             text: LocaleKeys
                 .we_have_already_sent_a_message_to_your_email_address

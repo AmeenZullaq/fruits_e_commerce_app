@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/helper_functions/showing_snack_bar.dart';
+import 'package:e_commerce_app/core/helper_functions/show_snack_bar.dart';
 import 'package:e_commerce_app/core/constants/app_routes.dart';
 import 'package:e_commerce_app/core/widgets/custom_Progross_hud.dart';
 import 'package:e_commerce_app/features/auth/presentation/cubits/logout_cubit/logout_cubit.dart';
@@ -22,7 +22,7 @@ class LogOutDialogBlocConsumer extends StatelessWidget {
           );
         }
         if (state is LogoutFailure) {
-          showingSnackBar(
+          showSnackBar(
             context,
             text: state.errMessage,
           );
